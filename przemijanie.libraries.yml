@@ -10,4 +10,4 @@ global-scripts:
   version: 1.x
   js:
     assets/js/main.js: {}
-  #   https://cdn.tailwindcss.com: { type: external, minified: true }
+    https://cdn.tailwindcss.com: { type: external, minified: true }

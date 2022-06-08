@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+    color: #787878;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    line-height: 27px;
+}
+
+header{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Menu font */
+#block-przemijanie-main-menu > ul{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Header contact banner */
+body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header contact banner */
+#block-treschtml > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Menu */
+body > div > div > div:nth-child(2){
+    max-width: 1280px;
+    padding: 20px 40px;
+}
+
+/* Swiper */
+#swiper-banner-block-1{
+    margin-top: 0;
+}
+
+/* Swiper title */
+.views-field-title{
+    left: 15%;
+}
+
+/* Swiper title */
+.views-field-title{
+    text-align: center;
+    color: #fff;
+    font-size: 54px;
+    font-style: 'Poppins';
+    font-weight: 600;
+    position: absolute;
+    /* left: 0; 
+    right: 0; 
+    top: 35%;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 1000px; */
+    left:50%; 
+    top:40%; 
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+/* Swiper button */
+.views-field-field-przycisk{
+    position: absolute;
+    display: inline;
+    text-align: center;
+    left:50%; 
+    top:60%; 
+    transform: translate(-50%, -50%);
+}
+.views-field-field-przycisk:hover{
+    cursor: pointer;
+}
+
+
+/* Swiper button */
+.views-field-field-przycisk > div{
+    background: #279e95;
+    left: 42%;
+}
+
+/* Swiper button:hover */
+.views-field-field-przycisk > div:hover{
+    background: #30c7bc;
+}
+
+/* Swiper height */
+/* #swiper-banner-block-1{
+    height: 650px;
+} */
+
+/* Swiper nav dots */
+.swiper-pagination > span{
+    background: #279e95;
+    width: 11px;
+    height: 11px;
+}
