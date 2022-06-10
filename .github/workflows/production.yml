@@ -58,7 +58,7 @@ jobs:
         uses: burnett01/rsync-deployments@5.2
         with:
           rsh: -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa
-          switches: -azrv --verbose --dry-run --relative --cvs-exclude --exclude='node_modules' --exclude='cache' --exclude='*.code-workspace' --exclude='.*' --exclude='*.sh'  --delete
+          switches: -azrv --relative --cvs-exclude --exclude='node_modules' --exclude='cache' --exclude='*.code-workspace' --exclude='.*' --exclude='*.sh'  --delete
           remote_path: ${{ secrets.REMOTE_PATH }}
           remote_host: ${{ secrets.REMOTE_HOST }}
           remote_port: ${{ secrets.REMOTE_PORT }}
