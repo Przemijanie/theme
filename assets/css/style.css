@@ -263,13 +263,39 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     width: 464px;
     background: #fff;
     padding: 16px 36px;
+    z-index: 1;
+    /* padding-top: 100px; */
 }
 
 /* Nasza oferta img hidden describtion */
 .testFormat{
-    height: 236px;
+    height: 340px;
     width: 464px;
+    z-index: -1;
 }
+
+/* Tests */
+.gridCol{
+    z-index: 1;
+}
+
+.show{
+    z-index: 0;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.test4{
+    display: none;
+}
+/* show img description on img title hover */
+/* .offer-title:hover ~ .testFormat{
+    z-index: 0;
+    border: 1px solid red;
+} */
+/* Test end */
 
 /* ---------------------Aktualnosci section--------------------- */
 /* Aktualnosci create date font */
