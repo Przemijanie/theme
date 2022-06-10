@@ -48,11 +48,11 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Install dependency in theme
-        run: npm install && npm run deploy
+      #- name: Install dependency in theme
+      #  run: npm install && npm run deploy
 
-      - name: Remove node
-        run: sudo rm -rf node_modules
+      #- name: Remove node
+      #  run: sudo rm -rf node_modules
 
       - name: Deploy to Server
         uses: burnett01/rsync-deployments@5.2
