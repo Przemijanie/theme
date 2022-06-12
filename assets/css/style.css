@@ -22,7 +22,7 @@ h1, h2, h3, a{
 
 p{
     font-family: "Roboto";
-    font-size: 16px;
+    /* font-size: 16px;test */
 }
 
 /* ---------------------HEADER Contact banner--------------------- */
@@ -259,11 +259,10 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 .offer-title{
     position: absolute;
     left: 50px;
-    top: 450px;
+    top: 452px;
     width: 464px;
     background: #fff;
     padding: 16px 36px;
-    z-index: 1;
     /* padding-top: 100px; */
 }
 
