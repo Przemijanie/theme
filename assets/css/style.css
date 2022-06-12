@@ -386,7 +386,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
         transform: translate(-50%, -50%);
     }
 
-    /* Swiper button */
+    /* Swiper button  */
     .views-field-field-przycisk{
         left:50%; 
         top:70%; 

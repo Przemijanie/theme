@@ -19,7 +19,7 @@ function ShowOfferDescriptionOnHover(){
     });
 };
 
-// Hamburger Menu
+// Hamburger Menu 
 function HamburgerMenu(){
     let menuBtn = document.querySelector('.menu-button');
     let menuCloseBtn = document.querySelector('.menu-close-button');
