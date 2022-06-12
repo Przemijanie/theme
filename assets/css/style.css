@@ -22,28 +22,35 @@ h1, h2, h3, a{
 
 p{
     font-family: "Roboto";
-    font-size: 16px;
+    /* font-size: 16px;test */
 }
 
 /* ---------------------HEADER Contact banner--------------------- */
 
 /* Header container width */
 #block-treschtml > div{
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-/* Header contact banner */
-#block-treschtml > div{
     display: flex;
     justify-content: space-between;
+    /* padding-left: 40px;
+    padding-right: 40px; */
 }
 
 /* ---------------------MENU--------------------- */
-/* Menu font */
-#block-przemijanie-main-menu > ul{
-    font-weight: 600;
-    font-size: 15px;
+.header-general{
+    height: 40px;
+}
+/* Menu positioning */
+body > div > div:nth-child(2){
+    width: 100;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 100px;
+}
+body > div > div.layout-container > header > div{
+    padding-left: 105px;
+    padding-right: 135px;
 }
 
 /* Header Menu */
@@ -54,9 +61,13 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     max-width: 100%;
     padding: 20px 110px;
     /* sticky top */
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 5;
+}
+
+#block-przemijanie-main-menu > ul > li:nth-child(0){
+    display: none;
 }
 
 /* ---------------------Swiper banner--------------------- */
@@ -111,7 +122,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     height: 11px;
 }
 
-/* ---------------------O NAS section--------------------- */
+/* ---------------------O NAS section + CTA--------------------- */
 /* CTA positioning */
 .layout__region--second.px-\[30px\] > div{
     position: relative;
@@ -119,7 +130,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 
 /* CTA title */
 .layout__region--second > div > div:nth-child(2),
-/* CTA title */
+/* CTA subtitle */
 .layout__region--second > div > div:nth-child(3),
 /* CTA button */
 .layout__region--second > div > div:nth-child(4){
@@ -131,7 +142,17 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     padding: 25px 40px;
 }
 
-/* CTA hide */
+/* CTA img doc */
+.layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img{
+    background: #279e95;
+    position: absolute;
+    left: 135px;
+    top: 430px;
+    width: 120px;
+    padding: 20px 20px 146px 20px;
+}
+
+/* CTA drupal titles hide */
 .layout__region--second > div > div:nth-child(2) > div:nth-child(1),
 .layout__region--second > div > div:nth-child(3) > div:nth-child(1),
 .layout__region--second > div > div:nth-child(4) > div:nth-child(1){
@@ -172,17 +193,6 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 .layout__region--second > div > div:nth-child(4) > div:nth-child(2) > div:hover{
     cursor: pointer;
     opacity: 0.8;
-}
-
-
-/* CTA img doc */
-.layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img{
-    background: #279e95;
-    position: absolute;
-    left: 135px;
-    top: 430px;
-    width: 120px;
-    padding: 20px 20px 146px 20px;
 }
 
 /* CTA img title hide */
@@ -259,20 +269,127 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 .offer-title{
     position: absolute;
     left: 50px;
-    top: 450px;
+    top: 452px;
     width: 464px;
     background: #fff;
     padding: 16px 36px;
+    /* padding-top: 100px; */
 }
 
 /* Nasza oferta img hidden describtion */
 .testFormat{
-    height: 236px;
+    height: 340px;
     width: 464px;
+    z-index: -1;
+}
+
+/* Tests */
+.gridCol{
+    z-index: 1;
+}
+
+.show{
+    z-index: 0;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.test4{
+    display: none;
+}
+
+.display-none{
+    display: none;
+}
+
+.display-flex{
+    display: flex;
+}
+
+.display-inline-block{
+    display: flex;
+}
+/* show img description on img title hover */
+/* .offer-title:hover ~ .testFormat{
+    z-index: 0;
+    border: 1px solid red;
+} */
+/* Test end */
+
+/* drupal fails */
+#block-treschtml{
+
 }
 
 /* ---------------------Aktualnosci section--------------------- */
 /* Aktualnosci create date font */
 .views-field-created{
     color: #279e95;
+}
+
+
+
+/* ---------------------RWD--------------------- */
+@media screen and (max-width: 1280px){
+    /* Header container width */
+    #block-treschtml > div{
+        max-width: 100%;
+    }
+
+    /* CTA img doc */
+    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img,
+    /* CTA title */
+    .layout__region--second > div > div:nth-child(2),
+    /* CTA subtitle */
+    .layout__region--second > div > div:nth-child(3),
+    /* CTA button */
+    .layout__region--second > div > div:nth-child(4){
+        display: none;
+    }
+
+    /* offer description tests*/
+    .testFormat,
+    .offer-title,
+    .InneKlasaCSS,
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+        display: none;
+    }
+
+    /* Menu positioning */
+    body > div > div:nth-child(2){
+        padding: 5px 20px 15px 20px;
+    }
+    body > div > div.layout-container > header > div{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    /* Header Menu */
+    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
+        flex-direction: column;
+    }
+    .header-general{
+        height: 80px;
+    }
+
+    /* Swiper title */
+    .swiper-title-css{
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 1.1;
+        left:50%; 
+        top:40%; 
+        transform: translate(-50%, -50%);
+    }
+
+    /* Swiper button */
+    .views-field-field-przycisk{
+        left:50%; 
+        top:70%; 
+        transform: translate(-50%, -50%) scale(0.65);
+    }
 }
