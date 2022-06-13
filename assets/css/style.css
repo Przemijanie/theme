@@ -22,11 +22,9 @@ h1, h2, h3, a{
 
 p{
     font-family: "Roboto";
-    /* font-size: 16px;test */
 }
 
 /* ---------------------HEADER Contact banner--------------------- */
-
 /* Header container width */
 #block-treschtml > div{
     display: flex;
@@ -49,8 +47,8 @@ body > div > div:nth-child(2){
     padding: 20px 100px;
 }
 body > div > div.layout-container > header > div{
-    padding-left: 105px;
-    padding-right: 135px;
+    padding-left: 115px;
+    padding-right: 110px;
 }
 
 /* Header Menu */
@@ -61,13 +59,9 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     max-width: 100%;
     padding: 20px 110px;
     /* sticky top */
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     z-index: 5;
-}
-
-#block-przemijanie-main-menu > ul > li:nth-child(0){
-    display: none;
 }
 
 /* ---------------------Swiper banner--------------------- */
@@ -121,6 +115,15 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     width: 11px;
     height: 11px;
 }
+
+/* Swiper custom height */
+/* .views-field.views-field-field-tlo > div{
+    height: 650px;
+}
+.img-drupal .twig-img{
+    object-fit: cover;
+    height: -webkit-fill-available;
+} */
 
 /* ---------------------O NAS section + CTA--------------------- */
 /* CTA positioning */
@@ -311,17 +314,13 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 .display-inline-block{
     display: flex;
 }
+
 /* show img description on img title hover */
 /* .offer-title:hover ~ .testFormat{
     z-index: 0;
     border: 1px solid red;
 } */
 /* Test end */
-
-/* drupal fails */
-#block-treschtml{
-
-}
 
 /* ---------------------Aktualnosci section--------------------- */
 /* Aktualnosci create date font */
@@ -330,12 +329,36 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 }
 
 
-
 /* ---------------------RWD--------------------- */
 @media screen and (max-width: 1280px){
     /* Header container width */
     #block-treschtml > div{
         max-width: 100%;
+    }
+
+    /* Header contact bar */
+    body > div > div.layout-container > header > div {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /* Menu list */
+    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
+        padding: 20px 20px;
+    }
+
+    /* Swiper title */
+    .swiper-title-css{
+        font-size: 44px;
+        font-weight: 600;
+        line-height: 1.1;
+        top:40%; 
+    }
+
+    /* Swiper button  */
+    .views-field-field-przycisk{
+        top:60%; 
+        transform: translate(-50%, -50%) scale(0.9);
     }
 
     /* CTA img doc */
@@ -356,15 +379,6 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
         display: none;
     }
-
-    /* Menu positioning */
-    body > div > div:nth-child(2){
-        padding: 5px 20px 15px 20px;
-    }
-    body > div > div.layout-container > header > div{
-        padding-left: 25px;
-        padding-right: 25px;
-    }
 }
 
 @media screen and (max-width: 1024px){
@@ -381,15 +395,34 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
         font-size: 36px;
         font-weight: 400;
         line-height: 1.1;
-        left:50%; 
-        top:40%; 
-        transform: translate(-50%, -50%);
+        top:35%; 
+        text-shadow: 0px 1px 4px #444;
     }
 
     /* Swiper button  */
     .views-field-field-przycisk{
-        left:50%; 
         top:70%; 
         transform: translate(-50%, -50%) scale(0.65);
+    }
+
+    /* Header contact bar */
+    body > div > div.layout-container > header > div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Menu list */
+    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
+        padding: 10px 20px 20px 20px;    
+    }
+}
+
+@media screen and (max-width: 640px){
+    /* Swiper title */
+    .swiper-title-css{
+        font-size: 24px;
+        line-height: 1;
+        top:30%; 
+        text-shadow: 0px 1px 4px #444;
     }
 }
