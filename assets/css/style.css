@@ -16,7 +16,7 @@ header{
     font-family: "Roboto";
 }
 
-h1, h2, h3, a{
+h1, h2, h3{
     font-family: "Poppins";
 }
 
@@ -115,6 +115,34 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     width: 11px;
     height: 11px;
 }
+
+/* ---------------------Swiper drop menu right side--------------------- */
+
+/* Swiper drop menu hover MAP row */
+.link-drop-map{
+    display: none!important;
+}
+.map-container:hover div.link-drop-map{
+    display: flex!important;
+}
+
+/* Swiper drop menu hover BOSS row */
+.link-drop-boss{
+    display: none!important;
+}
+.boss-container:hover .link-drop-boss{
+    display: flex!important;
+}
+
+/* Swiper drop menu hover Contact row */
+.link-drop-contact{
+    display: none!important;
+}
+.contact-container:hover .link-drop-contact{
+    display: flex!important;
+}
+
+
 
 /* Swiper custom height */
 /* .views-field.views-field-field-tlo > div{
@@ -329,6 +357,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 }
 
 
+
 /* ---------------------RWD--------------------- */
 @media screen and (max-width: 1280px){
     /* Header container width */
@@ -417,7 +446,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     }
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 768px){
     /* Swiper title */
     .swiper-title-css{
         font-size: 24px;
@@ -425,4 +454,11 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
         top:30%; 
         text-shadow: 0px 1px 4px #444;
     }
+
+    /* Header green info banner */
+    .header-general{
+        height: 40px;
+        font-size: 9px;
+    }
+    
 }
