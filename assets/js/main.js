@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 //------------------------------------------------------------
 
 
-// Nasza oferta section - show img description on hover (class manipultaion method)
+// Nasza oferta section - show img description on hover
 function ShowOfferDescriptionOnHover(){
     let hoverElem = document.querySelector('.offer-title');
     let hoverShowElem = document.querySelector('.testFormat');
@@ -49,9 +49,49 @@ function HamburgerMenu(){
     });
 };
 
+// Back to top scroll button
+function BackToTop(){
+    let backToTopButton = document.querySelector("#back-to-top-button");
+    let backToTopButtonHover = document.querySelector("#back-to-top-button-hover");
+
+
+    // scroll on click
+    backToTopButton.addEventListener("click", () => {
+        document.body.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+
+    // hiding btn
+    document.addEventListener('scroll', () => {
+        if ((window.scrollY) >= 300){
+            backToTopButton.classList.add('btn-move');
+            // backToTopButtonHover.classList.remove('hidden');
+            backToTopButtonHover.classList.add('btn-move');
+        }else{
+            backToTopButton.classList.remove('btn-move');
+            backToTopButton.classList.add('btn-return');
+            // backToTopButtonHover.classList.add('hidden');
+            backToTopButtonHover.classList.remove('btn-move');
+            backToTopButtonHover.classList.add('btn-return');
+        };
+    });
+
+    // transparent border button active
+    backToTopButton.addEventListener('mouseover', () => {
+        backToTopButtonHover.classList.toggle("scale");
+        console.log('test mouseover');
+    });
+    backToTopButton.addEventListener('mouseout', () => {
+        backToTopButtonHover.classList.toggle("scale");
+        console.log('test mouseout');
+    });
+};
+
 // functions run
 ShowOfferDescriptionOnHover();
 HamburgerMenu();
+BackToTop()
 
 
 
