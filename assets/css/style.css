@@ -33,7 +33,7 @@ p{
     padding-right: 40px; */
 }
 
-/* ---------------------MENU--------------------- */
+/* ---------------------------MENU--------------------------- */
 .header-general{
     height: 40px;
 }
@@ -88,7 +88,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     transform: scale(1.3) translateY(-35px);
 }
 
-/* ---------------------Swiper banner--------------------- */
+/* ---------------------------Swiper banner--------------------------- */
 /* Swiper */
 #swiper-banner-block-1{
     margin-top: 0;
@@ -194,27 +194,24 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 } */
 
 /* ---------------------O NAS section + CTA--------------------- */
-/* CTA positioning */
+/* ---------------------------CTA desktop--------------------------- */
+/* CTA box with text positioning */
 .layout__region--second.px-\[30px\] > div{
     position: relative;
 }
-
-/* CTA title */
 .layout__region--second > div > div:nth-child(2),
-/* CTA subtitle */
 .layout__region--second > div > div:nth-child(3),
-/* CTA button */
 .layout__region--second > div > div:nth-child(4){
+    width: 320px;
+    left: 255px;
+
     background: #279e95;
     color: #fff;
     position: absolute;
-    left: 255px;
-    width: 320px;
     padding: 25px 40px;
 }
-
-/* CTA img doc */
-.layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img{
+/* CTA DOC img */
+.layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
     background: #279e95;
     position: absolute;
     left: 135px;
@@ -222,27 +219,18 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     width: 120px;
     padding: 20px 20px 146px 20px;
 }
-
-/* CTA drupal titles hide */
-.layout__region--second > div > div:nth-child(2) > div:nth-child(1),
-.layout__region--second > div > div:nth-child(3) > div:nth-child(1),
-.layout__region--second > div > div:nth-child(4) > div:nth-child(1){
-    display: none;
-}
-
 /* CTA title info dla pacjentow */
 .layout__region--second > div > div:nth-child(2){
     font-size: 24px;
     font-weight: 600;
     top: 430px;
 }
-
-/* CTA title */
+/* CTA subtitle wnioski i zgody */
 .layout__region--second > div > div:nth-child(3){
     top: 525px;
+    font-family: 'Roboto';
 }
-
-/* CTA button */
+/* CTA button do pobrania */
 .layout__region--second > div > div:nth-child(4){
     top: 575px;
     padding-bottom: 25px;
@@ -259,19 +247,26 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     letter-spacing: .05em;
     text-align: center;
 }
-
 /* CTA button hover */
 .layout__region--second > div > div:nth-child(4) > div:nth-child(2) > div:hover{
     cursor: pointer;
     opacity: 0.8;
 }
 
+/* CTA drupal titles hide */
+.layout__region--second > div > div:nth-child(2) > div:nth-child(1),
+.layout__region--second > div > div:nth-child(3) > div:nth-child(1),
+.layout__region--second > div > div:nth-child(4) > div:nth-child(1){
+    display: none;
+}
 /* CTA img title hide */
 .layout__region--second > div > div:nth-child(5) > div:nth-child(1){
     display: none;
 }
+/* ---------------------------CTA end--------------------------- */
 
 /* ---------------------Nasza oferta section--------------------- */
+/* ---------------------Section Title styling------------------------ */
 /* Container Nasza oferta title */
 .views-element-container > h2{
     text-align: center;
@@ -313,6 +308,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     top: 142px;
     left: 95px;
 }
+/* ---------------------------End title styling--------------------------- */
 
 /* Nasza oferta Content container */
 #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(2){
@@ -321,43 +317,24 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     margin-right: auto;
 }
 
-/* Nasza oferta img padding */
-.gridRow.row-1.views-row > div,
-.gridCol.views-col.col-2,
-.gridCol.views-col.col-1,
-.gridCol.views-col.col-2,
-.gridRow.views-row.clearfix.row-3 > div{
-    padding-left: 30px;
-    padding-right: 30px;
-}
+/* Img description */
+/* .test4{
+    display: none;
+} */
 
-/* Nasza oferta img size */
-.views-field.views-field-field-zdjecie > div > img{
-    width: 100%;
-}
-
-/* Nasza oferta img title */
-.offer-title{
-    position: absolute;
-    left: 50px;
-    top: 452px;
-    width: 464px;
-    background: #fff;
-    padding: 16px 36px;
-    /* padding-top: 100px; */
-}
 
 /* Nasza oferta img hidden describtion */
-.testFormat{
+/* .testFormat{
     height: 340px;
     width: 464px;
     z-index: -1;
-}
+} */
 
 /* Tests */
-.gridCol{
+/* .gridCol{
     z-index: 1;
-}
+} */
+
 
 .show{
     z-index: 0;
@@ -365,10 +342,6 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 
 .hide{
     opacity: 0;
-}
-
-.test4{
-    display: none;
 }
 
 .display-none{
@@ -399,7 +372,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 
 
 
-/* ---------------------RWD--------------------- */
+/* ---------------------------RWD--------------------------- */
 @media screen and (max-width: 1280px){
     /* Header container width */
     #block-treschtml > div{
@@ -431,24 +404,49 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
         transform: translate(-50%, -50%) scale(0.9);
     }
 
-    /* CTA img doc */
-    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img,
-    /* CTA title */
+    /* ---------------------------CTA 1280px--------------------------- */
+    /* CTA box with text positioning */
     .layout__region--second > div > div:nth-child(2),
-    /* CTA subtitle */
     .layout__region--second > div > div:nth-child(3),
-    /* CTA button */
     .layout__region--second > div > div:nth-child(4){
-        display: none;
+        width: 240px;
+        left: 215px;
     }
+    /* CTA DOC img */
+    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
+        padding: 30px 20px 111px 20px;
+        left: 110px;
+        width: 105px;
+    }
+    /* CTA title info dla pacjentow */
+    .layout__region--second > div > div:nth-child(2){
+        font-size: 20px;
+        line-height: 1.2em;
+        padding: 30px 15px 10px 15px;
+        /* padding-top: 25px; */
+    }
+    /* CTA subtitle wnioski i zgody */
+    .layout__region--second > div > div:nth-child(3){
+        font-size: 15px;
+        font-family: 'Roboto';
+        padding: 5px 15px;
+        top: 518px;
+    }
+    /* CTA button do pobrania */
+    .layout__region--second > div > div:nth-child(4){
+        padding: 15px 15px 30px 15px;
+        /* padding-bottom: 15px; */
+        top: 540px;
+    }
+    /* ---------------------------CTA end--------------------------- */
 
     /* offer description tests*/
-    .testFormat,
+    /* .testFormat,
     .offer-title,
     .InneKlasaCSS,
     #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 1024px){
@@ -458,6 +456,17 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     }
     .header-general{
         height: 80px;
+    }
+
+    /* Header contact bar */
+    body > div > div.layout-container > header > div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Menu list */
+    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
+        padding: 10px 20px 20px 20px;    
     }
 
     /* Swiper title */
@@ -475,15 +484,58 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
         transform: translate(-50%, -50%) scale(0.65);
     }
 
-    /* Header contact bar */
-    body > div > div.layout-container > header > div {
-        padding-left: 0;
-        padding-right: 0;
+    /* ---------------------------CTA 1024px--------------------------- */
+    /* CTA box with text positioning */
+    .layout__region--second > div > div:nth-child(2),
+    .layout__region--second > div > div:nth-child(3),
+    .layout__region--second > div > div:nth-child(4){
+        width: 220px;
+        left: 120px;
     }
+    /* CTA DOC img */
+    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
+        padding: 22px 10px 111px 10px;
+        left: 40px;
+        width: 80px
+    }
+    /* CTA title info dla pacjentow */
+    .layout__region--second > div > div:nth-child(2){
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.1em;
+        padding: 25px 15px 15px 15px;
+    }
+    /* CTA subtitle wnioski i zgody */
+    .layout__region--second > div > div:nth-child(3){
+        font-size: 15px;
+        font-family: 'Roboto';
+        padding: 5px 15px;
+        top: 500px;
+    }
+    /* CTA button do pobrania */
+    .layout__region--second > div > div:nth-child(4){
+        font-size: 13px;
+        padding: 15px 15px 25px 15px;
+        top: 532px;
+    }
+    /* ---------------------------CTA end--------------------------- */
 
-    /* Menu list */
-    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
-        padding: 10px 20px 20px 20px;    
+    /* ---------------------------Nasza oferta--------------------------- */
+    /* Nasza oferta title background */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+        font-size: 100px;
+        width: 750px;
+        top: 22px;
+        left: -285px;
+    }
+    /* Container Nasza oferta title */
+    .views-element-container > h2{
+        font-size: 30px;
+    }
+    /* Nasza oferta title decor */
+    .views-element-container > h2:after{
+        top: 130px;
+        left: 75px;
     }
 }
 
@@ -501,5 +553,48 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
         height: 40px;
         font-size: 9px;
     }
+
+    /* ---------------------------Nasza oferta--------------------------- */
+    /* Nasza oferta title background */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+        font-size: 80px;
+        width: 620px;
+        top: 32px;
+        left: -230px;
+    }
+    /* Container Nasza oferta title */
+    .views-element-container > h2{
+        font-size: 25px;
+    }
+    /* Nasza oferta title decor */
+    .views-element-container > h2:after{
+        top: 125px;
+        left: 62px;
+    }
+
+    
+    
+}
+
+@media screen and (max-width: 640px){
+    /* ---------------------------Nasza oferta--------------------------- */
+    /* Nasza oferta title background */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+        font-size: 70px;
+        width: 480px;
+        top: 40px;
+        left: -160px;
+    }
+    /* Container Nasza oferta title */
+    .views-element-container > h2{
+        font-size: 25px;
+    }
+    /* Nasza oferta title decor */
+    .views-element-container > h2:after{
+        top: 125px;
+        left: 65px;
+    }
+
+    
     
 }

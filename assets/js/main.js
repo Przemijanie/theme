@@ -3,22 +3,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 //------------------------------------------------------------
 
 
-// Nasza oferta section - show img description on hover
-function ShowOfferDescriptionOnHover(){
-    let hoverElem = document.querySelector('.offer-title');
-    let hoverShowElem = document.querySelector('.testFormat');
-
-    hoverElem.addEventListener('mouseover', () => {
-        hoverShowElem.classList.add('show');
-        hoverElem.classList.add('hide');
-    });
-
-    hoverElem.addEventListener('mouseout', () => {
-        hoverShowElem.classList.remove('show');
-        hoverElem.classList.remove('hide');
-    });
-};
-
 // Hamburger Menu 
 function HamburgerMenu(){
     let menuBtn = document.querySelector('.menu-button');
@@ -88,10 +72,27 @@ function BackToTop(){
     });
 };
 
+// Nasza oferta section - show img description on hover
+function ShowOfferDescriptionOnHover(){
+    let hoverElem = document.querySelector('.offer-title');
+    let hoverShowElem = document.querySelector('.testFormat');
+
+    hoverElem.addEventListener('mouseover', () => {
+        hoverShowElem.classList.add('show');
+        hoverElem.classList.add('hide');
+    });
+
+    hoverElem.addEventListener('mouseout', () => {
+        hoverShowElem.classList.remove('show');
+        hoverElem.classList.remove('hide');
+    });
+};
+
+
 // functions run
-ShowOfferDescriptionOnHover();
 HamburgerMenu();
 BackToTop()
+// ShowOfferDescriptionOnHover();
 
 
 
