@@ -29,8 +29,6 @@ p{
 #block-treschtml > div{
     display: flex;
     justify-content: space-between;
-    /* padding-left: 40px;
-    padding-right: 40px; */
 }
 
 /* ---------------------------MENU--------------------------- */
@@ -38,20 +36,20 @@ p{
     height: 40px;
 }
 /* Menu positioning */
-body > div > div:nth-child(2){
+/* body > div > div:nth-child(2){
     width: 100;
     display: flex;
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 100px;
-}
+} */
 body > div > div.layout-container > header > div{
     padding-left: 115px;
     padding-right: 110px;
 }
 
-/* Header Menu */
+/* Header Menu NavBar */
 body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     display: flex;
     justify-content: space-between;
@@ -172,21 +170,58 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     visibility: visible;
     opacity: 1;
     transform: translateY(20px);
-    /* display: flex!important; */
 }
 
 /* Swiper drop menu hover Contact row */
 .link-drop-contact{
-    /* display: none!important; */
     transition: all 0.3s ease-in-out;
     visibility: hidden;
     opacity: 0;
 }
 .contact-container:hover .link-drop-contact{
-    /* display: flex!important; */
     transform: translateY(20px);
     visibility: visible;
     opacity: 1;
+}
+
+/* Display title of open/close drop menu button */
+.hover-btn-title{
+    /* z-index: 2!important; */
+    opacity: 0;
+    transition: 0.2s ease;
+}
+.btn-open-drop-menu:hover .hover-btn-title{
+    opacity: 1;
+}
+.hover-btn-close-menu{
+    /* z-index: 2!important; */
+    opacity: 0;
+    transition: 0.2s ease;
+}
+.close-button:hover .hover-btn-close-menu{
+    opacity: 1;
+}
+
+/* arrow pointer on hover */
+.hover-btn-title:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -4px;
+    top: 9px;
+}
+.hover-btn-close-menu:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 47px;
+    top: 22px;
 }
 
 
@@ -228,19 +263,28 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 }
 /* CTA title info dla pacjentow */
 .layout__region--second > div > div:nth-child(2){
+    position: absolute;
     font-size: 24px;
     font-weight: 600;
     top: 430px;
 }
 /* CTA subtitle wnioski i zgody */
 .layout__region--second > div > div:nth-child(3){
+    position: absolute;
     top: 525px;
     font-family: 'Roboto';
+
 }
 /* CTA button do pobrania */
 .layout__region--second > div > div:nth-child(4){
+    position: absolute;
     top: 575px;
     padding-bottom: 25px;
+
+}
+
+#block-przemijanie-content > article > div:nth-child(1) > div.xl\:container.mx-auto.xl\:px-\[40px\].py-\[120px\].mb-40 > div > div.layout__region.layout__region--second.px-\[30px\] > div > div.twig-field.h-\[100\%\].lg\:h-auto.lg\:container > p > img{
+    z-index: 0;
 }
 
 /* CTA button styling */
@@ -624,6 +668,15 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     }
 }
 
+/* .drop-menu{
+    transition: 0.3s ease;
+} */
 
+.transition-drop-menu{
+    transition: 0.3s ease;
+}
 
+.slide-down-drop-menu{
+    transform: translateY(100px);
+}
 
