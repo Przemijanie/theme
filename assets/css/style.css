@@ -100,11 +100,6 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 }
 
 /* Swiper title */
-.views-field-title{
-    left: 15%;
-}
-
-/* Swiper title */
 .swiper-title-css{
     text-align: center;
     color: #fff;
@@ -138,14 +133,18 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     cursor: pointer;
 }
 
-/* Swiper nav dots */
+/* Swiper pagination nav dots */
 .swiper-pagination > span{
     background: #279e95;
     width: 11px;
     height: 11px;
+    z-index: -1;
+}
+.swiper-pagination {
+    z-index: 1!important;
 }
 
-/* ---------------------Swiper drop menu right side--------------------- */
+/* ---------------------Swiper drop menu right side on Desktop--------------------- */
 
 /* Swiper drop menu hover MAP row */
 .link-drop-map{
@@ -172,7 +171,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     transform: translateY(20px);
 }
 
-/* Swiper drop menu hover Contact row */
+/* Swiper drop menu hover CONTACT row */
 .link-drop-contact{
     transition: all 0.3s ease-in-out;
     visibility: hidden;
@@ -184,9 +183,33 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     opacity: 1;
 }
 
+/* ---------------------Swiper drop menu right side on Mobile--------------------- */
+
+/* Swiper drop menu click MAP row */
+.header-map-click{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+/* Swiper drop menu click BOSS row */
+.header-boss-click{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+/* Swiper drop menu click CONTACT row */
+.header-contact-click{
+    transform: translateY(20px);
+    visibility: visible;
+    opacity: 1;
+}
+/* ---------------------END Swiper drop menu right side on Mobile--------------------- */
+
+
 /* Display title of open/close drop menu button */
 .hover-btn-title{
-    /* z-index: 2!important; */
     opacity: 0;
     transition: 0.2s ease;
 }
@@ -194,7 +217,6 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     opacity: 1;
 }
 .hover-btn-close-menu{
-    /* z-index: 2!important; */
     opacity: 0;
     transition: 0.2s ease;
 }
@@ -202,7 +224,7 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     opacity: 1;
 }
 
-/* arrow pointer on hover */
+/* Arrow pointer on hover */
 .hover-btn-title:after{
     content: '';
     width: 10px;
@@ -223,17 +245,6 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     right: 47px;
     top: 22px;
 }
-
-
-
-/* Swiper custom height */
-/* .views-field.views-field-field-tlo > div{
-    height: 650px;
-}
-.img-drupal .twig-img{
-    object-fit: cover;
-    height: -webkit-fill-available;
-} */
 
 /* ---------------------O NAS section + CTA--------------------- */
 /* ---------------------------CTA desktop--------------------------- */
@@ -368,14 +379,12 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 
 /* Nasza oferta Content container */
 #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(2){
-    max-width: 1024px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.offer-img{
-    width: 370px;
-}
+
 
 /* ---------------------Aktualnosci section--------------------- */
 /* Aktualnosci create date font */
@@ -383,21 +392,32 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
     color: #279e95;
 }
 
-/* ---------------------for js--------------------- */
+/* Aktualności grid */
+#block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div > ul{
+    grid-template-columns:repeat(3, 1fr);
+    gap: 50px;
+}
+/* #block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div > ul{
+    gap: 50px;
+} */
+
+/* ---------------------Footer--------------------- */
+/* temporary */
+footer > div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 100px auto 0 auto;
+}
+
+
+/* ---------------------------for js--------------------------- */
 .show{
     z-index: 0;
 }
 .hide{
     opacity: 0;
-}
-.display-none{
-    display: none;
-}
-.display-flex{
-    display: flex;
-}
-.display-inline-block{
-    display: flex;
 }
 .z-index-minus{
     z-index: -1;
@@ -405,278 +425,34 @@ body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
 .z-index-zero{
     z-index: 0!important;
 }
-
-
-
-/* ---------------------------RWD--------------------------- */
-@media screen and (max-width: 1280px){
-    /* Header container width */
-    #block-treschtml > div{
-        max-width: 100%;
-    }
-
-    /* Header contact bar */
-    body > div > div.layout-container > header > div {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    /* Menu list */
-    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
-        padding: 20px 20px;
-    }
-
-    /* Swiper title */
-    .swiper-title-css{
-        font-size: 44px;
-        font-weight: 600;
-        line-height: 1.1;
-        top:40%; 
-    }
-
-    /* Swiper button  */
-    .views-field-field-przycisk{
-        top:60%; 
-        transform: translate(-50%, -50%) scale(0.9);
-    }
-
-    /* ---------------------------CTA 1280px--------------------------- */
-    /* CTA box with text positioning */
-    .layout__region--second > div > div:nth-child(2),
-    .layout__region--second > div > div:nth-child(3),
-    .layout__region--second > div > div:nth-child(4){
-        width: 240px;
-        left: 215px;
-    }
-    /* CTA DOC img */
-    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
-        padding: 30px 20px 111px 20px;
-        left: 110px;
-        width: 105px;
-    }
-    /* CTA title info dla pacjentow */
-    .layout__region--second > div > div:nth-child(2){
-        font-size: 20px;
-        line-height: 1.2em;
-        padding: 30px 15px 10px 15px;
-        /* padding-top: 25px; */
-    }
-    /* CTA subtitle wnioski i zgody */
-    .layout__region--second > div > div:nth-child(3){
-        font-size: 15px;
-        font-family: 'Roboto';
-        padding: 5px 15px;
-        top: 518px;
-    }
-    /* CTA button do pobrania */
-    .layout__region--second > div > div:nth-child(4){
-        padding: 15px 15px 30px 15px;
-        /* padding-bottom: 15px; */
-        top: 540px;
-    }
-    /* ---------------------------CTA end--------------------------- */
-
-    /* offer description tests*/
-    /* .testFormat,
-    .offer-title,
-    .InneKlasaCSS,
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
-        display: none;
-    } */
-}
-
-@media screen and (max-width: 1024px){
-    /* Header Menu */
-    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
-        flex-direction: column;
-    }
-    .header-general{
-        height: 80px;
-    }
-
-    /* Header contact bar */
-    body > div > div.layout-container > header > div {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Menu list */
-    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
-        padding: 10px 20px 20px 20px;    
-    }
-
-    /* Swiper title */
-    .swiper-title-css{
-        font-size: 36px;
-        font-weight: 400;
-        line-height: 1.1;
-        top:35%; 
-        text-shadow: 0px 1px 4px #444;
-    }
-
-    /* Swiper button  */
-    .views-field-field-przycisk{
-        top:70%; 
-        transform: translate(-50%, -50%) scale(0.65);
-    }
-
-    /* ---------------------------CTA 1024px--------------------------- */
-    /* CTA box with text positioning */
-    .layout__region--second > div > div:nth-child(2),
-    .layout__region--second > div > div:nth-child(3),
-    .layout__region--second > div > div:nth-child(4){
-        width: 220px;
-        left: 120px;
-    }
-    /* CTA DOC img */
-    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
-        padding: 22px 10px 111px 10px;
-        left: 40px;
-        width: 80px
-    }
-    /* CTA title info dla pacjentow */
-    .layout__region--second > div > div:nth-child(2){
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.1em;
-        padding: 25px 15px 15px 15px;
-    }
-    /* CTA subtitle wnioski i zgody */
-    .layout__region--second > div > div:nth-child(3){
-        font-size: 15px;
-        font-family: 'Roboto';
-        padding: 5px 15px;
-        top: 500px;
-    }
-    /* CTA button do pobrania */
-    .layout__region--second > div > div:nth-child(4){
-        font-size: 13px;
-        padding: 15px 15px 25px 15px;
-        top: 532px;
-    }
-    /* ---------------------------CTA end--------------------------- */
-
-    /* ---------------------------Nasza oferta--------------------------- */
-    /* Nasza oferta title background */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
-        font-size: 100px;
-        width: 750px;
-        top: 22px;
-        left: -285px;
-    }
-    /* Container Nasza oferta title */
-    .views-element-container > h2{
-        font-size: 30px;
-    }
-    /* Nasza oferta title decor */
-    .views-element-container > h2:after{
-        top: 130px;
-        left: 75px;
-    }
-}
-
-@media screen and (max-width: 768px){
-    /* Swiper title */
-    .swiper-title-css{
-        font-size: 24px;
-        line-height: 1;
-        top:30%; 
-        text-shadow: 0px 1px 4px #444;
-    }
-
-    /* Header green info banner */
-    .header-general{
-        height: 40px;
-        font-size: 9px;
-    }
-
-    /* ---------------------------Nasza oferta--------------------------- */
-    /* Nasza oferta title background */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
-        font-size: 80px;
-        width: 620px;
-        top: 32px;
-        left: -230px;
-    }
-    /* Container Nasza oferta title */
-    .views-element-container > h2{
-        font-size: 25px;
-    }
-    /* Nasza oferta title decor */
-    .views-element-container > h2:after{
-        top: 125px;
-        left: 62px;
-    }
-
-    
-    
-}
-
-@media screen and (max-width: 640px){
-    /* ---------------------------Nasza oferta--------------------------- */
-    /* Nasza oferta title background */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
-        font-size: 70px;
-        width: 480px;
-        top: 40px;
-        left: -160px;
-    }
-    /* Container Nasza oferta title */
-    .views-element-container > h2{
-        font-size: 25px;
-    }
-    /* Nasza oferta title decor */
-    .views-element-container > h2:after{
-        top: 125px;
-        left: 65px;
-    }
-
-    /* Nasza oferta title hidden */
-    .views-field-title{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 400px){
-    /* ---------------------------Nasza oferta--------------------------- */
-    /* Nasza oferta title background */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
-        font-size: 55px;
-        width: 380px;
-        top: 55px;
-        left: -110px;
-    }
-    /* Container Nasza oferta title */
-    .views-element-container > h2{
-        font-size: 25px;
-    }
-    /* Nasza oferta title decor */
-    .views-element-container > h2:after{
-        top: 120px;
-        left: 60px;
-    }
-}
-
-@media screen and (min-width: 640px){
-    /* Nasza oferta body (img description) */
-    .views-field-body{
-        /* display: none; */
-        width: 24rem!important;
-        top: 10rem!important;
-        left: 6rem!important;
-        z-index: -1;
-    }
-}
-
-/* .drop-menu{
-    transition: 0.3s ease;
-} */
-
 .transition-drop-menu{
     transition: 0.3s ease;
 }
-
 .slide-down-drop-menu{
     transform: translateY(100px);
 }
+.navbar-down{
+    opacity: 1!important; /* jak media queries są nizej to sa maja wieksza moc */
+}
+
+
+
+
+/* temporary */
+/* Menu slide down on mobile */
+@media screen and (max-width: 1024px) {
+    .menu-list{
+        background: white;
+        padding: 10px 10px 10px 35px;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        z-index: 3;
+    }
+}
+
+
 

@@ -1,0 +1,272 @@
+@media screen and (max-width: 1280px){
+    /* Header container width */
+    #block-treschtml > div{
+        max-width: 100%;
+    }
+
+    /* Header contact bar */
+    body > div > div.layout-container > header > div {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /* Menu list */
+    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
+        padding: 20px 20px;
+    }
+
+    /* Swiper title */
+    .swiper-title-css{
+        font-size: 44px;
+        font-weight: 600;
+        line-height: 1.1;
+        top:40%; 
+    }
+
+    /* Swiper button  */
+    .views-field-field-przycisk{
+        top:60%; 
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    /* ---------------------------CTA 1280px--------------------------- */
+    /* CTA box with text positioning */
+    .layout__region--second > div > div:nth-child(2),
+    .layout__region--second > div > div:nth-child(3),
+    .layout__region--second > div > div:nth-child(4){
+        width: 240px;
+        left: 215px;
+    }
+    /* CTA DOC img */
+    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
+        padding: 30px 20px 111px 20px;
+        left: 110px;
+        width: 105px;
+    }
+    /* CTA title info dla pacjentow */
+    .layout__region--second > div > div:nth-child(2){
+        font-size: 20px;
+        line-height: 1.2em;
+        padding: 30px 15px 10px 15px;
+        /* padding-top: 25px; */
+    }
+    /* CTA subtitle wnioski i zgody */
+    .layout__region--second > div > div:nth-child(3){
+        font-size: 15px;
+        font-family: 'Roboto';
+        padding: 5px 15px;
+        top: 518px;
+    }
+    /* CTA button do pobrania */
+    .layout__region--second > div > div:nth-child(4){
+        padding: 15px 15px 30px 15px;
+        /* padding-bottom: 15px; */
+        top: 540px;
+    }
+    /* ---------------------------CTA end--------------------------- */
+}
+
+@media screen and (min-width: 1025px){
+    /* Nasza oferta body (img description) */
+    .offer-img-body{
+        z-index: -1;
+    }
+
+    /* Nasza oferta img */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(2) > div > div > ul > li > div.views-field.views-field-field-zdjecie > div > img{
+        width: 415px!important;
+    }
+}
+@media screen and (max-width: 1024px){
+    /* Header Menu */
+    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
+        flex-direction: column;
+    }
+    .header-general{
+        height: 80px;
+    }
+
+    /* Header contact bar */
+    body > div > div.layout-container > header > div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Menu list */
+    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
+        padding: 5px 10px 10px 10px;    
+    }
+
+    /* Swiper title */
+    .swiper-title-css{
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.1;
+        text-shadow: 0px 1px 4px #444;
+        top:50%; 
+        transform: translate(-50%, -50%);
+    }
+
+    /* Swiper button  */
+    /* .views-field-field-przycisk{
+        top:70%; 
+        transform: translate(-50%, -50%) scale(0.65);
+    } */
+
+    /* ---------------------------CTA 1024px--------------------------- */
+    /* CTA box with text positioning */
+    .layout__region--second > div > div:nth-child(2),
+    .layout__region--second > div > div:nth-child(3),
+    .layout__region--second > div > div:nth-child(4){
+        width: 220px;
+        left: 120px;
+    }
+    /* CTA DOC img */
+    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
+        padding: 22px 10px 111px 10px;
+        left: 40px;
+        width: 80px
+    }
+    /* CTA title info dla pacjentow */
+    .layout__region--second > div > div:nth-child(2){
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.1em;
+        padding: 25px 15px 15px 15px;
+    }
+    /* CTA subtitle wnioski i zgody */
+    .layout__region--second > div > div:nth-child(3){
+        font-size: 15px;
+        font-family: 'Roboto';
+        padding: 5px 15px;
+        top: 500px;
+    }
+    /* CTA button do pobrania */
+    .layout__region--second > div > div:nth-child(4){
+        font-size: 13px;
+        padding: 15px 15px 25px 15px;
+        top: 532px;
+    }
+    /* ---------------------------CTA end--------------------------- */
+
+    /* ---------------------------Nasza oferta--------------------------- */
+    /* Nasza oferta title background */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+        font-size: 100px;
+        width: 750px;
+        top: 22px;
+        left: -285px;
+    }
+    /* Container Nasza oferta title */
+    .views-element-container > h2{
+        font-size: 30px;
+    }
+    /* Nasza oferta title decor */
+    .views-element-container > h2:after{
+        top: 130px;
+        left: 75px;
+    }
+
+    /* Nasza oferta title hidden */
+    /* .views-field-title{
+        display: none;
+    } */
+
+    /* Nasza oferta body (img description) */
+    .views-field-body{
+        right: 0rem!important;
+    }
+
+    /* Nasza oferta img */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(2) > div > div > ul > li > div.views-field.views-field-field-zdjecie > div > img{
+        width: 90vw!important;
+    }
+
+    /* Aktualności grid */
+    #block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div > ul{
+        grid-template-columns:repeat(2, 1fr);
+        gap: 40px;
+    }
+    /* Container remove */
+    #block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /* Swiper title */
+    .swiper-title-css{
+        font-size: 22px;
+        line-height: 1;
+        text-shadow: 0px 1px 4px #444;
+    }
+
+    /* Header green info banner */
+    .header-general{
+        height: 40px;
+        font-size: 9px;
+    }
+
+    /* ---------------------------Nasza oferta--------------------------- */
+    /* Nasza oferta title background */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+        font-size: 80px;
+        width: 620px;
+        top: 32px;
+        left: -230px;
+    }
+    /* Container Nasza oferta title */
+    .views-element-container > h2{
+        font-size: 25px;
+    }
+    /* Nasza oferta title decor */
+    .views-element-container > h2:after{
+        top: 125px;
+        left: 62px;
+    }
+
+    /* Aktualności grid */
+    #block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div > ul{
+        grid-template-columns:repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 640px){
+    /* ---------------------------Nasza oferta--------------------------- */
+    /* Nasza oferta title background */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+        font-size: 70px;
+        width: 480px;
+        top: 40px;
+        left: -160px;
+    }
+    /* Container Nasza oferta title */
+    .views-element-container > h2{
+        font-size: 25px;
+    }
+    /* Nasza oferta title decor */
+    .views-element-container > h2:after{
+        top: 125px;
+        left: 65px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    /* ---------------------------Nasza oferta--------------------------- */
+    /* Nasza oferta title background */
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+        font-size: 55px;
+        width: 380px;
+        top: 55px;
+        left: -110px;
+    }
+    /* Container Nasza oferta title */
+    .views-element-container > h2{
+        font-size: 25px;
+    }
+    /* Nasza oferta title decor */
+    .views-element-container > h2:after{
+        top: 120px;
+        left: 60px;
+    }
+}

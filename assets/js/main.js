@@ -5,39 +5,38 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 // Hamburger Menu 
 function HamburgerMenu(){
-    let menuBtn = document.querySelector('.menu-button');
-    let menuCloseBtn = document.querySelector('.menu-close-button');
-    let menuList = document.querySelector('.menu-list');
+    let menuBtn = document.querySelector('[data-menu-button]');
+    let menuCloseBtn = document.querySelector('[data-menu-close-button]');
+    let menuList = document.querySelector('[data-menu-list]');
+
+    let layoutContent = document.querySelector('.layout-content');
 
     menuBtn.addEventListener('click', () => {
-        //clear
-        menuList.classList.remove("display-none");
-        //show menu list
-        menuList.classList.add("display-flex");
-        //show close btn
-        menuCloseBtn.classList.add("display-inline-block");
-        //hide hamburger btn
-        menuBtn.classList.remove("display-flex")
-        menuBtn.classList.add("display-none")
+        // menuList.classList.replace('hidden', 'flex');
+        menuCloseBtn.classList.replace('hidden', 'inline-block');
+        menuBtn.classList.replace('inline-block', 'hidden');
+
+        // menuList.classList.remove('navbar-up');
+        menuList.classList.add('navbar-down');
     });
 
     menuCloseBtn.addEventListener('click', () => {
-        //clear
-        menuList.classList.remove("display-flex");
-        //hide menu list
-        menuList.classList.add("display-none");
-        //hide close btn
-        menuCloseBtn.classList.remove("display-inline-block");
-        menuCloseBtn.classList.add("display-none")
-        menuBtn.classList.add("display-flex")
+        menuList.classList.replace('flex', 'hidden');
+        menuCloseBtn.classList.replace('inline-block', 'hidden');
+        menuBtn.classList.replace('hidden', 'inline-block');
+
+        menuList.classList.remove('navbar-down');
+        console.log('navbar-up');
+        
+
+
     });
 };
 
 // Back to top scroll button
 function BackToTop(){
-    let backToTopButton = document.querySelector("#back-to-top-button");
-    let backToTopButtonHover = document.querySelector("#back-to-top-button-hover");
-
+    let backToTopButton = document.querySelector('[data-back-to-top-button]');
+    let backToTopButtonHover = document.querySelector('[data-back-to-top-button-hover]');
 
     // scroll on click
     backToTopButton.addEventListener("click", () => {
@@ -45,21 +44,17 @@ function BackToTop(){
             behavior: "smooth"
         });
     });
-
     // hiding btn
     document.addEventListener('scroll', () => {
         if ((window.scrollY) >= 300){
             backToTopButton.classList.add('btn-move');
             backToTopButtonHover.classList.add('btn-move');
         }else{
-            backToTopButton.classList.remove('btn-move');
-            backToTopButton.classList.add('btn-return');
-            backToTopButtonHover.classList.remove('btn-move');
-            backToTopButtonHover.classList.add('btn-return');
+            backToTopButton.classList.replace('btn-move', 'btn-return');
+            backToTopButtonHover.classList.replace('btn-move', 'btn-return');
         };
     });
-
-    // transparent border button active
+    // transparent border around button active
     backToTopButton.addEventListener('mouseover', () => {
         backToTopButtonHover.classList.toggle("scale");
     });
@@ -71,7 +66,7 @@ function BackToTop(){
 // Nasza oferta section - show img description on hover
 function ShowOfferDescriptionOnHover(){
     let hoverElem = document.querySelectorAll('.drupal-wiersz');
-    let ShowElem = document.querySelectorAll('.offer-img-description');
+    let ShowElem = document.querySelectorAll('.offer-img-body');
 
     for (let i = 0; i<5 ; i++){
         hoverElem[i].addEventListener('mouseover', () => {
@@ -89,6 +84,8 @@ function DynamicDropMenu(){
     let dropMenu = document.querySelector('[data-drop-menu]');
     let closeMenuBtn = document.querySelector('[data-close-button]');
     let openMenuBtn = document.querySelector('[data-btn-open-drop-menu]');
+    let hoverTitleBtn = document.querySelector('[data-hover-btn-title]');
+    let isCloseClicked = false;
 
     //on hover content
     let mapContent = document.querySelector('[data-map-content]');
@@ -117,17 +114,17 @@ function DynamicDropMenu(){
         //back to visible menu on swiper
         dropMenu.classList.remove('invisible');
 
-        closeClicked = false;
-        console.log('closeclicked false from rth');
+        //button title hide when drop menu is on the right side
+        hoverTitleBtn.classList.remove('absolute');
+
+        //status marker
+        isCloseClicked = false;
     };
 
     function ShowDropMenuFixedHidden(){
         // Drop menu + close button
         dropMenu.classList.remove('absolute', 'top-[25%]', 'right-0', 'grid-cols-3', 'grid-cols-[100px]', 'w-[100px]');
         dropMenu.classList.add('fixed', 'top-[-4px]', 'xl:mx-auto', 'xl:left-0', 'xl:right-0', 'xl:w-[1165px]', 'lg:mx-auto', 'lg:left-0', 'lg:right-0', 'lg:w-[920px]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]', 'xl:grid-cols-[380px_380px_380px_40px]', 'lg:grid-cols-[300px_300px_300px_40px]');
-        // setTimeout(() => {
-        //     dropMenu.classList.add('animation', 'transition-drop-menu');
-        // },1000);
         closeMenuBtn.classList.remove('invisible');
 
         //Map content display after hover
@@ -142,40 +139,36 @@ function DynamicDropMenu(){
         contactContent.classList.remove('right-[100px]', 'top-[-20px]');
         contactContent.classList.add('xl:right-[25px]', 'lg:right-[20px]', 'top-[80px]');
 
-        // dropMenu.classList.add('hidden');
-    };
+        //button title hide when drop menu is on the right side
+        hoverTitleBtn.classList.add('absolute');
 
-    let closeClicked = false;
+    };
 
     function ShowDropMenuFixedSlideDown(){
         setTimeout(() =>{
-            // dropMenu.classList.remove('hidden');
             dropMenu.classList.add('transition-drop-menu');
             dropMenu.classList.add('slide-down-drop-menu');
         },100);
     };
 
     function CloseDropMenu(){
-        //Close menu
         closeMenuBtn.addEventListener('click', () => {
             dropMenu.classList.remove('slide-down-drop-menu');
-            //show open menu button
             openMenuBtn.classList.remove('invisible');
-            closeClicked = true;  
+            isCloseClicked = true;  
         });
     };
 
     function OpenDropMenu(){
         openMenuBtn.classList.add('visible');
 
-        //Open menu button - show menu
         openMenuBtn.addEventListener('click', () => {
             dropMenu.classList.add('slide-down-drop-menu');
             dropMenu.classList.add('visible');
             openMenuBtn.classList.add('invisible');
 
-            closeClicked = false;
-            console.log('closeclicked false from close btn');
+            isCloseClicked = false;
+            // console.log('closeclicked false from close btn');
         });
 
 
@@ -196,36 +189,93 @@ function DynamicDropMenu(){
         openMenuBtn.classList.add('invisible');
     };
 
+
+
     document.addEventListener('scroll', () => {
         //1st scroll: moved from right side -> hidden under navbar
         if ((window.scrollY > 550) && (window.scrollY < 750)) {
             hideOpenMenuButton();
             ShowDropMenuFixedHidden();
-            console.log('1st scroll');
+            // console.log('1st scroll');
             
         //1st slide down drop-menu
         }else if ((window.scrollY > 750)){
             //secured from continuously sliding down after scrolling
-            if (closeClicked === false){
+            if (isCloseClicked === false){
                 ShowDropMenuFixedHidden();
                 ShowDropMenuFixedSlideDown();
                 CloseDropMenu();
                 OpenDropMenu();
-                console.log('if closeclicked false');
+                // console.log('if closeclicked false');
 
             //display menu when closed/hidden
-            }else if (closeClicked === true){
+            }else if (isCloseClicked === true){
                 ShowDropMenuFixedHidden();
                 OpenDropMenu();
-                console.log('if closeclicked true');
+                // console.log('if closeclicked true');
             };
 
         //Back to right side position
         }else{
             DropMenuReturnToHomePos();
-            console.log('rth');
+            // console.log('rth');
         };
     });
+};
+
+// Mobile header menu
+function HeaderOnMobile(){
+    //header views.icons
+    let headerMapIcon = document.querySelector('[data-header-map]');
+    let headerBossIcon = document.querySelector('[data-header-boss]');
+    let headerContactIcon = document.querySelector('[data-header-contact]');
+
+    //hidden content
+    let onClickMapContent = document.querySelector('[data-map-mobile-content]');
+    let onClickBossContent = document.querySelector('[data-boss-mobile-content]');
+    let onClickContactContent = document.querySelector('[data-contact-mobile-content]');
+
+
+    headerMapIcon.addEventListener('click', () => {
+        //cleaning other content
+        onClickBossContent.classList.add('hidden');
+        onClickContactContent.classList.add('hidden');
+        onClickContactContent.classList.remove('flex');
+        onClickBossContent.classList.remove('flex');
+        //display selected content
+        onClickMapContent.classList.toggle('hidden');
+    });
+
+    // another method is to use "toggle" for hidden class (as above),
+    // but then whe have an issue/warrning in twig file with hidden and flex used simultaneously:
+    // 'hidden' applies the same CSS properties as 'flex'
+    headerBossIcon.addEventListener('click', () => {
+        onClickMapContent.classList.add('hidden');
+        onClickContactContent.classList.add('hidden');
+        onClickContactContent.classList.remove('flex');
+
+        if (onClickBossContent.classList.contains('flex')){
+            onClickBossContent.classList.replace('flex', 'hidden');
+        }else{
+            onClickBossContent.classList.replace('hidden', 'flex');
+        };
+    });
+
+    headerContactIcon.addEventListener('click', () => {
+        onClickMapContent.classList.add('hidden');
+        onClickBossContent.classList.add('hidden');
+        onClickBossContent.classList.remove('flex');
+
+        if (onClickContactContent.classList.contains('flex')){
+            onClickContactContent.classList.replace('flex', 'hidden');
+        }else{
+            onClickContactContent.classList.replace('hidden', 'flex');
+        };
+    });
+
+
+
+
 };
 
 
@@ -234,102 +284,8 @@ HamburgerMenu();
 BackToTop();
 ShowOfferDescriptionOnHover();
 DynamicDropMenu();
+HeaderOnMobile();
 
 
 //------------------------------------------------------------
 });
-
-//backup
-// //Drop menu change to fixed under navbar after scroll
-// function DynamicDropMenu(){
-//     //on scroll content
-//     let dropMenu = document.querySelector('[data-drop-menu]');
-//     let closeMenuBtn = document.querySelector('[data-close-button]');
-//     let openMenuBtn = document.querySelector('[data-btn-open-drop-menu]');
-
-//     //on hover content
-//     let mapContent = document.querySelector('[data-map-content]');
-//     let bossContent = document.querySelector('[data-boss-content]');
-//     let contactContent = document.querySelector('[data-contact-content]');
-
-
-//     function DropMenuBackToHomePos(){
-//         //Drop menu + close button (return to swiper)
-//         dropMenu.classList.remove('fixed', 'top-[96px]', 'right-[7%]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]');
-//         dropMenu.classList.add('absolute', 'top-[25%]', 'right-[0]', 'grid-cols-3', 'grid-cols-[100px]', 'w-[100px]');
-//         closeMenuBtn.classList.add('invisible');
-
-//         //Map content display after hover
-//         mapContent.classList.remove('right-[790px]', 'top-[120px]');
-//         mapContent.classList.add('right-[100px]', 'top-[20px]');
-
-//         //Boss content display after hover
-//         bossContent.classList.remove('right-[410px]', 'top-[80px]');
-//         bossContent.classList.add('right-[100px]', 'top-[-70px]');
-
-//         //Contact content display after hover
-//         contactContent.classList.remove('right-[40px]', 'top-[80px]');
-//         contactContent.classList.add('right-[100px]', 'top-[-20px]');
-
-//         //back to visible menu on swiper
-//         dropMenu.classList.remove('invisible');
-//     };
-
-//     function ShowDropMenuFixed(){
-//         // Drop menu + close button
-//         dropMenu.classList.remove('absolute', 'top-[25%]', 'right-[0]', 'grid-cols-3', 'grid-cols-[100px]', 'w-[100px]');
-//         dropMenu.classList.add('invisible', 'fixed', 'top-[-100px]', 'right-[7%]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]');
-//         setTimeout(() => {
-//             dropMenu.classList.add('animation');
-//         },1000);
-//         closeMenuBtn.classList.remove('invisible');
-
-//         //Map content display after hover
-//         mapContent.classList.remove('right-[100px]', 'top-[20px]');
-//         mapContent.classList.add('right-[790px]', 'top-[120px]');
-
-//         //Boss content display after hover
-//         bossContent.classList.remove('right-[100px]', 'top-[-70px]');
-//         bossContent.classList.add('right-[410px]', 'top-[80px]');
-
-//         //Contact content display after hover
-//         contactContent.classList.remove('right-[100px]', 'top-[-20px]');
-//         contactContent.classList.add('right-[40px]', 'top-[80px]');
-//     };
-
-//     function OpenCloseDropMenu(){
-//         //Close menu button - close menu
-//         closeMenuBtn.addEventListener('click', () => {
-//             dropMenu.classList.add('invisible');
-//             //show open menu button
-//             openMenuBtn.classList.remove('invisible');
-//         });
-
-//         //Open menu button - show menu
-//         openMenuBtn.addEventListener('click', () => {
-//             dropMenu.classList.remove('invisible');
-//             dropMenu.classList.add('visible');
-//             openMenuBtn.classList.add('invisible');
-//         });
-
-//         //Open menu button - hide itself
-//         if (dropMenu.classList.contains('fixed') && !dropMenu.classList.contains('invisible')){
-//             openMenuBtn.classList.remove('visible');
-//             openMenuBtn.classList.add('invisible');
-//         };
-//     };
-
-//     document.addEventListener('scroll', () => {
-//         if ((window.scrollY) > 560){
-//             ShowDropMenuFixed();
-//             OpenCloseDropMenu();
-
-//         }else if ((window.scrollY > 700)){
-            
-//         }else{
-//             DropMenuBackToHomePos();
-//         };
-//     });
-// };
-
-
