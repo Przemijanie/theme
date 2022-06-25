@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="xl:container mx-auto xl:px-[40px] lg§py-[120px] py-[40px] lg:mb-40 mb-52">
+{% if content %}
+  <div{{ attributes.addClass('grid grid-cols-1 md:grid-cols-2 z-[-1]') }}>
+
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first px-[30px]') }}>
+        {{ content.first }}
+      </div>
+    {% endif %}
+
+    {% if content.second %}
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second px-[30px] z-[-1] test flex justify-end md:block') }}>
+        {{ content.second }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}
+</div>

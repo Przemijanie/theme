@@ -5,7 +5,7 @@ global-styling:
     theme:
       assets/css/style.css: {}
       assets/css/rwd.css: {}
-      # css/layout.css: {}
+      assets/css/pages_layout.css: {}
       # css/colors.css: {}
 global-scripts:
   version: 1.x
