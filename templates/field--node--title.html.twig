@@ -31,9 +31,10 @@
 {% if not is_inline %}
   {% include "field.html.twig" %}
 {% else %}
-<span{{ attributes }}>
+<span{{ attributes.addClass('text-[#444] text-[36px] font-["Poppins"] text-center font-semibold mb-[14px]') }}>
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
 </span>
+<div class="decor-underline content-[''] mx-auto mt-[20px] bg-[#279e95] w-[40px] h-[2px]"></div>
 {% endif %}

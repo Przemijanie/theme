@@ -1,0 +1,82 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @see template_preprocess_field()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+{%
+set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+{% if label_hidden %}
+{% if multiple %}
+
+    <div class="twig-field-1 w-[900px] mx-auto px-[15px]" {{ attributes }}>
+        {# title styling  #}
+        {# <div class="my-[100px]">
+            <p class="mb-20 mt-24 text-[#444] text-[36px] font-['Poppins'] text-center font-semibold before:relative before:top-[30px] before:right-[-78px] before:inline-block before:mr-[10px] before:content-[''] before:bg-[#279e95] before:w-[40px] before:h-[2px]">
+                New title
+            </p>
+        </div> #}
+    {% for item in items %}
+        <div {{ item.attributes }}>{{ item.content }}</div>
+    {% endfor %}
+    </div>
+{% else %}
+    {% for item in items %}
+    <div class="twig-field-2" {{ attributes }}>{{ item.content }}</div>
+    {% endfor %}
+{% endif %}
+{% else %}
+<div class="twig-field-3" {{ attributes }}>
+    <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% if multiple %}
+    <div class="twig-field-4">
+    {% endif %}
+    {% for item in items %}
+    <div class="twig-field-5" {{ item.attributes }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+  
