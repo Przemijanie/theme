@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div{{ attributes }} class="twig-primary-menu flex justify-between bg-[#fff] py-[20px] px-[110px] sticky top-0 z-[5] shadow-[0_3px_3px_rgba(0,0,0,0.1)]">
+    {{ content }}
+  </div>
+{% endif %}
+

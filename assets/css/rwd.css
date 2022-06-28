@@ -1,15 +1,4 @@
 @media screen and (max-width: 1280px){
-    /* Header container width */
-    #block-treschtml > div{
-        max-width: 100%;
-    }
-
-    /* Header contact bar */
-    body > div > div.layout-container > header > div {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
     /* Menu list */
     body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
         padding: 20px 20px;
@@ -77,6 +66,7 @@
         width: 415px!important;
     }
 }
+
 @media screen and (max-width: 1024px){
     /* Header Menu */
     body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
@@ -84,12 +74,6 @@
     }
     .header-general{
         height: 80px;
-    }
-
-    /* Header contact bar */
-    body > div > div.layout-container > header > div {
-        padding-left: 0;
-        padding-right: 0;
     }
 
     /* Menu list */
@@ -106,12 +90,6 @@
         top:50%; 
         transform: translate(-50%, -50%);
     }
-
-    /* Swiper button  */
-    /* .views-field-field-przycisk{
-        top:70%; 
-        transform: translate(-50%, -50%) scale(0.65);
-    } */
 
     /* ---------------------------CTA 1024px--------------------------- */
     /* CTA box with text positioning */
@@ -166,11 +144,6 @@
         top: 130px;
         left: 75px;
     }
-
-    /* Nasza oferta title hidden */
-    /* .views-field-title{
-        display: none;
-    } */
 
     /* Nasza oferta body (img description) */
     .views-field-body{
