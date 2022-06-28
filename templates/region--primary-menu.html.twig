@@ -15,7 +15,13 @@
  */
 #}
 {% if content %}
-  <div{{ attributes }} class="twig-primary-menu flex justify-between bg-[#fff] py-[20px] px-[110px] sticky top-0 z-[5] shadow-[0_3px_3px_rgba(0,0,0,0.1)]">
+  <div{{ attributes }} class=
+  "
+  twig-primary-menu
+  flex justify-between flex-col lg:flex-row
+  bg-[#fff] pt-[5px] pb-[10px] lg:py-[20px] px-[10px] md:px-[20px] xl:px-[110px]
+  sticky top-0 z-[5] shadow-[0_3px_3px_rgba(0,0,0,0.1)]
+  ">
     {{ content }}
   </div>
 {% endif %}

@@ -3,10 +3,11 @@ global-styling:
   version: 1.x
   css:
     theme:
+      assets/css/swiper_banner.css: {}
       assets/css/style.css: {}
-      assets/css/rwd.css: {}
       assets/css/pages_layout.css: {}
-      # css/colors.css: {}
+      assets/css/sticky_drop_menu.css: {}
+      assets/css/rwd.css: {}
 global-scripts:
   version: 1.x
   js:

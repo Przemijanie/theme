@@ -1,21 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
 
-body{
-    color: #787878;
-    font-weight: 400;
-    font-size: 16px;
-    font-family: "Poppins";
-    line-height: 27px;
-}
-
-header{
-    color: #fff;
-    font-weight: 300;
-    font-size: 14px;
-    font-family: "Roboto";
-}
-
 h1, h2, h3{
     font-family: "Poppins";
 }
@@ -24,346 +9,31 @@ p{
     font-family: "Roboto";
 }
 
-/* ---------------------------MENU--------------------------- */
-/* Header Menu NavBar */
-/* .twig-primary-menu{
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    max-width: 100%;
-    padding: 20px 110px;
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
-} */
-
 /* ---------------------Back to top scroll button--------------------- */
 /* Animation */
-#back-to-top-button{
-    bottom: 0px;
-    transition: 0.3s ease-in-out;
-    opacity: 0;
-}
-
+#back-to-top-button,
 #back-to-top-button-hover{
-    bottom: 0px;
-    opacity: 0;
     transition: 0.3s ease-in-out;
 }
 
-#btn-scroll-container{
-    z-index: 1;
+/* ---------------------O NAS section--------------------- */
+/* CTA drupal titles hide */
+.twig-cta-info-dla-pacjent > div:nth-child(1),
+.twig-cta-wnioski > div:nth-child(1),
+.twig-cta-przycisk > div:nth-child(1),
+.twig-cta-icon-doc > div:nth-child(1){
+    display: none;
 }
 
-.btn-move{
-    bottom: 45px!important;
-    opacity: 1!important;
-}
-.btn-return{
-    bottom: 0px;
-}
-
-.scale{
-    transform: scale(1.3);
-}
-
-/* ---------------------------Swiper banner--------------------------- */
-/* Swiper */
-#swiper-banner-block-1{
-    margin-top: 0;
-}
-
-/* Swiper title */
-.swiper-title-css{
-    text-align: center;
-    color: #fff;
-    font-size: 54px;
-    font-weight: 600;
-    position: absolute;
-    left:50%; 
-    top:40%; 
-    transform: translate(-50%, -50%);
-    width: 100%;
-}
-
-/* Swiper button */
-.views-field-field-przycisk{
-    position: absolute;
-    display: inline;
-    text-align: center;
-    left:50%; 
-    top:60%; 
-    transform: translate(-50%, -50%);
-}
-
-/* Swiper button */
-.views-field-field-przycisk > div{
-    background: #279e95;
-}
-
-/* Swiper button:hover */
-.views-field-field-przycisk > div:hover{
-    background: #30c7bc;
-    cursor: pointer;
-}
-
-/* Swiper pagination nav dots */
-.swiper-pagination > span{
-    background: #279e95;
-    width: 11px;
-    height: 11px;
-    z-index: -1;
-}
-.swiper-pagination {
-    z-index: 1!important;
-}
-
-/* ---------------------Swiper drop menu right side on Desktop--------------------- */
-
-/* Swiper drop menu hover MAP row */
-.link-drop-map{
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-}
-.map-container:hover div.link-drop-map{
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(-20px);
-}
-
-/* Swiper drop menu hover BOSS row */
-.link-drop-boss{
-    /* display: none!important; */
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-}
-.boss-container:hover .link-drop-boss{
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(20px);
-}
-
-/* Swiper drop menu hover CONTACT row */
-.link-drop-contact{
-    transition: all 0.3s ease-in-out;
-    visibility: hidden;
-    opacity: 0;
-}
-.contact-container:hover .link-drop-contact{
-    transform: translateY(20px);
-    visibility: visible;
-    opacity: 1;
-}
-
-/* ---------------------Swiper drop menu right side on Mobile--------------------- */
-
-/* Swiper drop menu click MAP row */
-.header-map-click{
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(-20px);
-}
-
-/* Swiper drop menu click BOSS row */
-.header-boss-click{
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(20px);
-}
-
-/* Swiper drop menu click CONTACT row */
-.header-contact-click{
-    transform: translateY(20px);
-    visibility: visible;
-    opacity: 1;
-}
-/* ---------------------END Swiper drop menu right side on Mobile--------------------- */
-
-
-/* Display title of open/close drop menu button */
-.hover-btn-title{
-    opacity: 0;
-    transition: 0.2s ease;
-}
-.btn-open-drop-menu:hover .hover-btn-title{
-    opacity: 1;
-}
-.hover-btn-close-menu{
-    opacity: 0;
-    transition: 0.2s ease;
-}
-.close-button:hover .hover-btn-close-menu{
-    opacity: 1;
-}
-
-/* Arrow pointer on hover */
-.hover-btn-title:after{
-    content: '';
-    width: 10px;
-    height: 10px;
-    background: #000;
-    transform: rotate(45deg);
-    position: absolute;
-    right: -4px;
-    top: 9px;
-}
-.hover-btn-close-menu:after{
-    content: '';
-    width: 10px;
-    height: 10px;
-    background: #000;
-    transform: rotate(45deg);
-    position: absolute;
-    right: 47px;
-    top: 22px;
-}
-
-/* ---------------------O NAS section + CTA--------------------- */
-/* ---------------------------CTA desktop--------------------------- */
-/* CTA box with text positioning */
-.layout__region--second.px-\[30px\] > div{
-    position: relative;
-}
-.layout__region--second > div > div:nth-child(2),
-.layout__region--second > div > div:nth-child(3),
-.layout__region--second > div > div:nth-child(4){
-    width: 320px;
-    left: 255px;
-
-    background: #279e95;
-    color: #fff;
-    position: absolute;
-    padding: 25px 40px;
-}
-/* CTA DOC img */
-.layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
-    background: #279e95;
-    position: absolute;
-    left: 135px;
-    top: 430px;
-    width: 120px;
-    padding: 20px 20px 146px 20px;
-}
-/* CTA title info dla pacjentow */
-.layout__region--second > div > div:nth-child(2){
-    position: absolute;
-    font-size: 24px;
-    font-weight: 600;
-    top: 430px;
-}
-/* CTA subtitle wnioski i zgody */
-.layout__region--second > div > div:nth-child(3){
-    position: absolute;
-    top: 525px;
-    font-family: 'Roboto';
-
-}
-/* CTA button do pobrania */
-.layout__region--second > div > div:nth-child(4){
-    position: absolute;
-    top: 575px;
-    padding-bottom: 25px;
-
-}
-
-#block-przemijanie-content > article > div:nth-child(1) > div.xl\:container.mx-auto.xl\:px-\[40px\].py-\[120px\].mb-40 > div > div.layout__region.layout__region--second.px-\[30px\] > div > div.twig-field.h-\[100\%\].lg\:h-auto.lg\:container > p > img{
-    z-index: 0;
-}
-
-/* CTA button styling */
-.layout__region--second > div > div:nth-child(4) > div:nth-child(2) > div{
-    background: #fff;
-    color: #279e95;
-    border-radius: 30px;
-    padding: 15px 40px;
-    width: 180px;
-    font-size: 14px;
-    letter-spacing: .05em;
-    text-align: center;
-}
 /* CTA button hover */
-.layout__region--second > div > div:nth-child(4) > div:nth-child(2) > div:hover{
+.twig-cta-btn-css:hover{
     cursor: pointer;
     opacity: 0.8;
 }
 
-/* CTA drupal titles hide */
-.layout__region--second > div > div:nth-child(2) > div:nth-child(1),
-.layout__region--second > div > div:nth-child(3) > div:nth-child(1),
-.layout__region--second > div > div:nth-child(4) > div:nth-child(1){
-    display: none;
-}
-/* CTA img title hide */
-.layout__region--second > div > div:nth-child(5) > div:nth-child(1){
-    display: none;
-}
-
-/* fb icon under CTA img */
-#block-przemijanie-content > article > div:nth-child(1) > div > div > div > div > .twig-field > svg{
-    display: none;
-}
-/* ---------------------------CTA end--------------------------- */
-
-/* ---------------------Nasza oferta section--------------------- */
-/* ---------------------Section Title styling------------------------ */
-/* Container Nasza oferta title */
-.views-element-container > h2{
-    text-align: center;
-    position: relative;
-    font-size: 36px;
-    color: #444;
-    font-weight: 600;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    z-index: 0;
-}
-
-/* Nasza oferta title center */
-.views-element-container{
-    display: flex;
-    justify-content: center;
-}
-
-/* Nasza oferta title background */
-#block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
-    position: absolute;
-    content: 'Nasza oferta';
-    width: 800px;
-    color: #fff;
-    font-size: 120px;
-    top: 10px;
-    left: -285px;
-    z-index: -1;
-}
-
-/* Nasza oferta title decor */
-.views-element-container > h2:after{
-    position: absolute;
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 2px;
-    background: #279e95;
-    top: 142px;
-    left: 95px;
-}
-/* ---------------------------End title styling--------------------------- */
-
-/* Nasza oferta Content container */
-#block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(2){
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
 /* ---------------------Aktualnosci section--------------------- */
 /* Aktualnosci create date font */
-.views-field-created{
+.date{
     color: #279e95;
 }
 
@@ -372,9 +42,6 @@ p{
     grid-template-columns:repeat(3, 1fr);
     gap: 50px;
 }
-/* #block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div > ul{
-    gap: 50px;
-} */
 
 /* ---------------------Footer--------------------- */
 /* temporary */
@@ -386,8 +53,7 @@ footer > div{
     margin: 100px auto 0 auto;
 }
 
-
-/* ---------------------------for js--------------------------- */
+/* ---------------------------for JS--------------------------- */
 .show{
     z-index: 0;
 }
@@ -407,13 +73,22 @@ footer > div{
     transform: translateY(100px);
 }
 .navbar-down{
-    opacity: 1!important; /* jak media queries są nizej to sa maja wieksza moc */
+    opacity: 1!important;
+}
+/* ---------------------Back to top scroll button for JS--------------------- */
+.btn-move{
+    bottom: 45px!important;
+    opacity: 1!important;
+}
+.btn-return{
+    bottom: 0px;
+}
+.scale{
+    transform: scale(1.3);
 }
 
 
-
-
-/* temporary */
+/* temporary, testing */
 /* Menu slide down on mobile */
 @media screen and (max-width: 1024px) {
     .menu-list{
@@ -428,6 +103,3 @@ footer > div{
         z-index: 3;
     }
 }
-
-
-

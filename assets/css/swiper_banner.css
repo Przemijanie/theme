@@ -1,0 +1,49 @@
+/* Swiper */
+#swiper-banner-block-1{
+    margin-top: 0;
+}
+
+/* Swiper title */
+.swiper-title-css{
+    text-align: center;
+    color: #fff;
+    font-size: 54px;
+    font-weight: 600;
+    position: absolute;
+    left:50%; 
+    top:40%; 
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* Swiper button */
+.views-field-field-przycisk{
+    position: absolute;
+    display: inline;
+    text-align: center;
+    left:50%; 
+    top:60%; 
+    transform: translate(-50%, -50%);
+}
+
+/* Swiper button */
+.views-field-field-przycisk > div{
+    background: #279e95;
+}
+
+/* Swiper button:hover */
+.views-field-field-przycisk > div:hover{
+    background: #30c7bc;
+    cursor: pointer;
+}
+
+/* Swiper pagination nav dots */
+.swiper-pagination > span{
+    background: #279e95;
+    width: 11px;
+    height: 11px;
+    z-index: -1;
+}
+.swiper-pagination {
+    z-index: 1!important;
+}

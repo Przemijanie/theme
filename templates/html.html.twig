@@ -60,47 +60,159 @@
       }
     </script>
   </head>
-  <body{{ attributes }}>
-    {# Header for mobile map section#}
-    <div data-map-mobile-content class="hidden lg:hidden h-[250px] w-[100%] right-[100px] top-[20px] shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5057.837940265929!2d17.934027!3d50.665765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75e44f5b4c5cb98b!2sFundacja%20Przemijanie!5e0!3m2!1spl!2spl!4v1655463882753!5m2!1spl!2spl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+  <body class="text-[#787878] font-normal text-[16px] font-['Poppins'] leading-[27px]"{{ attributes }}>
 
-    {# Header for mobile boss section#}
-      <div data-boss-mobile-content class="hidden lg:hidden bg-[#f7f7f7] flex-col h-[250px] w-[100%] text-center justify-center px-10 right-[100px] text-[#444] font-light top-[-70px] shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
-        <h5 class=" text-[20px] mb-[18px]"><i class="fa-solid fa-scale-balanced text-[25px] text-[#279e95] mr-[15px]"></i>Władze Fundacji</h5>
-        
-        <p class="mb-[15px] text-[15px] font-['Roboto']">ZARZĄD FUNDACJI:</p>
-        
-        <ul class="icn-list mb-[18px] text-[16px] pl-[24px] font-['Roboto']">
-          <li class="mb-[18px]">Magdalena Osińska-Kurzywilk - Prezes</li>
-          <li>Marek Trenka - Wiceprezes</li>
-        </ul>
+    {# -------------------------Sticky Drop Menu------------------------- #}
+    <div data-drop-menu class="drop-menu hidden z-[2] absolute top-[25%] right-0 lg:grid lg:grid-cols-1 grid-cols-[100px] w-[100px] text-[13px] text-white">
+      <div data-map-container class="map-container h-[100px] bg-[#228f86] flex items-center justify-center hover:cursor-pointer hover:text-[#279e95] transition ease hover:bg-white duration-300">
+        {# Map row title #}
+        <div data-map-row class="map-row flex flex-col text-center">
+          <i class="fa-solid fa-location-dot text-[35px]"></i>
+          <a class="link mt-1" href="#"><span class="text-[11px]">LOKALIZACJA</span></a>
+        </div>
+
+        {# Map hover content #}
+        <div data-map-content class="link-drop-map absolute h-[300px] w-[390px] right-[100px] top-[20px] shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5057.837940265929!2d17.934027!3d50.665765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75e44f5b4c5cb98b!2sFundacja%20Przemijanie!5e0!3m2!1spl!2spl!4v1655463882753!5m2!1spl!2spl" width="390" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
 
-    {# Header for mobile contact section#}
-    <div data-contact-mobile-content class="hidden lg:hidden bg-[#f7f7f7] flex-col h-[250px] w-[100%] text-center justify-center px-10 right-[100px] text-[#444] font-light top-[-20px] shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
-      <h5 class="link-drop-title text-[20px] mb-[18px]"><i class="fa-solid fa-phone text-[25px] text-[#279e95] mr-[15px]"></i>Kontakt</h5>
+      <div data-boss-container  class="boss-container h-[100px] bg-[#269e95] flex items-center justify-center hover:cursor-pointer hover:text-[#279e95] transition ease hover:bg-white duration-300">
+        {# Boss row title #}
+        <div data-boss-row class="boss-row flex flex-col text-center">
+          <i class="fa-solid fa-scale-balanced text-[35px]"></i>
+          <a class="link mt-1" href="#"><span class="text-[11px]">WŁADZE<br>FUNDACJI</span></a>
+        </div>
+
+        {# Boss hover content #}
+        <div data-boss-content  class="link-drop-boss absolute bg-[#f7f7f7] flex flex-col h-[250px] w-[390px] justify-center px-10 right-[100px] text-[#444] font-light top-[-70px] shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
+          <h5 class="link-drop-title text-[20px] mb-[18px]"><i class="fa-solid fa-scale-balanced text-[25px] text-[#279e95] mr-[15px]"></i>Władze Fundacji</h5>
+          
+          <p class="mb-[15px] text-[15px] font-['Roboto']">ZARZĄD FUNDACJI:</p>
+          
+          <ul class="icn-list mb-[18px] text-[16px] pl-[24px] font-['Roboto']">
+            <li class="mb-[18px]">Magdalena Osińska-Kurzywilk - Prezes</li>
+            <li>Marek Trenka - Wiceprezes</li>
+          </ul>
+        </div>
+      </div>
       
-      <p class="mb-[15px] text-[15px] font-['Roboto']">Kontakt z fundacją możliwa za pomocą telefonu oraz email.</p>
       
-      <ul class="icn-list pl-[24px] font-['Roboto']">
-        <li class="text-[24px] font-normal mb-[18px]"><span class="phone"><i class="fa-solid fa-phone text-[14px] text-[#279e95]"></i>  +48 728 182 993 i/lub 77 50 00 334</span></li>
-        <li class="text-[16px]"><a href="mailto:biuro@przemijanie.pl"><span><i class="fa-solid fa-envelope text-[14px] text-[#279e95]"></i>  biuro@przemijanie.pl</span></a></li>
+      <div data-contact-container class="contact-container h-[100px] bg-[#3ba89f] flex items-center justify-center hover:cursor-pointer hover:text-[#279e95] transition ease hover:bg-white duration-300">
+        {# Contact row title #}
+        <div data-contact-row class="contact-row flex flex-col text-center">
+          <i class="fa-solid fa-phone text-[35px]"></i>
+          <a class="link mt-1" href="#"><span class="text-[11px]">KONTAKT</span></a>
+        </div>
+      
+        {# Contact hover content #}
+        <div data-contact-content class="link-drop-contact absolute bg-[#f7f7f7] flex flex-col h-[300px] w-[390px] justify-center px-10 right-[100px] text-[#444] font-light top-[-20px] shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
+          <h5 class="link-drop-title text-[20px] mb-[18px]"><i class="fa-solid fa-phone text-[25px] text-[#279e95] mr-[15px]"></i>Kontakt</h5>
+          
+          <p class="mb-[15px] text-[15px] font-['Roboto']">Kontakt z fundacją możliwa za pomocą telefonu oraz email.</p>
+          
+          <ul class="icn-list pl-[24px] font-['Roboto']">
+            <li class="text-[24px] font-normal mb-[18px]"><span class="phone"><i class="fa-solid fa-phone text-[14px] text-[#279e95]"></i>  +48 728 182 993 i/lub 77 50 00 334</span></li>
+            <li class="text-[16px]"><a href="mailto:biuro@przemijanie.pl"><span><i class="fa-solid fa-envelope text-[14px] text-[#279e95]"></i>  biuro@przemijanie.pl</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      {# Close button #}
+      <div data-close-button class="close-button invisible w-[40px] h-[100px] bg-white lg:flex justify-center items-center text-2xl text-black hover:cursor-pointer">
+        <p class="arrow-up"><i class="fa-solid fa-chevron-up"></i></p>
+        <div data-hover-btn-title class="hover-btn-close-menu top-[5px] xl:right-[-47px] lg:right-[-52px] w-[105px] h-[28px] py-1 px-2 bg-black text-sm text-white font-['Roboto']">Zamknij panel</div>
+      </div>
+    </div>
+
+    {# -------------------------Header for mobile------------------------- #}
+    {# Header for mobile MAP section#}
+    <div data-map-mobile-content class=
+    "hidden lg:hidden h-[250px] w-[100%] right-[100px] top-[20px] shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
+      <iframe src=
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5057.837940265929!2d17.934027!3d50.665765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75e44f5b4c5cb98b!2sFundacja%20Przemijanie!5e0!3m2!1spl!2spl!4v1655463882753!5m2!1spl!2spl"
+      width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    {# Header for mobile BOSS section #}
+    <div data-boss-mobile-content class=
+    "hidden lg:hidden bg-[#f7f7f7] flex-col h-[250px] w-[100%] text-center
+    justify-center px-10 right-[100px] text-[#444] font-light top-[-70px]
+    shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
+      <h5 class=" text-[20px] mb-[18px]">
+        <i class="fa-solid fa-scale-balanced text-[25px] text-[#279e95] mr-[15px]"></i>Władze Fundacji
+      </h5>
+      
+      <p class="mb-[15px] text-[15px] font-['Roboto']">
+        ZARZĄD FUNDACJI:
+      </p>
+      
+      <ul class="icn-list mb-[18px] text-[16px] pl-[24px] font-['Roboto']">
+        <li class="mb-[18px]">Magdalena Osińska-Kurzywilk - Prezes</li>
+        <li>Marek Trenka - Wiceprezes</li>
       </ul>
     </div>
 
-    {# Back to top btn #}
-    <div data-btn-scroll-container id="btn-scroll-container" class="html-twig fixed right-[25px] bottom-[45px] w-[63px] h-[63px]">
-      <div data-back-to-top-button-hover id="back-to-top-button-hover" class="fixed w-[63px] h-[63px] rounded-full bg-[#279e9435]"></div>
-      <a data-back-to-top-button id="back-to-top-button" class="fixed w-[63px] h-[63px] text-2xl text-white flex justify-center items-center rounded-full bg-[#279e95] cursor-pointer"><i class="fa-solid fa-arrow-up"></i></a>
+    {# Header for mobile CONTACT section #}
+    <div data-contact-mobile-content class=
+    "hidden lg:hidden bg-[#f7f7f7] flex-col h-[250px] w-[100%] text-center
+    justify-center px-10 right-[100px] text-[#444] font-light top-[-20px]
+    shadow-[0_5px_5px_rgba(0,0,0,0.1)]">
+      <h5 class="link-drop-title text-[20px] mb-[18px]">
+        <i class="fa-solid fa-phone text-[25px] text-[#279e95] mr-[15px]"></i>Kontakt
+      </h5>
+      
+      <p class="mb-[15px] text-[15px] font-['Roboto']">
+        Kontakt z fundacją możliwa za pomocą telefonu oraz email.
+      </p>
+      
+      <ul class="icn-list pl-[24px] font-['Roboto']">
+        <li class="text-[24px] font-normal mb-[18px]">
+          <span class="phone">
+            <i class="fa-solid fa-phone text-[14px] text-[#279e95]"></i>  +48 728 182 993 i/lub 77 50 00 334
+          </span>
+        </li>
+
+        <li class="text-[16px]">
+          <a href="mailto:biuro@przemijanie.pl">
+            <span>
+              <i class="fa-solid fa-envelope text-[14px] text-[#279e95]"></i>  biuro@przemijanie.pl
+            </span>
+          </a>
+        </li> 
+      </ul>
     </div>
 
     {# Open drop menu button (after scroll) #}
-    <div data-btn-open-drop-menu class="btn-open-drop-menu html-twig invisible fixed right-[-33px] top-[73px] w-[80px] h-[60px] rotate-45 pb-1 text-xl text-[#424242] flex justify-center items-end bg-[#269e9550] hover:bg-[#269e9590] hover:text-white hover:cursor-pointer">
+    <div data-btn-open-drop-menu class=
+    "btn-open-drop-menu html-twig
+    invisible fixed right-[-33px] top-[73px] w-[80px] h-[60px] rotate-45
+    pb-1 text-xl text-[#424242] flex justify-center items-end bg-[#269e9550]
+    hover:bg-[#269e9590] hover:text-white hover:cursor-pointer">
       <i class="fa-solid fa-plus -rotate-45"></i>
-      <div class="hover-btn-title -rotate-45 absolute top-[79px] right-[40px] w-[98px] h-[28px] py-1 px-2 bg-black text-sm text-white font-['Roboto']">Otwórz panel</div>
+      <div class=
+      "hover-btn-title -rotate-45 absolute top-[79px] right-[40px] w-[98px] h-[28px] py-1 px-2
+      bg-black text-sm text-white font-['Roboto']">
+        Otwórz panel
+      </div>
     </div>
+
+    {# Back to top btn after scroll#}
+    <div data-btn-scroll-container id="btn-scroll-container" class=
+    "html-twig fixed right-[25px] bottom-[45px] w-[63px] h-[63px] z-[1]">
+
+      <div data-back-to-top-button-hover id="back-to-top-button-hover" class=
+      "bottom-0 opacity-0 fixed w-[63px] h-[63px] rounded-full bg-[#279e9435]">
+      </div>
+
+      <a data-back-to-top-button id="back-to-top-button" class=
+      "bottom-0 opacity-0 fixed w-[63px] h-[63px] text-2xl text-white
+      flex justify-center items-center rounded-full bg-[#279e95] cursor-pointer">          
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+    
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.

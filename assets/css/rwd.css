@@ -1,9 +1,4 @@
 @media screen and (max-width: 1280px){
-    /* Menu list */
-    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
-        padding: 20px 20px;
-    }
-
     /* Swiper title */
     .swiper-title-css{
         font-size: 44px;
@@ -18,39 +13,40 @@
         transform: translate(-50%, -50%) scale(0.9);
     }
 
-    /* ---------------------------CTA 1280px--------------------------- */
+    /* ---------------------------CTA 1280px !important bo w twigach jest stylowanie--------------------------- */
     /* CTA box with text positioning */
-    .layout__region--second > div > div:nth-child(2),
-    .layout__region--second > div > div:nth-child(3),
-    .layout__region--second > div > div:nth-child(4){
-        width: 240px;
-        left: 215px;
+    .twig-cta-info-dla-pacjent,
+    .twig-cta-wnioski,
+    .twig-cta-przycisk{
+        width: 240px!important;
+        left: 215px!important;
     }
+
     /* CTA DOC img */
-    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
-        padding: 30px 20px 111px 20px;
-        left: 110px;
-        width: 105px;
+    .twig-cta-icon-doc{
+        padding: 30px 20px 111px 20px!important;
+        left: 110px!important;
+        width: 105px!important;
     }
+
     /* CTA title info dla pacjentow */
-    .layout__region--second > div > div:nth-child(2){
-        font-size: 20px;
-        line-height: 1.2em;
-        padding: 30px 15px 10px 15px;
-        /* padding-top: 25px; */
+    .twig-cta-info-dla-pacjent{
+        font-size: 20px!important;
+        line-height: 1.2em!important;
+        padding: 30px 15px 10px 15px!important;
     }
+
     /* CTA subtitle wnioski i zgody */
-    .layout__region--second > div > div:nth-child(3){
-        font-size: 15px;
-        font-family: 'Roboto';
-        padding: 5px 15px;
-        top: 518px;
+    .twig-cta-wnioski{
+        font-size: 15px!important;
+        padding: 5px 15px!important;
+        top: 518px!important;
     }
+
     /* CTA button do pobrania */
-    .layout__region--second > div > div:nth-child(4){
-        padding: 15px 15px 30px 15px;
-        /* padding-bottom: 15px; */
-        top: 540px;
+    .twig-cta-przycisk{
+        padding: 15px 15px 30px 15px!important;
+        top: 540px!important;
     }
     /* ---------------------------CTA end--------------------------- */
 }
@@ -62,25 +58,12 @@
     }
 
     /* Nasza oferta img */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(2) > div > div > ul > li > div.views-field.views-field-field-zdjecie > div > img{
-        width: 415px!important;
+    .offer-img > img{
+        width: 415px;
     }
 }
 
 @media screen and (max-width: 1024px){
-    /* Header Menu */
-    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2){
-        flex-direction: column;
-    }
-    .header-general{
-        height: 80px;
-    }
-
-    /* Menu list */
-    body > div.dialog-off-canvas-main-canvas > div > div:nth-child(2) {
-        padding: 5px 10px 10px 10px;    
-    }
-
     /* Swiper title */
     .swiper-title-css{
         font-size: 40px;
@@ -93,54 +76,57 @@
 
     /* ---------------------------CTA 1024px--------------------------- */
     /* CTA box with text positioning */
-    .layout__region--second > div > div:nth-child(2),
-    .layout__region--second > div > div:nth-child(3),
-    .layout__region--second > div > div:nth-child(4){
-        width: 220px;
-        left: 120px;
+    .twig-cta-info-dla-pacjent,
+    .twig-cta-wnioski,
+    .twig-cta-przycisk{
+        width: 220px!important;
+        left: 120px!important;
     }
+
     /* CTA DOC img */
-    .layout__region--second > div > div:nth-child(5) > div:nth-child(2) > img {
-        padding: 22px 10px 111px 10px;
-        left: 40px;
-        width: 80px
+    .twig-cta-icon-doc{
+        padding: 22px 10px 111px 10px!important;
+        left: 40px!important;
+        width: 80px!important;
     }
+
     /* CTA title info dla pacjentow */
-    .layout__region--second > div > div:nth-child(2){
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.1em;
-        padding: 25px 15px 15px 15px;
+    .twig-cta-info-dla-pacjent{
+        font-weight: 500!important;
+        font-size: 18px!important;
+        line-height: 1.1em!important;
+        padding: 25px 15px 15px 15px!important;
     }
+
     /* CTA subtitle wnioski i zgody */
-    .layout__region--second > div > div:nth-child(3){
-        font-size: 15px;
-        font-family: 'Roboto';
-        padding: 5px 15px;
-        top: 500px;
+    .twig-cta-wnioski{
+        font-size: 15px!important;
+        padding: 5px 15px!important;
+        top: 500px!important;
     }
+
     /* CTA button do pobrania */
-    .layout__region--second > div > div:nth-child(4){
-        font-size: 13px;
-        padding: 15px 15px 25px 15px;
-        top: 532px;
+    .twig-cta-przycisk{
+        font-size: 13px!important;
+        padding: 15px 15px 25px 15px!important;
+        top: 532px!important;
     }
     /* ---------------------------CTA end--------------------------- */
 
     /* ---------------------------Nasza oferta--------------------------- */
     /* Nasza oferta title background */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.twig-nasza-oferta-container > h2:before{
         font-size: 100px;
         width: 750px;
         top: 22px;
         left: -285px;
     }
     /* Container Nasza oferta title */
-    .views-element-container > h2{
+    .twig-nasza-oferta-container > h2{
         font-size: 30px;
     }
     /* Nasza oferta title decor */
-    .views-element-container > h2:after{
+    .twig-nasza-oferta-container > h2:after{
         top: 130px;
         left: 75px;
     }
@@ -174,26 +160,20 @@
         text-shadow: 0px 1px 4px #444;
     }
 
-    /* Header green info banner */
-    .header-general{
-        height: 40px;
-        font-size: 9px;
-    }
-
     /* ---------------------------Nasza oferta--------------------------- */
     /* Nasza oferta title background */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.twig-nasza-oferta-container > h2:before{
         font-size: 80px;
         width: 620px;
         top: 32px;
         left: -230px;
     }
     /* Container Nasza oferta title */
-    .views-element-container > h2{
+    .twig-nasza-oferta-container > h2{
         font-size: 25px;
     }
     /* Nasza oferta title decor */
-    .views-element-container > h2:after{
+    .twig-nasza-oferta-container > h2:after{
         top: 125px;
         left: 62px;
     }
@@ -207,18 +187,18 @@
 @media screen and (max-width: 640px){
     /* ---------------------------Nasza oferta--------------------------- */
     /* Nasza oferta title background */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.twig-nasza-oferta-container > h2:before{
         font-size: 70px;
         width: 480px;
         top: 40px;
         left: -160px;
     }
     /* Container Nasza oferta title */
-    .views-element-container > h2{
+    .twig-nasza-oferta-container > h2{
         font-size: 25px;
     }
     /* Nasza oferta title decor */
-    .views-element-container > h2:after{
+    .twig-nasza-oferta-container > h2:after{
         top: 125px;
         left: 65px;
     }
@@ -227,18 +207,18 @@
 @media screen and (max-width: 400px){
     /* ---------------------------Nasza oferta--------------------------- */
     /* Nasza oferta title background */
-    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.views-element-container > h2:before{
+    #block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) > div > div.twig-nasza-oferta-container > h2:before{
         font-size: 55px;
         width: 380px;
         top: 55px;
         left: -110px;
     }
     /* Container Nasza oferta title */
-    .views-element-container > h2{
+    .twig-nasza-oferta-container > h2{
         font-size: 25px;
     }
     /* Nasza oferta title decor */
-    .views-element-container > h2:after{
+    .twig-nasza-oferta-container > h2:after{
         top: 120px;
         left: 60px;
     }

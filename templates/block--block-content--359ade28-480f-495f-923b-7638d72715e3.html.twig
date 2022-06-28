@@ -27,20 +27,13 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes }} class="twig02">
+<div class="twig-cta-container relative"{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</div></h2>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-  <div class=
-    "
-    twig03
-    md:h-[80px] lg:h-[40px]
-    flex items-center justify-center
-    ">
     {{ content }}
-  </div>
   {% endblock %}
 </div>

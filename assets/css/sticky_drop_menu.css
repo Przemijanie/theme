@@ -1,0 +1,100 @@
+/* Swiper drop menu hover MAP row */
+.link-drop-map{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.map-container:hover div.link-drop-map{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+/* Swiper drop menu hover BOSS row */
+.link-drop-boss{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.boss-container:hover .link-drop-boss{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+/* Swiper drop menu hover CONTACT row */
+.link-drop-contact{
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+.contact-container:hover .link-drop-contact{
+    transform: translateY(20px);
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ---------------------Swiper drop menu right side on Mobile--------------------- */
+
+/* Swiper drop menu click MAP row */
+.header-map-click{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+/* Swiper drop menu click BOSS row */
+.header-boss-click{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+/* Swiper drop menu click CONTACT row */
+.header-contact-click{
+    transform: translateY(20px);
+    visibility: visible;
+    opacity: 1;
+}
+/* ---------------------END Swiper drop menu right side on Mobile--------------------- */
+
+
+/* Display title of open/close drop menu button */
+.hover-btn-title{
+    opacity: 0;
+    transition: 0.2s ease;
+}
+.btn-open-drop-menu:hover .hover-btn-title{
+    opacity: 1;
+}
+.hover-btn-close-menu{
+    opacity: 0;
+    transition: 0.2s ease;
+}
+.close-button:hover .hover-btn-close-menu{
+    opacity: 1;
+}
+
+/* Arrow pointer on hover */
+/* rectangle */
+.hover-btn-title:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -4px;
+    top: 9px;
+}
+/* triangle */
+.hover-btn-close-menu:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 47px;
+    top: 22px;
+}
