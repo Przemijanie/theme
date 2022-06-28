@@ -9,13 +9,6 @@ p{
     font-family: "Roboto";
 }
 
-/* ---------------------Back to top scroll button--------------------- */
-/* Animation */
-#back-to-top-button,
-#back-to-top-button-hover{
-    transition: 0.3s ease-in-out;
-}
-
 /* ---------------------O NAS section--------------------- */
 /* CTA drupal titles hide */
 .twig-cta-info-dla-pacjent > div:nth-child(1),
@@ -23,34 +16,6 @@ p{
 .twig-cta-przycisk > div:nth-child(1),
 .twig-cta-icon-doc > div:nth-child(1){
     display: none;
-}
-
-/* CTA button hover */
-.twig-cta-btn-css:hover{
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-/* ---------------------Aktualnosci section--------------------- */
-/* Aktualnosci create date font */
-.date{
-    color: #279e95;
-}
-
-/* Aktualności grid */
-#block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div > ul{
-    grid-template-columns:repeat(3, 1fr);
-    gap: 50px;
-}
-
-/* ---------------------Footer--------------------- */
-/* temporary */
-footer > div{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 100px auto 0 auto;
 }
 
 /* ---------------------------for JS--------------------------- */
@@ -87,6 +52,38 @@ footer > div{
     transform: scale(1.3);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------Aktualnosci section not finished--------------------- */
+/* Aktualnosci create date font */
+.date{
+    color: #279e95;
+}
+
+/* Aktualności grid */
+div.item-list > ul.ul-list{
+    grid-template-columns:repeat(3, 1fr);
+    gap: 50px;
+}
+
+/* ---------------------Footer--------------------- */
+/* temporary */
+footer > div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 100px auto 0 auto;
+}
 
 /* temporary, testing */
 /* Menu slide down on mobile */

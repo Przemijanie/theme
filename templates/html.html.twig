@@ -54,6 +54,7 @@
             screens: {
               'xs2': '240px',
               'sm': '340px',
+              'sm2': '640px',
             }
           }
         }
@@ -81,7 +82,7 @@
         {# Boss row title #}
         <div data-boss-row class="boss-row flex flex-col text-center">
           <i class="fa-solid fa-scale-balanced text-[35px]"></i>
-          <a class="link mt-1" href="#"><span class="text-[11px]">WŁADZE<br>FUNDACJI</span></a>
+          <a class="link mt-1 text-[11px] leading-4" href="#"><span class="">WŁADZE</br>FUNDACJI</span></a>
         </div>
 
         {# Boss hover content #}
@@ -203,12 +204,12 @@
     "html-twig fixed right-[25px] bottom-[45px] w-[63px] h-[63px] z-[1]">
 
       <div data-back-to-top-button-hover id="back-to-top-button-hover" class=
-      "bottom-0 opacity-0 fixed w-[63px] h-[63px] rounded-full bg-[#279e9435]">
+      "bottom-0 opacity-0 fixed w-[63px] h-[63px] rounded-full bg-[#279e9435] transition-[ease_300] duration-300">
       </div>
 
       <a data-back-to-top-button id="back-to-top-button" class=
       "bottom-0 opacity-0 fixed w-[63px] h-[63px] text-2xl text-white
-      flex justify-center items-center rounded-full bg-[#279e95] cursor-pointer">          
+      flex justify-center items-center rounded-full bg-[#279e95] cursor-pointer transition-[ease_300] duration-300">          
         <i class="fa-solid fa-arrow-up"></i>
       </a>
     </div>

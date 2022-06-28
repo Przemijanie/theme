@@ -46,27 +46,24 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div {{ attributes }}>
+    <div{{ attributes }}>
       {% for item in items %}
         <div {{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div {{ attributes }}>{{ item.content }}</div>
+      <div class="twig-field-cta-body-01"{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div class="twig-cta-wnioski
-  bg-[#279e95] font-['Roboto'] text-[#fff]
-  "
-  {{ attributes }}>
+  <div{{ attributes }}>
     <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
       <div>
     {% endif %}
     {% for item in items %}
-      <div {{ item.attributes }}>{{ item.content }}</div>
+      <div{{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

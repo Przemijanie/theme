@@ -57,12 +57,8 @@
     {% endfor %}
   {% endif %}
 {% else %}
-  <div class=
-  "
-  twig-cta-przycisk
+  <div class="twig-cta-przycisk
   text-[#fff] bg-[#279e95]
-  px-[40px] py-[25px]
-  absolute top-[575px] left-[255px] w-[320px]
   "
   {{ attributes }}>
     <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
@@ -70,12 +66,11 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div class=
-      "
-      twig-cta-btn-css
+      <div class="twig-cta-btn-css
       bg-[#fff] text-[#279e95] rounded-[30px]
       text-[14px] tracking-wider text-center
       px-[40px] py-[15px] w-[180px]
+      hover:cursor-pointer hover:opacity-[0.8]
       "
       {{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
