@@ -69,10 +69,11 @@
       <div class="twig-cta-btn-css
       bg-[#fff] text-[#279e95] rounded-[30px]
       text-[14px] tracking-wider text-center
-      px-[40px] py-[15px] w-[180px]
+      px-[20px] py-[10px] lg:w-[150px]
+      lg:px-[30px] lg:py-[10px] lg:w-[180px]
       hover:cursor-pointer hover:opacity-[0.8]
       "
-      {{ item.attributes }}>{{ item.content }}</div>
+      {{ item.attributes }}>{{ item.content }}<span> </span><i class="fa-solid fa-arrow-right"></i></div>
     {% endfor %}
     {% if multiple %}
       </div>

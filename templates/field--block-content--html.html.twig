@@ -53,7 +53,7 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div class="twig-field flex items-center justify-between lg:container"{{ attributes }}>{{ item.content }}<i class="fa-brands fa-facebook fa-xl twig hidden lg:inline hover:opacity-50 hover:cursor-pointer"></i></div>
+      <div class="twig-field flex items-center justify-between lg:container w-[100%] z-[6]"{{ attributes }}>{{ item.content }}<i class="fa-brands fa-facebook fa-xl twig hidden lg:inline hover:opacity-50 hover:cursor-pointer"></i></div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -63,7 +63,7 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
+      <div {{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

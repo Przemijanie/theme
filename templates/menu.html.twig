@@ -32,12 +32,12 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes }} data-menu-list class="twig-menu menu-list lg:flex flex-col lg:flex-row lg:space-x-6 xl:space-x-8  text-[14px] xl:text-[15px] font-semibold lg:pt-0">
+      <ul{{ attributes }}>
     {% else %}
       <ul>
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes }} class="list-item text-[#444] lg:border-none sm:border-b hover:text-[#279e95] py-3 lg:py-0">
+      <li{{ item.attributes }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
@@ -45,17 +45,5 @@
       </li>
     {% endfor %}
     </ul>
-    <button data-menu-button class="menu-button md§text-4xl sm§text-[30px] text-[#444] absolute inline-block lg:hidden right-[30px] top-[25px]">
-      {# <i class="fa-solid fa-bars"></i> #}
-      <div class="bar w-[25px] h-[2px] bg-[#444] mb-[6px]"></div>
-      <div class="bar w-[25px] h-[2px] bg-[#444] mb-[6px]"></div>
-      <div class="bar w-[25px] h-[2px] bg-[#444] mb-[6px]"></div>
-    </button>
-    <button data-menu-close-button class="menu-close-button hidden md§text-5xl sm§text-[40px] text-[#444] absolute lg:hidden right-[30px] top-[25px] ">
-      {# <i class="fa-solid fa-xmark"></i> #}
-      <div class="bar w-[25px] h-[2px] bg-[#444] mb-[6px] translate-y-[8px] rotate-45"></div>
-      <div class="bar w-[25px] h-[2px] bg-[#444] mb-[6px] opacity-0"></div>
-      <div class="bar w-[25px] h-[2px] bg-[#444] mb-[6px] -translate-y-[8px] -rotate-45"></div>
-    </button>
   {% endif %}
 {% endmacro %}

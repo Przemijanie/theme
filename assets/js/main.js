@@ -12,12 +12,10 @@ function HamburgerMenu(){
     let layoutContent = document.querySelector('.layout-content');
 
     menuBtn.addEventListener('click', () => {
-        // menuList.classList.replace('hidden', 'flex');
         menuCloseBtn.classList.replace('hidden', 'inline-block');
         menuBtn.classList.replace('inline-block', 'hidden');
 
-        // menuList.classList.remove('navbar-up');
-        menuList.classList.add('navbar-down');
+        menuList.classList.remove('translate-y-[-830px]');
     });
 
     menuCloseBtn.addEventListener('click', () => {
@@ -25,11 +23,7 @@ function HamburgerMenu(){
         menuCloseBtn.classList.replace('inline-block', 'hidden');
         menuBtn.classList.replace('hidden', 'inline-block');
 
-        menuList.classList.remove('navbar-down');
-        console.log('navbar-up');
-        
-
-
+        menuList.classList.add('translate-y-[-830px]');
     });
 };
 
@@ -50,30 +44,32 @@ function BackToTop(){
             backToTopButton.classList.add('btn-move');
             backToTopButtonHover.classList.add('btn-move');
         }else{
-            backToTopButton.classList.replace('btn-move', 'btn-return');
-            backToTopButtonHover.classList.replace('btn-move', 'btn-return');
+            backToTopButton.classList.replace('btn-move', 'bottom-0');
+            backToTopButtonHover.classList.replace('btn-move', 'bottom-0');
         };
     });
     // transparent border around button active
     backToTopButton.addEventListener('mouseover', () => {
-        backToTopButtonHover.classList.toggle("scale");
+        backToTopButtonHover.classList.toggle("scale-[1.3]");
     });
     backToTopButton.addEventListener('mouseout', () => {
-        backToTopButtonHover.classList.toggle("scale");
+        backToTopButtonHover.classList.toggle("scale-[1.3]");
     });
 };
 
 // Nasza oferta section - show img description on hover
 function ShowOfferDescriptionOnHover(){
-    let hoverElem = document.querySelectorAll('.drupal-wiersz');
+    let hoverElem = document.querySelectorAll('.drupal-wiersz-twig');
     let ShowElem = document.querySelectorAll('.offer-img-body');
+
+
 
     for (let i = 0; i<5 ; i++){
         hoverElem[i].addEventListener('mouseover', () => {
-            ShowElem[i].classList.add('z-index-zero');
+            ShowElem[i].classList.add('z-[0]');
         });
         hoverElem[i].addEventListener('mouseout', () => {
-            ShowElem[i].classList.remove('z-index-zero');
+            ShowElem[i].classList.remove('z-[0]');
         });
     };
 };
@@ -95,7 +91,7 @@ function DynamicDropMenu(){
 
     function DropMenuReturnToHomePos(){
         //Drop menu + close button (return to swiper)
-        dropMenu.classList.remove('fixed', 'top-[-4px]', 'xl:mx-auto', 'xl:left-0', 'xl:right-0', 'xl:w-[1165px]', 'lg:mx-auto', 'lg:left-0', 'lg:right-0', 'lg:w-[920px]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]', 'transition-drop-menu', 'slide-down-drop-menu', 'xl:grid-cols-[380px_380px_380px_40px]', 'lg:grid-cols-[300px_300px_300px_40px]');
+        dropMenu.classList.remove('fixed', 'top-[-4px]', 'xl:mx-auto', 'xl:left-0', 'xl:right-0', 'xl:w-[1165px]', 'lg:mx-auto', 'lg:left-0', 'lg:right-0', 'lg:w-[920px]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]', 'transition-[ease_500ms]', 'slide-down-drop-menu', 'xl:grid-cols-[380px_380px_380px_40px]', 'lg:grid-cols-[300px_300px_300px_40px]');
         dropMenu.classList.add('absolute', 'top-[25%]', 'right-0', 'grid-cols-1', 'grid-cols-[100px]', 'w-[100px]');
         closeMenuBtn.classList.add('invisible');
 
@@ -146,7 +142,8 @@ function DynamicDropMenu(){
 
     function ShowDropMenuFixedSlideDown(){
         setTimeout(() =>{
-            dropMenu.classList.add('transition-drop-menu');
+            // dropMenu.classList.add('transition-drop-menu');
+            dropMenu.classList.add('transition-[ease_500ms]');
             dropMenu.classList.add('slide-down-drop-menu');
         },100);
     };
@@ -168,22 +165,14 @@ function DynamicDropMenu(){
             openMenuBtn.classList.add('invisible');
 
             isCloseClicked = false;
-            // console.log('closeclicked false from close btn');
         });
 
-
-
-        //Open menu button - hide itself, teraz zrobione warunkami w wywołaniu addEventListener scroll
-        // if (dropMenu.classList.contains('fixed') && !dropMenu.classList.contains('invisible')){
-        //     openMenuBtn.classList.remove('visible');
-        //     openMenuBtn.classList.add('invisible');
-        // };
     };
 
-    function showOpenMenuButton(){
-        openMenuBtn.classList.remove('invisible');
-        openMenuBtn.classList.add('visible');
-    };
+    // function showOpenMenuButton(){
+    //     openMenuBtn.classList.remove('invisible');
+    //     openMenuBtn.classList.add('visible');
+    // };
     function hideOpenMenuButton(){
         openMenuBtn.classList.remove('visible');
         openMenuBtn.classList.add('invisible');
