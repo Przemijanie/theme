@@ -91,7 +91,7 @@ function DynamicDropMenu(){
 
     function DropMenuReturnToHomePos(){
         //Drop menu + close button (return to swiper)
-        dropMenu.classList.remove('fixed', 'top-[-4px]', 'xl:mx-auto', 'xl:left-0', 'xl:right-0', 'xl:w-[1165px]', 'lg:mx-auto', 'lg:left-0', 'lg:right-0', 'lg:w-[920px]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]', 'transition-[ease_500ms]', 'slide-down-drop-menu', 'xl:grid-cols-[380px_380px_380px_40px]', 'lg:grid-cols-[300px_300px_300px_40px]');
+        dropMenu.classList.remove('fixed', 'top-[-4px]', 'xl:mx-auto', 'xl:left-0', 'xl:right-0', 'xl:w-[1165px]', 'lg:mx-auto', 'lg:left-0', 'lg:right-0', 'lg:w-[920px]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]', 'slide-down-drop-menu', 'xl:grid-cols-[380px_380px_380px_40px]', 'lg:grid-cols-[300px_300px_300px_40px]');
         dropMenu.classList.add('absolute', 'top-[25%]', 'right-0', 'grid-cols-1', 'grid-cols-[100px]', 'w-[100px]');
         closeMenuBtn.classList.add('invisible');
 
@@ -142,8 +142,6 @@ function DynamicDropMenu(){
 
     function ShowDropMenuFixedSlideDown(){
         setTimeout(() =>{
-            // dropMenu.classList.add('transition-drop-menu');
-            dropMenu.classList.add('transition-[ease_500ms]');
             dropMenu.classList.add('slide-down-drop-menu');
         },100);
     };
@@ -236,7 +234,7 @@ function HeaderOnMobile(){
     });
 
     // another method is to use "toggle" for hidden class (as above),
-    // but then whe have an issue/warrning in twig file with hidden and flex used simultaneously:
+    // but then we have an issue/warrning in twig file with hidden and flex used simultaneously:
     // 'hidden' applies the same CSS properties as 'flex'
     headerBossIcon.addEventListener('click', () => {
         onClickMapContent.classList.add('hidden');

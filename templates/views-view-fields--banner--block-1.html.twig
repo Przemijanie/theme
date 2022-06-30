@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="twig-swiper-banner">
+  
+  <div class="twig-swiper-title
+  w-full text-[22px] text-center text-[#fff] font-normal
+  absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]
+  sm:text-[30px] sm:leading-tight
+  md:text-[40px] md:top-[35%]
+  lg:text-[44px] lg:font-semibold
+  xl:text-[54px] xl:left-[50%] xl:top-[30%]
+  ">
+    {{ fields.title.content }}
+  </div>
+
+  <div class="twig-swiper-subtitle
+  w-full invisible text-center text-[#fff] text-[16px] font-light
+  absolute left-[50%] top-[45%] translate-x-[-50%] translate-y-[-50%]
+  md:visible
+  ">
+    <span>{{ fields.field_opis_baneru.content }}</span>
+  </div>
+
+  <div class="swiper-button-more 
+  text-center text-[12px] text-[#fff] invisible bg-[#279e95]
+  rounded-full px-0 py-1 w-[130px]
+  absolute left-[50%] top-[65%] translate-x-[-50%] translate-y-[-50%]
+  hover:bg-[#30c7bc] hover:cursor-pointer
+  sm:visible
+  md:px-2 md:py-2 md:w-[155px] md:text-[13px]
+  lg:px-4 lg:py-4 lg:w-[200px] lg:text-[15px]
+  ">
+    <span> {{ fields.field_przycisk.content }}<i class="fa-solid fa-arrow-right"></i></span>
+  </div>
+
+  <div class="tlo">
+    {{ fields.field_tlo.content }}
+  </div>
+</div>
+

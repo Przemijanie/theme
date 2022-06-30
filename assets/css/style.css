@@ -9,6 +9,12 @@ p{
     font-family: "Roboto";
 }
 
+
+/*  
+    for now I didn't find a way to implenet this details in twig templates,
+    most often because of "!important"
+*/
+
 /* O nas section - CTA drupal titles hide */
 .twig-cta-info-dla-pacjent > div:nth-child(1),
 .twig-cta-wnioski > div:nth-child(1),
@@ -18,17 +24,57 @@ p{
 }
 
 /* header loading blink */
-#block-treschtml > div > div > div > p.header-map,
+/* #block-treschtml > div > div > div > p.header-map,
 #block-treschtml > div > div > div > p.header-boss,
 #block-treschtml > div > div > div > p.header-contact{
     display: none;
-};
+} */
+
+/* Swiper */
+.swiper-container{
+    margin-top: 0;
+}
+
+/* Swiper pagination nav dots */
+.swiper-pagination > span{
+    background: #279e95;
+    width: 11px;
+    height: 11px;
+    z-index: -1;
+}
+.swiper-pagination {
+    z-index: 1!important;
+}
+
+@media screen and (min-width: 1025px){
+    /* Nasza oferta body (img description) */
+    .offer-img-body{
+        z-index: -1;
+    }
+}
+@media screen and (max-width: 1024px){
+    /* Nasza oferta body (img description) */
+    .views-field-body{
+        right: 0rem!important;
+    }
+
+    /* Nasza oferta img */
+    .offer-img > img{
+        width: 90vw!important;
+    }
+
+    /* header loading blink
+    #block-treschtml > div > div > div > p.header-map,
+    #block-treschtml > div > div > div > p.header-boss,
+    #block-treschtml > div > div > div > p.header-contact{
+        display: flex;
+    }; */
+}
+
+
+
 
 /* ---------------------------for JS--------------------------- */
-.transition-drop-menu{
-    transition: 400ms ease;
-    /* transition-duration: 500ms!important; */
-}
 .slide-down-drop-menu{
     transform: translateY(100px)!important;
 }
