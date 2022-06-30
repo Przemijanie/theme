@@ -24,7 +24,7 @@
       <h3>{{ settings.swiper_title }}</h3>
     {% endif %}
 
-    <div{{ attributes }}>
+    <div{{ attributes.addClass('mt-0') }}>
 
       {# Slides #}
       <div{{ content_attributes }}>
@@ -33,7 +33,7 @@
       
       {# Add Pagination #}
       {% if settings.pagination.enabled %}
-        <div{{ pagination_attributes}}></div>
+        <div{{ pagination_attributes.addClass('z-[1] [&>span]:bg-[#279e95] [&>span]:w-[11px] [&>span]:h-[11px]')}}></div>
       {% endif %}
 
       {# Add navigation buttons #}

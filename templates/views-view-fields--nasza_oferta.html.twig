@@ -31,6 +31,9 @@
  * @ingroup themeable
  */
 #}
+
+{# v1: twig template + drupal class fields in settings
+  v2 with custom template is underneath in comment #}
 {% for field in fields -%}
   {{ field.separator }}
 
@@ -55,5 +58,28 @@
   {%- if field.wrapper_element -%}
     </{{ field.wrapper_element }}>
   {%- endif %}
+
 {%- endfor %}
 
+
+{# v2: only custom beta twig template, didnt know what to choose #}
+  {# <div class="li-nasza-oferta-title views-field views-field-title drupal-class bg-white py-4 w-96 absolute top-370px px-9 lg§left-12 sm§hidden lg§block twig-wrapper
+  span-inside field-content text-xl font-semibold text-stone-700 lgbg-przemijanie mdblock mb-10 twig-elem
+  ">
+    {{ fields.title.content }}
+  </div>
+
+  <div class="li-nasza-oferta-zdjecie views-field views-field-field-zdjecie drupal-block twig-wrapper2 field-content offer-img md§mx-6 twig-elem">
+    {{ fields.field_zdjecie.content }}
+  </div>
+
+  <div class="li-nasza-oferta-body views-field views-field-body bg-white px-4 py-3 sm§w-auto lg§w-96 lg§h-80 sm§56 absolute lg§left-12 sm§left-8 lg§top-40 sm§-bottom-8 text-sm offer-img-body twig-wrapper
+  h2-inside mb-[8px] text-xl lg:text-2xl text-[#444] font-semibold hover:cursor-pointer hover:text-[#279e95]
+  p-inside text-[15px] leading-6
+  ">
+    {{ fields.body.content }}
+  </div> #}
+
+
+
+  

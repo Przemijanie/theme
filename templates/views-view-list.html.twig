@@ -29,12 +29,12 @@
     {% for row in rows %}
       <li class="drupal-wiersz-twig flex flex-col items-center relative mb-40 lg:mx-6"{{ row.attributes }}>
         {{- row.content -}}
-        {# <div class="new-content">
+        {#
+          <div class="new-content">
           {{ field.title.row.content }}
           <div>{{ row.content['#row']._entity.title[0].value }}</div>
-
-        </div> #}
-
+        </div>
+        #}
       </li>
     {% endfor %}
 

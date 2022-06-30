@@ -1,51 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
-
-h1, h2, h3{
-    font-family: "Poppins";
-}
-
-p{
-    font-family: "Roboto";
-}
-
-
 /*  
-    for now I didn't find a way to implenet this details in twig templates,
-    most often because of "!important"
+    1.  in views-view-fields--nasza_oferta.html.twig I prepared two version of nasza-oferta section,
+        currently turned on needs this @media, second version is beta,
+
+    2.  page title on main page is commented in page--node--9.html.twig,
+        because I need to change title region from "Lewy pasek boczny" to "Ścieżka nawigacyjna" 
+        to get title above content on other pages
 */
-
-/* O nas section - CTA drupal titles hide */
-.twig-cta-info-dla-pacjent > div:nth-child(1),
-.twig-cta-wnioski > div:nth-child(1),
-.twig-cta-przycisk > div:nth-child(1),
-.twig-cta-icon-doc > div:nth-child(1){
-    display: none;
-}
-
-/* header loading blink */
-/* #block-treschtml > div > div > div > p.header-map,
-#block-treschtml > div > div > div > p.header-boss,
-#block-treschtml > div > div > div > p.header-contact{
-    display: none;
-} */
-
-/* Swiper */
-.swiper-container{
-    margin-top: 0;
-}
-
-/* Swiper pagination nav dots */
-.swiper-pagination > span{
-    background: #279e95;
-    width: 11px;
-    height: 11px;
-    z-index: -1;
-}
-.swiper-pagination {
-    z-index: 1!important;
-}
-
 @media screen and (min-width: 1025px){
     /* Nasza oferta body (img description) */
     .offer-img-body{
@@ -62,13 +22,6 @@ p{
     .offer-img > img{
         width: 90vw!important;
     }
-
-    /* header loading blink
-    #block-treschtml > div > div > div > p.header-map,
-    #block-treschtml > div > div > div > p.header-boss,
-    #block-treschtml > div > div > div > p.header-contact{
-        display: flex;
-    }; */
 }
 
 
@@ -87,19 +40,8 @@ p{
     opacity: 1!important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* ---------------------Aktualnosci section not finished--------------------- */
+/* ----------------------------------TESTS---------------------------------- */
+/* ---------------------Aktualnosci--------------------- */
 /* Aktualnosci create date font */
 .date{
     color: #279e95;

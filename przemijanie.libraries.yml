@@ -4,6 +4,7 @@ global-styling:
   css:
     theme:
       assets/css/style.css: {}
+      assets/css/fonts.css: {}
 global-scripts:
   version: 1.x
   js:

@@ -38,45 +38,37 @@
  * @ingroup themeable
  */
 #}
-
-
 {%
-set title_classes = [
+  set title_classes = [
     label_display == 'visually_hidden' ? 'visually-hidden',
-]
+  ]
 %}
 
 {% if label_hidden %}
-{% if multiple %}
-
-    <div class="twig-field-1 w-[900px] mx-auto px-[15px]" {{ attributes }}>
-        {# title styling  #}
-        {# <div class="my-[100px]">
-            <p class="mb-20 mt-24 text-[#444] text-[36px] font-['Poppins'] text-center font-semibold before:relative before:top-[30px] before:right-[-78px] before:inline-block before:mr-[10px] before:content-[''] before:bg-[#279e95] before:w-[40px] before:h-[2px]">
-                New title
-            </p>
-        </div> #}
-    {% for item in items %}
+  {% if multiple %}
+    <div class="twig-field-1 container max-w-[900px] mx-auto px-[15px]" {{ attributes }}>
+      {% for item in items %}
         <div {{ item.attributes }}>{{ item.content }}</div>
-    {% endfor %}
+      {% endfor %}
     </div>
-{% else %}
+  {% else %}
     {% for item in items %}
-    <div class="twig-field-2" {{ attributes }}>{{ item.content }}</div>
+      <div{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
-{% endif %}
+  {% endif %}
 {% else %}
-<div class="twig-field-3" {{ attributes }}>
+  <div{{ attributes }}>
     <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-    <div class="twig-field-4">
+      <div>
     {% endif %}
     {% for item in items %}
-    <div class="twig-field-5" {{ item.attributes }}>{{ item.content }}</div>
+      <div{{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
-    </div>
+      </div>
     {% endif %}
-</div>
+  </div>
 {% endif %}
   
+
