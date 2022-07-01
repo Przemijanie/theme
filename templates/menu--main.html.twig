@@ -44,7 +44,7 @@
       <ul>
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes }} class="list-item text-[#444] lg:border-none sm:border-b hover:text-[#279e95] py-3 lg:py-0">
+      <li{{ item.attributes }} class="list-item text-[#444] lg:border-none border-b hover:text-[#279e95] py-3 lg:py-0">
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

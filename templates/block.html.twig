@@ -27,32 +27,13 @@
  * @ingroup themeable
  */
 #}
-<div class="twig-cta-container relative"{{ attributes }}>
+<div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</div></h2>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {{ content.body }}
-    <div class="twig-cta-tab-container
-    bg-[#279e95] px-6 py-6 lg:py-10
-    flex flex-row absolute
-    left-[25px] top-[380px] w-[320px] h-[200px]
-    sm:left-[-100px] sm:top-[400px]
-    md:left-[-40px] md:top-[360px] 
-    lg:left-auto lg:right-[-15px] lg:top-[440px] lg:w-[400px] lg:h-[250px]
-    xl:left-auto xl:right-[-70px] xl:top-[465px]
-    ">
-      <div class="left-side-tab">
-        {{ content.field_ikona_cta }}
-      </div>
-
-      <div class="right-side-tab">
-        {{ content.field_naglowek_cta }}
-        {{ content.field_opis_cta }}
-        {{ content.field_przyci }}
-      </div>
-    </div>
+    {{ content }}
   {% endblock %}
 </div>

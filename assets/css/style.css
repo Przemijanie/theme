@@ -8,7 +8,7 @@
 */
 @media screen and (min-width: 1025px){
     /* Nasza oferta body (img description) */
-    .offer-img-body{
+    .offer-body{
         z-index: -1;
     }
 }
@@ -22,6 +22,25 @@
     .offer-img > img{
         width: 90vw!important;
     }
+}
+
+/* nasza oferta background */
+#block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3){
+    background: #f7f7f7;
+}
+
+/* Lista aktualności custom css for 1st column */
+.twig-item-1 > .twig-lista-aktualnosci > .content-container,
+.twig-item-2 > .twig-lista-aktualnosci > .content-container{
+    position: static;
+    padding: 0;
+    margin-left: 30px;
+}
+
+.twig-item-1 > .twig-lista-aktualnosci > .content-container > .twig-title,
+.twig-item-2 > .twig-lista-aktualnosci > .content-container > .twig-title{
+    margin-bottom: 0;
+    text-transform: none;
 }
 
 
@@ -40,17 +59,14 @@
     opacity: 1!important;
 }
 
+
+
+
 /* ----------------------------------TESTS---------------------------------- */
 /* ---------------------Aktualnosci--------------------- */
 /* Aktualnosci create date font */
 .date{
     color: #279e95;
-}
-
-/* Aktualności grid */
-div.item-list > ul.ul-list{
-    grid-template-columns:repeat(3, 1fr);
-    gap: 50px;
 }
 
 /* ---------------------Footer--------------------- */
@@ -65,21 +81,9 @@ footer > div{
 
 /* temporary, testing */
 @media screen and (max-width: 1024px) {
-    /* Aktualności grid */
-    div.item-list > ul.ul-list{
-        grid-template-columns:repeat(2, 1fr);
-        gap: 40px;
-    }
 
-    /* Aktualnosci full width */
-    #block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div{
-        max-width: 100%;
-    }
 }
 
 @media screen and (max-width: 768px){
-    /* Aktualności grid */
-    #block-przemijanie-content > article > div.layout.layout--onecol > div > div:nth-child(2) > div > div > ul{
-        grid-template-columns:repeat(1, 1fr);
-    }
+
 }

@@ -60,7 +60,7 @@ function BackToTop(){
 // Nasza oferta section - show img description on hover
 function ShowOfferDescriptionOnHover(){
     let hoverElem = document.querySelectorAll('.drupal-wiersz-twig');
-    let ShowElem = document.querySelectorAll('.offer-img-body');
+    let ShowElem = document.querySelectorAll('.offer-body');
 
 
 
@@ -270,7 +270,7 @@ function HeaderOnMobile(){
 HamburgerMenu();
 BackToTop();
 ShowOfferDescriptionOnHover();
-DynamicDropMenu();
+// DynamicDropMenu();
 HeaderOnMobile();
 
 

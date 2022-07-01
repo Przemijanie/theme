@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a view template to display a list of rows.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container.
+ * - rows: A list of rows for this list.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's contents.
+ * - title: The title of this group of rows. May be empty.
+ * - list: @todo.
+ *   - type: Starting tag will be either a ul or ol.
+ *   - attributes: HTML attributes for the list element.
+ *
+ * @see template_preprocess_views_view_list()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{# stiff template for styling #}
+<div class="twig-lista-aktualnosci-container container  mx-auto mb-[400px] grid grid-cols-1
+xl:grid-cols-3 xl:max-w-[1200px]
+lg:grid-cols-2 lg:grid-flow-col 
+md:grid-cols-2
+">
+  <div class= "twig-item-1 px-[15px] 
+  lg:row-span-1 lg:col-span-1 flex justify-center
+  lg:flex-start
+  "> 
+    {{ rows[0] . content}} 
+  </div>
+
+  <div class= "twig-item-2 px-[15px] 
+  lg:row-span-1 lg:col-span-1 flex justify-center
+  lg:flex-start
+  "> 
+    {{ rows[1] . content}} 
+  </div>
+
+  <div class= "twig-item-3 px-[15px] 
+  lg:col-span-1 lg:row-span-2
+  "> 
+    {{ rows[2] . content}} 
+  </div>
+
+  <div class= "twig-item-4 px-[15px] 
+  lg:col-span-1 lg:row-span-2
+  "> 
+    {{ rows[3] . content}} 
+  </div>
+</div>
+
+{# almost original template #}
+{# {% if attributes -%}
+  <div{{ attributes.addClass('twig-block-container') }}>
+{% endif %}
+
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
+
+  <{{ list.type }}{{ list.attributes.addClass('twig-ul grid grid-cols-3') }}>
+    {% for row in rows %}
+    <div class="new-container-li">
+      <li{{ row.attributes.addClass('twig-li-item') }}>
+        {{- row.content -}}
+      </li>
+    </div>
+    {% endfor %}
+  </{{ list.type }}>
+
+{% if attributes -%}
+  </div>
+{% endif %} #}
