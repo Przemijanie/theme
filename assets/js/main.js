@@ -9,21 +9,34 @@ function HamburgerMenu(){
     let menuCloseBtn = document.querySelector('[data-menu-close-button]');
     let menuList = document.querySelector('[data-menu-list]');
 
-    let layoutContent = document.querySelector('.layout-content');
+    // beacause of floating menu at reload
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 1024){
+            menuList.classList.add('translate-y-[-485px]');
+            setTimeout(() => {
+                menuList.classList.replace('invisible', 'visible');
+                menuList.classList.add('opacity-0');
+            },200);
+            console.log('< 1024');
+        };
+    });
+
 
     menuBtn.addEventListener('click', () => {
         menuCloseBtn.classList.replace('hidden', 'inline-block');
         menuBtn.classList.replace('inline-block', 'hidden');
+        menuList.classList.remove('translate-y-[-485px]');
+        menuList.classList.replace('opacity-0', 'opacity-100');
 
-        menuList.classList.remove('translate-y-[-830px]');
     });
 
     menuCloseBtn.addEventListener('click', () => {
         menuList.classList.replace('flex', 'hidden');
         menuCloseBtn.classList.replace('inline-block', 'hidden');
         menuBtn.classList.replace('hidden', 'inline-block');
+        menuList.classList.add('translate-y-[-485px]');
+        menuList.classList.replace('opacity-100', 'opacity-0');
 
-        menuList.classList.add('translate-y-[-830px]');
     });
 };
 
@@ -270,7 +283,7 @@ function HeaderOnMobile(){
 HamburgerMenu();
 BackToTop();
 ShowOfferDescriptionOnHover();
-// DynamicDropMenu();
+DynamicDropMenu();
 HeaderOnMobile();
 
 

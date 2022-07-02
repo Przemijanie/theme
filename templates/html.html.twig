@@ -32,7 +32,6 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -272,7 +271,7 @@
         <i class="fa-solid fa-arrow-up"></i>
       </a>
     </div>
-    
+
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
@@ -283,6 +282,7 @@
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
+
     <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>
 </html>

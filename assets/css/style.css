@@ -24,24 +24,7 @@
     }
 }
 
-/* nasza oferta background */
-#block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3){
-    background: #f7f7f7;
-}
 
-/* Lista aktualności custom css for 1st column */
-.twig-item-1 > .twig-lista-aktualnosci > .content-container,
-.twig-item-2 > .twig-lista-aktualnosci > .content-container{
-    position: static;
-    padding: 0;
-    margin-left: 30px;
-}
-
-.twig-item-1 > .twig-lista-aktualnosci > .content-container > .twig-title,
-.twig-item-2 > .twig-lista-aktualnosci > .content-container > .twig-title{
-    margin-bottom: 0;
-    text-transform: none;
-}
 
 
 
@@ -63,12 +46,39 @@
 
 
 /* ----------------------------------TESTS---------------------------------- */
+
+/* #block-przemijanie-content > article > div:nth-child(1) > div.xl\:container.mx-auto.xl\:px-\[40px\].lg§py-\[120px\].py-\[40px\].lg\:mb-40.mb-52 > div > div.layout__region.layout__region--second.sm\:px-\[30px\].relative.flex.justify-end.md\:block > div > div.twig-field-cta-body-01.ml-\[45px\] > p > img{
+    width: 480px;
+    height: 560px;
+} */
+/* #block-przemijanie-site-branding > a > img{
+    width: 144px;
+    height: 51px;
+} */
 /* ---------------------Aktualnosci--------------------- */
 /* Aktualnosci create date font */
 .date{
     color: #279e95;
 }
 
+/* nasza oferta background */
+#block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3){
+    background: #f7f7f7;
+}
+
+/* Lista aktualności custom css for 1st adn 2nd column */
+.twig-item-1 > .twig-lista-aktualnosci > .content-container,
+.twig-item-2 > .twig-lista-aktualnosci > .content-container{
+    position: static;
+    padding: 0;
+    margin-left: 30px;
+    width: 200px;
+}
+.twig-item-1 > .twig-lista-aktualnosci > .content-container > .twig-title,
+.twig-item-2 > .twig-lista-aktualnosci > .content-container > .twig-title{
+    margin-bottom: 0;
+    text-transform: none;
+}
 /* ---------------------Footer--------------------- */
 /* temporary */
 footer > div{
@@ -79,11 +89,10 @@ footer > div{
     margin: 100px auto 0 auto;
 }
 
-/* temporary, testing */
-@media screen and (max-width: 1024px) {
-
+/* footer */
+.twig-field-2 > div:nth-child(1){
+    display: none;
 }
-
-@media screen and (max-width: 768px){
-
+.twig-field-2{
+    font-size: 14px;
 }
