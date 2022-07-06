@@ -32,6 +32,7 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
+    <link rel="stylesheet" async href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -175,6 +176,7 @@
 
     {# -------------------------HEADER for mobile------------------------- #}
     {# Header for mobile MAP section#}
+    <div class="mobile-container">
     <div data-map-mobile-content class="mobile-header-map
     hidden lg:hidden h-[250px] w-[100%] right-[100px] top-[20px]
     shadow-[0_5px_5px_rgba(0,0,0,0.1)]
@@ -233,11 +235,12 @@
         </li> 
       </ul>
     </div>
+  </div>
 
     {# Open drop menu button (after scroll) #}
-    <div data-btn-open-drop-menu class="btn-open-drop-menu group
-    html-twig invisible fixed right-[-33px] top-[73px] w-[80px] h-[60px] rotate-45
-    pb-1 text-xl text-[#424242] flex justify-center items-end bg-[#269e9550]
+    <div data-btn-open-drop-menu class="btn-open-drop-menu group html-twig 
+    invisible fixed right-[-33px] top-[73px] w-[80px] h-[60px] rotate-45
+    pb-1 text-xl text-[#424242] hidden lg:flex justify-center items-end bg-[#269e9550]
     hover:bg-[#269e9590] hover:text-white hover:cursor-pointer
     ">
       <i class="fa-solid fa-plus -rotate-45"></i>

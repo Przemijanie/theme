@@ -55,7 +55,14 @@
     width: 144px;
     height: 51px;
 } */
-/* ---------------------Aktualnosci--------------------- */
+/* ---------------------Nasza oferta--------------------- */
+/* not enough place in drupla field -.- */
+@media screen and (max-width: 1024px){
+    .offer-body{
+        height: fit-content;
+    }
+}
+
 /* Aktualnosci create date font */
 .date{
     color: #279e95;

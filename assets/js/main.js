@@ -5,38 +5,40 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 // Hamburger Menu 
 function HamburgerMenu(){
-    let menuBtn = document.querySelector('[data-menu-button]');
+    let menuOpenBtn = document.querySelector('[data-menu-open-button]');
     let menuCloseBtn = document.querySelector('[data-menu-close-button]');
     let menuList = document.querySelector('[data-menu-list]');
 
-    // beacause of floating menu at reload
-    window.addEventListener('resize', () => {
+    // beacause of floating blinking menu at reload
+    window.addEventListener('load', () => {
         if (window.innerWidth < 1024){
-            menuList.classList.add('translate-y-[-485px]');
-            setTimeout(() => {
-                menuList.classList.replace('invisible', 'visible');
+            menuOpenBtn.classList.replace('hidden', 'inline-block');
+            setTimeout(() => {   
+                menuList.classList.add('translate-y-[-485px]');
                 menuList.classList.add('opacity-0');
-            },200);
-            console.log('< 1024');
+            },100);
         };
     });
 
 
-    menuBtn.addEventListener('click', () => {
-        menuCloseBtn.classList.replace('hidden', 'inline-block');
-        menuBtn.classList.replace('inline-block', 'hidden');
-        menuList.classList.remove('translate-y-[-485px]');
-        menuList.classList.replace('opacity-0', 'opacity-100');
-
+    menuOpenBtn.addEventListener('click', () => {
+        menuList.classList.replace('hidden', 'block');
+        setTimeout(() => {   
+            menuCloseBtn.classList.replace('hidden', 'inline-block');
+            menuOpenBtn.classList.replace('inline-block', 'hidden');
+            menuList.classList.remove('translate-y-[-485px]');
+            menuList.classList.replace('opacity-0', 'opacity-100');
+        },100);
     });
 
     menuCloseBtn.addEventListener('click', () => {
-        menuList.classList.replace('flex', 'hidden');
         menuCloseBtn.classList.replace('inline-block', 'hidden');
-        menuBtn.classList.replace('hidden', 'inline-block');
+        menuOpenBtn.classList.replace('hidden', 'inline-block');
         menuList.classList.add('translate-y-[-485px]');
         menuList.classList.replace('opacity-100', 'opacity-0');
-
+        setTimeout(() => {   
+            menuList.classList.replace('block', 'hidden');
+        },300);
     });
 };
 
@@ -74,8 +76,6 @@ function BackToTop(){
 function ShowOfferDescriptionOnHover(){
     let hoverElem = document.querySelectorAll('.drupal-wiersz-twig');
     let ShowElem = document.querySelectorAll('.offer-body');
-
-
 
     for (let i = 0; i<5 ; i++){
         hoverElem[i].addEventListener('mouseover', () => {
@@ -282,9 +282,13 @@ function HeaderOnMobile(){
 // functions run
 HamburgerMenu();
 BackToTop();
-ShowOfferDescriptionOnHover();
 DynamicDropMenu();
 HeaderOnMobile();
+
+// only at home page
+if (window.location.href === 'http://localhost/'){
+    ShowOfferDescriptionOnHover();
+}
 
 
 //------------------------------------------------------------
