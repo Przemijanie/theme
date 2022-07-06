@@ -5,8 +5,13 @@ global-styling:
     theme:
       assets/css/style.css: {}
       assets/css/fonts.css: {}
+
 global-scripts:
   version: 1.x
   js:
     assets/js/main.js: {}
     https://cdn.tailwindcss.com: { type: external, minified: true }
+    assets/js/search_api_autocomplete.js: {}
+  dependencies:
+    - core/drupal.autocomplete
+    - core/jquery.once

@@ -282,7 +282,7 @@ function HeaderOnMobile(){
 // functions run
 HamburgerMenu();
 BackToTop();
-DynamicDropMenu();
+// DynamicDropMenu();
 HeaderOnMobile();
 
 // only at home page

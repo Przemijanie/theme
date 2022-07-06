@@ -46,24 +46,24 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div class="twig-field-1" {{ attributes }}>
+    <div {{ attributes }}>
       {% for item in items %}
         <div {{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div class="twig-field h-[100%] lg:h-auto lg:container"{{ attributes }}>{{ item.content }}<i class="fa-brands fa-facebook fa-xl twig hidden lg:inline hover:opacity-50 hover:cursor-pointer"></i></div>
+      <div{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div class="twig-field-2" {{ attributes }}>
+  <div  {{ attributes }}>
     <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div class="twig-field-3">
+      <div>
     {% endif %}
     {% for item in items %}
-      <div class="twig-field-4" {{ item.attributes }}>{{ item.content }}</div>
+      <div{{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

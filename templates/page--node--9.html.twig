@@ -87,4 +87,36 @@
     </footer>
   {% endif %}
 
+  {% if page.footer_top %}
+    <footer role="contentinfo_top">
+      {{ page.footer_top }}
+    </footer>
+  {% endif %}
+
+  <div class="footer-info-block flex justify-around">
+    {% if page.footer_left %}
+      <footer role="contentinfo_left">
+        {{ page.footer_left }}
+      </footer>
+    {% endif %}
+
+    {% if page.footer_center %}
+      <footer role="contentinfo_center">
+        {{ page.footer_center }}
+      </footer>
+    {% endif %}
+
+    {% if page.footer_right %}
+      <footer role="contentinfo_right">
+        {{ page.footer_right }}
+      </footer>
+    {% endif %}
+  </div>
+
+  {% if page.footer_bottom %}
+    <footer role="contentinfo_bottom">
+      {{ page.footer_bottom }}
+    </footer>
+  {% endif %}
+
 </div>{# /.layout-container #}
