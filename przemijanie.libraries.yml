@@ -11,7 +11,3 @@ global-scripts:
   js:
     assets/js/main.js: {}
     https://cdn.tailwindcss.com: { type: external, minified: true }
-    assets/js/search_api_autocomplete.js: {}
-  dependencies:
-    - core/drupal.autocomplete
-    - core/jquery.once

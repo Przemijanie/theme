@@ -25,12 +25,27 @@
     }
 }
 
+input[type="submit"] {
+    font-family: FontAwesome;
+}
 
+.search-container:hover .twig-input{
+    width: 170px;
+}
 
 
 
 
 /* ---------------------------for JS--------------------------- */
+.is-active{
+    visibility: visible!important;
+    opacity: 1!important;
+    transform: translateY(0)!important;
+    transition: ease-in 0.3s;
+}
+.transition-on{
+    transition: ease-in 0.3s;
+}
 .slide-down-drop-menu{
     transform: translateY(100px)!important;
 }
@@ -47,18 +62,12 @@
 
 
 /* ----------------------------------TESTS---------------------------------- */
-#block-treschtml > div > div{
-    max-width: 1280px;
+/* search bar */
+.form-autocomplete{
+    width: 80px;
 }
 
-/* #block-przemijanie-content > article > div:nth-child(1) > div.xl\:container.mx-auto.xl\:px-\[40px\].lg§py-\[120px\].py-\[40px\].lg\:mb-40.mb-52 > div > div.layout__region.layout__region--second.sm\:px-\[30px\].relative.flex.justify-end.md\:block > div > div.twig-field-cta-body-01.ml-\[45px\] > p > img{
-    width: 480px;
-    height: 560px;
-} */
-/* #block-przemijanie-site-branding > a > img{
-    width: 144px;
-    height: 51px;
-} */
+
 /* ---------------------Nasza oferta--------------------- */
 /* not enough place in drupla field -.- */
 @media screen and (max-width: 1024px){
@@ -91,19 +100,69 @@
     text-transform: none;
 }
 /* ---------------------Footer--------------------- */
-/* temporary */
-/* footer > div{
+/* #block-footerpliki > div > p > a{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 100px auto 0 auto;
+    align-items: center;
 } */
-
-/* footer */
-/* .twig-field-2 > div:nth-child(1){
-    display: none;
-} */
-/* .twig-field-2{
+#block-telefonynew p{
     font-size: 14px;
-} */
+    line-height: 23px;
+    color: #787878;
+    /* text-[14px] text-[#787878] leading-[23px] */
+}
+/* links */
+#block-telefonynew a{
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    /* text-[15px] text-[#787878] font-semibold */
+}
+#block-telefonynew a:hover{
+    color: #279e95;
+    /* hover:text-[#279e95] */
+}
+
+#block-emailnew p,
+#block-faxnew p{
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    font-family: 'Poppins';
+}
+
+#block-kontaktnew{
+    font-size: 14px;
+    line-height: 23px;
+    color: #787878;
+    margin-bottom: 20px;
+    /* text-[14px] text-[#787878] leading-[23px] mb-[20px] */
+}
+#block-kontaktnew p{
+    margin-bottom: 10px;
+    /* mb-[10px] */
+}
+/* button */
+#block-kontaktnew div p:first-child a{
+    background: linear-gradient(to right,#269e95 0%,#40d1c6 100%);
+    padding: 8px 14px;
+    line-height: 45px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-family: 'Roboto';
+    color: #fff;
+    font-weight: 300;
+    /* 
+    bg-gradient-to-r from-[#269e95] to-[#40d1c6] px-[8px] py-[14px] leading-[45px]
+    rounded-[16px] font-light text-[13px] text-[#fff] font-['Roboto'] 
+    */
+}
+#block-kontaktnew > div > p:nth-child(2) > b{
+    color: #279e95;
+}
+
+
+
+
+
+

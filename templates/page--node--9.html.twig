@@ -54,7 +54,7 @@
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
 
-  {# {{ page.breadcrumb }} #}
+  {{ page.breadcrumb }}
 
   {{ page.highlighted }}
 
@@ -93,7 +93,10 @@
     </footer>
   {% endif %}
 
-  <div class="footer-info-block flex justify-around">
+  <div class="footer-info-block
+   bg-[#f7f7f7]  mx-auto py-[40px]
+   ">
+   <div class="footer-container container mx-auto flex justify-around">
     {% if page.footer_left %}
       <footer role="contentinfo_left">
         {{ page.footer_left }}
@@ -112,6 +115,7 @@
       </footer>
     {% endif %}
   </div>
+</div>
 
   {% if page.footer_bottom %}
     <footer role="contentinfo_bottom">
