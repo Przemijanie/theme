@@ -10,23 +10,19 @@ function HamburgerMenu(){
     let menuList = document.querySelector('[data-menu-list]');
 
     menuOpenBtn.addEventListener('click', () => {
-       menuOpenBtn.classList.remove('is-active');
-       menuOpenBtn.classList.add('opacity-0');
-       menuCloseBtn.classList.replace('hidden', 'inline-block');
-       menuCloseBtn.classList.add('is-active');
+       menuOpenBtn.classList.add('invisible');
+       menuCloseBtn.classList.replace('invisible', 'visible');
 
        menuList.classList.add('is-active');
        menuList.classList.remove('translate-y-[0]');
     });
 
     menuCloseBtn.addEventListener('click', () => {
-        menuCloseBtn.classList.remove('is-active');
-        menuOpenBtn.classList.add('is-active');
+        menuCloseBtn.classList.replace('visible', 'invisible');
+        menuOpenBtn.classList.replace('invisible', 'visible');
         
         menuList.classList.remove('is-active');
         menuList.classList.add('transition-on');
-
-
     });
 };
 
@@ -75,7 +71,7 @@ function ShowOfferDescriptionOnHover(){
     };
 };
 
-//Drop menu change to fixed under navbar after scroll
+//Drop menu widget change to fixed under navbar after scroll
 function DynamicDropMenu(){
     //on scroll content
     let dropMenu = document.querySelector('[data-drop-menu]');
@@ -91,9 +87,9 @@ function DynamicDropMenu(){
 
 
     function DropMenuReturnToHomePos(){
-        //Drop menu + close button (return to swiper)
+        //Drop menu widget + close button (return to swiper)
         dropMenu.classList.remove('fixed', 'top-[-4px]', 'xl:mx-auto', 'xl:left-0', 'xl:right-0', 'xl:w-[1165px]', 'lg:mx-auto', 'lg:left-0', 'lg:right-0', 'lg:w-[920px]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]', 'slide-down-drop-menu', 'xl:grid-cols-[380px_380px_380px_40px]', 'lg:grid-cols-[300px_300px_300px_40px]');
-        dropMenu.classList.add('absolute', 'top-[25%]', 'right-0', 'grid-cols-1', 'grid-cols-[100px]', 'w-[100px]');
+        dropMenu.classList.add('absolute', 'top-[50%]','translate-y-[-40%]', 'right-0', 'grid-cols-1', 'grid-cols-[100px]', 'w-[100px]');
         closeMenuBtn.classList.add('invisible');
 
         //Map content display after hover
@@ -108,7 +104,7 @@ function DynamicDropMenu(){
         contactContent.classList.remove('xl:right-[25px]', 'lg:right-[20px]', 'top-[80px]');
         contactContent.classList.add('right-[100px]', 'top-[-20px]');
 
-        //back to visible menu on swiper
+        //back to visible menu widget on swiper
         dropMenu.classList.remove('invisible');
 
         //button title hide when drop menu is on the right side
@@ -119,8 +115,8 @@ function DynamicDropMenu(){
     };
 
     function ShowDropMenuFixedHidden(){
-        // Drop menu + close button
-        dropMenu.classList.remove('absolute', 'top-[25%]', 'right-0', 'grid-cols-3', 'grid-cols-[100px]', 'w-[100px]');
+        // Drop menu widget + close button
+        dropMenu.classList.remove('absolute', 'top-[50%]','translate-y-[-40%]', 'right-0', 'grid-cols-3', 'grid-cols-[100px]', 'w-[100px]');
         dropMenu.classList.add('fixed', 'top-[-4px]', 'xl:mx-auto', 'xl:left-0', 'xl:right-0', 'xl:w-[1165px]', 'lg:mx-auto', 'lg:left-0', 'lg:right-0', 'lg:w-[920px]', 'grid-cols-4', 'grid-cols-[380px_380px_380px_40px]', 'xl:grid-cols-[380px_380px_380px_40px]', 'lg:grid-cols-[300px_300px_300px_40px]');
         closeMenuBtn.classList.remove('invisible');
 
@@ -183,9 +179,8 @@ function DynamicDropMenu(){
         //1st scroll: moved from right side -> hidden under navbar
         if ((window.scrollY > 550) && (window.scrollY < 750)) {
             hideOpenMenuButton();
-            ShowDropMenuFixedHidden();
-            // console.log('1st scroll');
-            
+            ShowDropMenuFixedHidden(); 
+
         //1st slide down drop-menu
         }else if ((window.scrollY > 750)){
             //secured from continuously sliding down after scrolling
@@ -201,12 +196,20 @@ function DynamicDropMenu(){
                 ShowDropMenuFixedHidden();
                 OpenDropMenu();
                 // console.log('if closeclicked true');
+
             };
 
         //Back to right side position
         }else{
             DropMenuReturnToHomePos();
             // console.log('rth');
+        };
+
+        //hiding drop menu widget when scrolled on footer
+        if ((window.scrollY > 3770)){
+            DropMenuReturnToHomePos();
+            hideOpenMenuButton()
+            console.log('>3770');
         };
     });
 };
@@ -270,7 +273,7 @@ function HeaderOnMobile(){
 // functions run
 HamburgerMenu();
 BackToTop();
-// DynamicDropMenu();
+DynamicDropMenu();
 HeaderOnMobile();
 
 // only at home page

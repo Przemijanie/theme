@@ -33,7 +33,16 @@ input[type="submit"] {
     width: 170px;
 }
 
+#block-przemijanie-content > div > div > div > article > div.layout.layout--onecol > div.layout__region.layout__region--content > div:nth-child(3) > div{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
+#block-przemijanie-content > div > div > div > article > div > div > div.container.mx-auto.px-\[60px\] > div > div:nth-child(1) > div > div > div:nth-child(2) > img{
+    width: 570px;
+}
 
 
 /* ---------------------------for JS--------------------------- */
@@ -42,6 +51,10 @@ input[type="submit"] {
     opacity: 1!important;
     transform: translateY(0)!important;
     transition: ease-in 0.3s;
+}
+.is-visible{
+    visibility: visible;
+    opacity: 1;
 }
 .transition-on{
     transition: ease-in 0.3s;

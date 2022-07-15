@@ -15,18 +15,8 @@
  */
 #}
 {% if content %}
-  <div class="bg-white primary-menu-container 
-  h-[65px] lg:h-auto
-  sticky top-0 lg:z-[2] z-[1] shadow-[0px_3px_0px_0px_rgba(0,0,0,0.1)]
-  ">
-    <div{{ attributes }} class="twig-primary-menu
-    bg-[#fff] pt-0 px-[15px] sticky top-0 lg:z-[2] mx-auto 
-    flex flex-row justify-between 
-    lg:flex-row lg:py-[20px]
-    xl:container xl:px-[60px]
-    ">
-      {{ content }}
-    </div>
-</div>
+  <div{{ attributes }} class="twig-region">
+    {{ content }}
+  </div>
 {% endif %}
 

@@ -53,11 +53,17 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div {{ attributes }}>{{ item.content }}</div>
+      <div class="twig-gallery-title
+      text-[#444] text-[36px] text-center font-semibold tracking-[1px] mb-20 relative
+
+      after:content-[''] after:mx-auto after:bg-[#279e95] after:w-[40px] after:h-[2px]
+      after:absolute after:top-[55px] after:left-[50%] after:translate-x-[-50%]
+      "
+      {{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div {{ attributes }}>
+  <div  {{ attributes }}>
     <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
       <div>

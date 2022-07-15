@@ -53,7 +53,7 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div {{ attributes }}>{{ item.content }}</div>
+      <div class="twig-gallery-description mb-20"{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -63,7 +63,7 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
+      <div {{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

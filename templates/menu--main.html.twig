@@ -33,12 +33,12 @@
   {% if items %}
     {% if menu_level == 0 %}
       <ul{{ attributes }} data-menu-list class="twig-menu menu-list
-      text-[14px] font-semibold bg-[#fff] py-[10px] pr-[10px] pl-[35px]
-      z-[-1]   translate-y-[-115%] 
+      text-[14px] font-semibold bg-[#fff] pr-[10px] pl-[35px]
+      z-[-1]   translate-y-[-115%] invisible opacity-0
       absolute top-[55px] left-0 w-[100%]
       xl:text-[15px] xl:space-x-8
       lg:flex flex-col lg:flex-row lg:space-x-6 lg:pt-0 lg:translate-y-0 lg:z-[0]
-      lg:w-auto lg:sticky lg:opacity-100
+      lg:w-auto lg:static lg:opacity-100 lg:visible
       {# transition ease-in duration-300 opacity-0 hidden #}
       ">
     {% else %}
@@ -55,8 +55,7 @@
     </ul>
     <button data-menu-open-button class="menu-button
     md:text-4xl sm:text-[30px] text-[#444] 
-    absolute right-[30px] top-[23px] lg:opacity-0 
-    {# lg:hidden inline-block #}
+    absolute right-[30px] top-[23px] lg:invisible
     ">
       {# <i class="fa-solid fa-bars"></i> #}
       <div class="bar w-[25px] h-[2px] bg-[#444] mb-[6px]"></div>
@@ -65,8 +64,8 @@
     </button>
     <button data-menu-close-button class="menu-close-button
     text-[#444] absolute right-[30px] top-[23px]
-    md:text-5xl sm:text-[40px] opacity-0 invisible
-    hidden
+    md:text-5xl sm:text-[40px] invisible
+    {# hidden #}
     ">
       {# <i class="fa-solid fa-xmark"></i> #}
       <div class="bar w-[25px] h-[2px] bg-[#444] mb-[6px] translate-y-[8px] rotate-45"></div>

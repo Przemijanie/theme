@@ -46,7 +46,13 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div {{ attributes }}>
+    <div class="twig-gallery-container
+    mx-auto px-[20px] grid grid-cols-1 justify-items-center gap-[30px]
+    sm:grid-cols-2
+    lg:container lg:px-[60px]
+    xl:px-[140px]
+    "
+    {{ attributes }}>
       {% for item in items %}
         <div {{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
