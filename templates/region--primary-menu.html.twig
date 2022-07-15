@@ -15,8 +15,14 @@
  */
 #}
 {% if content %}
+{# v1 #}
+  {# <div class="mobile-navbar lg:hidden h-[65px] bg-[#fff] z-[2] sticky top-0">
+    <div class="inside z-[1]">{{ content }}</div>
+  </div> #}
+
+  {# ok #}
   <div class="bg-white primary-menu-container 
-  h-[65px] lg:h-auto
+  h-[65px] lg:h-auto hidden lg:block
   sticky top-0 lg:z-[2] z-[1] shadow-[0px_3px_0px_0px_rgba(0,0,0,0.1)]
   ">
     <div{{ attributes }} class="twig-primary-menu
@@ -27,6 +33,6 @@
     ">
       {{ content }}
     </div>
-</div>
+  </div>
 {% endif %}
 

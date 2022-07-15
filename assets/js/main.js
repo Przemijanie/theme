@@ -273,11 +273,11 @@ function HeaderOnMobile(){
 // functions run
 HamburgerMenu();
 BackToTop();
-DynamicDropMenu();
 HeaderOnMobile();
 
 // only at home page
 if (window.location.href === 'http://localhost/' || window.location.href === 'http://localhost/en'){
+    DynamicDropMenu();
     ShowOfferDescriptionOnHover();
 }
 

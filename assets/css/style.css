@@ -1,11 +1,3 @@
-/*  
-    1.  in views-view-fields--nasza_oferta.html.twig I prepared two version of nasza-oferta section,
-        currently turned on needs this @media, second version is beta,
-
-    2.  page title on main page is commented in page--node--9.html.twig,
-        because I need to change title region from "Lewy pasek boczny" to "Ścieżka nawigacyjna" 
-        to get title above content on other pages
-*/
 @media screen and (min-width: 1025px){
     /* Nasza oferta body (img description) */
     .offer-body{
@@ -29,32 +21,12 @@ input[type="submit"] {
     font-family: FontAwesome;
 }
 
-.search-container:hover .twig-input{
-    width: 170px;
-}
-
-#block-przemijanie-content > div > div > div > article > div.layout.layout--onecol > div.layout__region.layout__region--content > div:nth-child(3) > div{
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-#block-przemijanie-content > div > div > div > article > div > div > div.container.mx-auto.px-\[60px\] > div > div:nth-child(1) > div > div > div:nth-child(2) > img{
-    width: 570px;
-}
-
-
 /* ---------------------------for JS--------------------------- */
 .is-active{
     visibility: visible!important;
     opacity: 1!important;
     transform: translateY(0)!important;
     transition: ease-in 0.3s;
-}
-.is-visible{
-    visibility: visible;
-    opacity: 1;
 }
 .transition-on{
     transition: ease-in 0.3s;
@@ -65,24 +37,23 @@ input[type="submit"] {
 .navbar-down{
     opacity: 1!important;
 }
-/* ---------------------Back to top scroll button for JS--------------------- */
 .btn-move{
     bottom: 45px!important;
     opacity: 1!important;
 }
 
-
-
-
 /* ----------------------------------TESTS---------------------------------- */
-/* search bar */
-.form-autocomplete{
-    width: 80px;
+/* v2 for mobile navbar */
+/* #block-przemijanie-site-branding{
+    height: 4.5rem;
+    background: #fff;
+    width: 100%;
 }
-
-
+body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-container{
+    z-index: 2;
+} */
 /* ---------------------Nasza oferta--------------------- */
-/* not enough place in drupla field -.- */
+/* not enough place in drupla field */
 @media screen and (max-width: 1024px){
     .offer-body{
         height: fit-content;
@@ -113,10 +84,6 @@ input[type="submit"] {
     text-transform: none;
 }
 /* ---------------------Footer--------------------- */
-/* #block-footerpliki > div > p > a{
-    display: flex;
-    align-items: center;
-} */
 #block-telefonynew p{
     font-size: 14px;
     line-height: 23px;
