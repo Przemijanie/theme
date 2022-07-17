@@ -22,8 +22,7 @@ input[type="submit"] {
 }
 
 footer a[href^="tel:"]{
-    font-size: 15px;
-    font-family: 'Poppins';
+    font: 15px 'Poppins';
     color: #444;
 }
 
@@ -36,9 +35,11 @@ footer a[href^="mailto:"] {
     font-weight: 600;
 }
 
+/* inherit wrong style from footer-center */
 #block-fast-contact > div > div > b > a:nth-child(1),
 #block-fast-contact > div > div > b > a:nth-child(2){
     color:white;
+    font: 15px 'Roboto' 500
 }
 #block-fast-contact > div > div > b > a:nth-child(1):hover,
 #block-fast-contact > div > div > b > a:nth-child(2):hover{
