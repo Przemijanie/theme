@@ -15,7 +15,9 @@
  */
 #}
 {% if content %}
-  <div{{ attributes }} class="twig-right">
+  <div{{ attributes }} class="twig-right
+  [&>div>div:nth-child(2)]:leading-[30px] [&>div>div:nth-child(2)]:text-[15px]
+  ">
     {{ content }}
   </div>
 {% endif %}

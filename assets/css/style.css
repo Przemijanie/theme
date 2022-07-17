@@ -21,17 +21,18 @@ input[type="submit"] {
     font-family: FontAwesome;
 }
 
-a[href^="tel:"]{
+footer a[href^="tel:"]{
     font-size: 15px;
     font-family: 'Poppins';
     color: #444;
-    
-}a[href^="tel:"]:hover{
+}
+
+footer a[href^="tel:"]:hover{
     color: #279e95;
 }
 
-a[href^="tel:"],
-a[href^="mailto:"] {
+footer a[href^="tel:"],
+footer a[href^="mailto:"] {
     font-weight: 600;
 }
 
