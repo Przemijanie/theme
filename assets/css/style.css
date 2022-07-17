@@ -39,7 +39,7 @@ footer a[href^="mailto:"] {
 #block-fast-contact > div > div > b > a:nth-child(1),
 #block-fast-contact > div > div > b > a:nth-child(2){
     color:white;
-    font: 15px 'Roboto' 500
+    font: 15px 'Roboto' 500!important;
 }
 #block-fast-contact > div > div > b > a:nth-child(1):hover,
 #block-fast-contact > div > div > b > a:nth-child(2):hover{
