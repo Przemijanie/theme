@@ -27,7 +27,13 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes }}>
+<div class="
+text-center text-[#444] font-semibold relative z-[0] pt-[80px] pb-[50px]
+lg:text-[36px] md:text-[30px] text-[25px]
+
+after:absolute after:contet-[''] after:inline-block after:w-[40px] after:h-[2px] after:bg-[#279e95]
+after:top-[130px] after:left-[50%] after:translate-x-[-50%]
+"{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</div></h2>
