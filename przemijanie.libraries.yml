@@ -11,3 +11,5 @@ global-scripts:
   js:
     assets/js/main.js: {}
     https://cdn.tailwindcss.com: { type: external, minified: true }
+  dependencies:
+    - core/drupalSettings

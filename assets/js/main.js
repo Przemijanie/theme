@@ -276,7 +276,8 @@ BackToTop();
 HeaderOnMobile();
 
 // only at home page
-if (window.location.href === 'http://localhost/' || window.location.href === 'http://localhost/en'){
+// @ts-ignore
+if (drupalSettings.path.isFront){
     DynamicDropMenu();
     ShowOfferDescriptionOnHover();
 }
