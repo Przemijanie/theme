@@ -20,6 +20,12 @@
 input[type="submit"] {
     font-family: FontAwesome;
 }
+a{
+    font-weight: bold!important;
+}
+a[href^="tel:"] {
+    font-weight: bold!important;
+}
 
 /* ---------------------------for JS--------------------------- */
 .is-active{
