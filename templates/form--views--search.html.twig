@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ *
+ * @ingroup themeable
+ */
+#}
+<form{{ attributes }}>
+  <div class="search-container group
+  flex flex-row justify-between absolute top-[18px] right-[65px]
+  border-[1px] border-solid border-[#fff] hover:border-[#ccc] text-[15px]
+  hover:w-[190px] w-[50px] transform ease duration-200
+  lg:top-[34px] lg:right-[60px]
+  ">
+    {{ children }}
+  </div>
