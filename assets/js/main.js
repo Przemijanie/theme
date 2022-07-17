@@ -284,6 +284,5 @@ if (drupalSettings.path.isFront){
     ShowOfferDescriptionOnHover();
 }
 
-
 //------------------------------------------------------------
 });

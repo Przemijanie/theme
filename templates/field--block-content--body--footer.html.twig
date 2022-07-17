@@ -55,10 +55,13 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div class="twig-footer text-[14px] leading-[23px]"{{ attributes }}>
+      <div class="twig-footer 
+      text-[14px] leading-[23px]
+      [&>p>a]:transition [&>p>a]:ease [&>p>a]:duration-200
+      "{{ attributes }}>
         {{ item.content }}
       </div>
-    {% endfor %}
+      {% endfor %}
   {% endif %}
 {% else %}
   <div class="test3"{{ attributes }}>

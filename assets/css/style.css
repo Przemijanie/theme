@@ -20,9 +20,19 @@
 input[type="submit"] {
     font-family: FontAwesome;
 }
+
+a[href^="tel:"]{
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: #444;
+    
+}a[href^="tel:"]:hover{
+    color: #279e95;
+}
+
 a[href^="tel:"],
 a[href^="mailto:"] {
-    font-weight: bold!important;
+    font-weight: 600;
 }
 
 /* ---------------------------for JS--------------------------- */
@@ -95,17 +105,17 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
     /* text-[14px] text-[#787878] leading-[23px] */
 }
 /* links */
-#block-telefonynew a{
+/* #block-telefonynew a{
     font-family: 'Poppins';
     font-size: 15px;
     font-weight: 600;
     color: #444;
-    /* text-[15px] text-[#787878] font-semibold */
+    text-[15px] text-[#787878] font-semibold
 }
 #block-telefonynew a:hover{
     color: #279e95;
-    /* hover:text-[#279e95] */
-}
+    hover:text-[#279e95]
+} */
 
 #block-emailnew p,
 #block-faxnew p{
