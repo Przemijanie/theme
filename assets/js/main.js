@@ -1,3 +1,5 @@
+/*global drupalSettings:true*/
+// declare var drupalSettings: any;
 window.addEventListener('DOMContentLoaded', (event) => {
     //console.log('DOM fully loaded');
 //------------------------------------------------------------
@@ -275,8 +277,8 @@ HamburgerMenu();
 BackToTop();
 HeaderOnMobile();
 
-// only at home page
-// @ts-ignore
+/*eslint no-undef: "error"*/
+
 if (drupalSettings.path.isFront){
     DynamicDropMenu();
     ShowOfferDescriptionOnHover();
