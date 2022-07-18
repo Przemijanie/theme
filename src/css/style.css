@@ -1,0 +1,172 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@media screen and (min-width: 1025px) {
+  /* Nasza oferta body (img description) */
+  .offer-body {
+    z-index: -1;
+  }
+}
+/* margin inside block */
+@media screen and (max-width: 1024px) {
+  /* Nasza oferta body (img description) */
+  .views-field-body {
+    right: 0rem !important;
+  }
+
+  /* Nasza oferta img */
+  .offer-img > img {
+    width: 90vw !important;
+  }
+}
+
+input[type='submit'] {
+  font-family: FontAwesome;
+}
+
+footer a[href^='tel:'] {
+  font: 15px 'Poppins';
+  color: #444;
+}
+
+footer a[href^='tel:']:hover {
+  color: #279e95;
+}
+
+footer a[href^='tel:'],
+footer a[href^='mailto:'] {
+  font-weight: 600;
+}
+
+/* inherit wrong style from footer-center */
+#block-fast-contact > div > div > b > a:nth-child(1),
+#block-fast-contact > div > div > b > a:nth-child(2) {
+  color: white;
+  font-weight: 300 !important;
+  font-family: 'Roboto' !important;
+}
+#block-fast-contact > div > div > b > a:nth-child(1):hover,
+#block-fast-contact > div > div > b > a:nth-child(2):hover {
+  color: white;
+}
+
+/* ---------------------------for JS--------------------------- */
+.is-active {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: ease-in 0.3s;
+}
+.transition-on {
+  transition: ease-in 0.3s;
+}
+.slide-down-drop-menu {
+  transform: translateY(100px) !important;
+}
+.navbar-down {
+  opacity: 1 !important;
+}
+.btn-move {
+  bottom: 45px !important;
+  opacity: 1 !important;
+}
+
+/* ----------------------------------TESTS---------------------------------- */
+/* v2 for mobile navbar */
+/* #block-przemijanie-site-branding{
+    height: 4.5rem;
+    background: #fff;
+    width: 100%;
+}
+body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-container{
+    z-index: 2;
+} */
+/* ---------------------Nasza oferta--------------------- */
+/* not enough place in drupla field */
+@media screen and (max-width: 1024px) {
+  .offer-body {
+    height: fit-content;
+  }
+}
+
+/* Aktualnosci create date font */
+.date {
+  color: #279e95;
+}
+
+/* nasza oferta background */
+#block-przemijanie-content > article > div:nth-child(1) > div:nth-child(3) {
+  background: #f7f7f7;
+}
+
+/* Lista aktualności custom css for 1st adn 2nd column */
+.twig-item-1 > .twig-lista-aktualnosci > .content-container,
+.twig-item-2 > .twig-lista-aktualnosci > .content-container {
+  position: static;
+  padding: 0;
+  margin-left: 30px;
+  width: 200px;
+}
+.twig-item-1 > .twig-lista-aktualnosci > .content-container > .twig-title,
+.twig-item-2 > .twig-lista-aktualnosci > .content-container > .twig-title {
+  margin-bottom: 0;
+  text-transform: none;
+}
+/* ---------------------Footer--------------------- */
+#block-telefonynew p {
+  font-size: 14px;
+  line-height: 23px;
+  color: #787878;
+  /* text-[14px] text-[#787878] leading-[23px] */
+}
+/* links */
+/* #block-telefonynew a{
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    text-[15px] text-[#787878] font-semibold
+}
+#block-telefonynew a:hover{
+    color: #279e95;
+    hover:text-[#279e95]
+} */
+
+#block-emailnew p,
+#block-faxnew p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  font-family: 'Poppins';
+}
+
+#block-kontaktnew {
+  font-size: 14px;
+  line-height: 23px;
+  color: #787878;
+  margin-bottom: 20px;
+  /* text-[14px] text-[#787878] leading-[23px] mb-[20px] */
+}
+#block-kontaktnew p {
+  margin-bottom: 10px;
+  /* mb-[10px] */
+}
+/* button */
+#block-kontaktnew div p:first-child a {
+  background: linear-gradient(to right, #269e95 0%, #40d1c6 100%);
+  padding: 8px 14px;
+  line-height: 45px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-family: 'Roboto';
+  color: #fff;
+  font-weight: 300;
+  /* 
+    bg-gradient-to-r from-[#269e95] to-[#40d1c6] px-[8px] py-[14px] leading-[45px]
+    rounded-[16px] font-light text-[13px] text-[#fff] font-['Roboto'] 
+    */
+}
+#block-kontaktnew > div > p:nth-child(2) > b {
+  color: #279e95;
+}

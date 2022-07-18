@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npx postcss src/**/*.css --base src --dir assets/ --watch",
+    "build": "npx postcss src/**/*.css --base src --dir assets/ --minify",
+    "deploy": "npx postcss src/**/*.css --base src --dir assets/ --minify"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.12",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "postcss-nested": "^5.0.6",
+    "tailwindcss": "^3.1.6"
+  }
+}
