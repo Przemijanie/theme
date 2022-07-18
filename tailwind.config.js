@@ -1,6 +1,5 @@
 module.exports = {
   content: ['**/*.twig'],
-  separator: '§',
   theme: {
     extend: {
       colors: {
