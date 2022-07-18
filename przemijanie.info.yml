@@ -1,28 +1,30 @@
 name: przemijanie
 type: theme
-description: 'An intentionally plain theme with no styling to demonstrate default Drupal’s HTML and CSS. Learn how to build a custom theme from Stark in the <a href="https://www.drupal.org/docs/8/theming">Theming Guide</a>.'
-core_version_requirement: ">=9"
+description: 'Szablon dla Przemijanie.pl stworzony przez <a href="https://webo.agency">webo.agency</a>.'
+core_version_requirement: '>=9'
 base theme: false
 package: Custom
+logo: assets/img/logo.png
+screenshot: assets/img/screenshot.png
 libraries:
   - przemijanie/global-styling
   - przemijanie/global-scripts
 regions:
-  header: "Header"
-  drop_menu_widget: "Drop menu widget"
-  primary_menu: "Primary menu"
-  secondary_menu: "Secondary menu"
-  highlighted: "Highlighted"
-  help: "Help"
-  content: "Content"
-  sidebar_first: "Left sidebar"
-  sidebar_second: "Right sidebar"
-  footer: "Footer"
-  footer_top: "Footer top"
-  footer_left: "Footer left"
-  footer_center: "Footer center"
-  footer_right: "Footer right"
-  footer_bottom: "Footer bottom"
-  breadcrumb: "Breadcrumb"
-  page_top: "Page top"
-  page_bottom: "Page bottom"
+  header: 'Header'
+  drop_menu_widget: 'Drop menu widget'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+  footer: 'Footer'
+  footer_top: 'Footer top'
+  footer_left: 'Footer left'
+  footer_center: 'Footer center'
+  footer_right: 'Footer right'
+  footer_bottom: 'Footer bottom'
+  breadcrumb: 'Breadcrumb'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
