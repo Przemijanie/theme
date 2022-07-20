@@ -16,7 +16,7 @@
 <span {{ attributes.addClass(classes) }}>
   <a href="{{ url }}" type="{{ type }}" class="flex items-center">
     {% if attributes.hasClass('file--application-pdf') %}
-      <svg class="mr-2"
+      <svg class="mr-2 h-[40px] w-auto"
         xmlns="http://www.w3.org/2000/svg"
         width="132"
         height="150"
@@ -30,7 +30,7 @@
     {% endif %}
 
     {% if attributes.hasClass('file--x-office-document') %}
-      <svg class="mr-2"
+      <svg class="mr-2 h-[40px] w-auto"
         width="132"
         height="150"
         viewBox="0 0 132 150"
@@ -46,7 +46,7 @@
     {% if
       not attributes.hasClass('file--application-pdf')
         and not attributes.hasClass('file--x-office-document') %}
-      <svg class="mr-2"
+      <svg class="mr-2 h-[40px] w-auto"
         xmlns="http://www.w3.org/2000/svg"
         width="114"
         height="150"
