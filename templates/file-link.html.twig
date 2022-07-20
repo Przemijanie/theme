@@ -15,7 +15,7 @@
 #}
 {{ dump() }}
 {% set container_attr = create_attribute() %}
-{% set my_classes = ['flex', 'items-center'] %}
+{% set container_attr = ['flex', 'items-center'] %}
 <div {{ container_attr }}>
   {% if attributes.hasClass('file--application-pdf') %}
     <img class="mr-2"
