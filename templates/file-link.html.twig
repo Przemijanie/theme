@@ -13,6 +13,7 @@
  * @ingroup themeable
  */
 #}
+{% set classes = ['block', 'mb-2'] %}
 <span {{ attributes.addClass(classes) }}>
   <a href="{{ url }}" type="{{ type }}" class="flex items-center">
     {% if attributes.hasClass('file--application-pdf') %}
