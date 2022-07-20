@@ -1,6 +1,6 @@
 <?php
 
-use Drupal\file\Entity\File;
+use Drupal\Core\Link;
 
 function przemijanie_preprocess_file_link(&$variables) {
 
