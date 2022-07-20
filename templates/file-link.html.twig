@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a link to a file.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the file.
+ * - file_size: The size of the file.
+ *
+ * @see template_preprocess_file_link()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if attributes['file--mime-application-pdf'] %}
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAClUlEQVRYhe3WvU8acRzH8c8Bp1cDHiVUKIlPoUONMRhzcTEx8WEwcdDEp8nBhTi4GCfjZqLyB+iiRB1xcXTSTY2GlJqaGnloaACtA0G0Aj5wXDfbSymR+/0Om+h7hG++vxfH8QC8RhaT78HPo6OxyubmB9LlmXDYLKXT35pWV5tJd8kKLy6GJQpF3W7pemsr92Vs7KtSi4bmC8uXwW5n6oaGGpQiVQcCZMiSAAHlyJIBAWXIkgKB4pElBwLFIZ8FCDwdqVMV4XAgsrNTaITR6vU1hQZUBfKCAF4QCs58X1qKF3r+2d7ip0YFGHK54BsZwe3ZGY11soiBD4kEkoeHMLW343Jvj4ZJFjGQYVloysogZbNgdPRvaWKgzmCAlMvhxu9HudVKwySLyj1oFASkgkHoGxtprJNFB9jaijfV1WB5nsY6WVSAN6enuI3F/s9PsZTNIr69DXN3N849HhomWcTAy4MDlFVVoX5yEtfHx0gFAjRcjxEDzzc2YOnrg4ZlUT8xgeDcHMR0moYNAOFvcdLrxX08DnNHB1KBAB6SSUiiiJOpKXA2G8R0GjqeR0VdHd719IA1Gos+Q/EVvI/HEV1bQ+7uDp8GBxFyuZDY34e5qwvlViuSXi/etrXB3NkJMZOBf2ZG0TlFX8G7iwtEVlaQ2N1FucWC2vFxGAUBrMn0e0iS8GNzE1G3G6zJBA3HQctx6gOvj44QmJ1FpcMBRqvFh+lp6Bsa/h5kGLwfGICltxc/T04giSIqm5rUB4YWFlDrdOLM40GN05kf90cajgPf0qII9rijmOEKux3R9XXYhodh7e8nOvipFXUFP87Pq+X4Zy/jH7WavQJJewWSlvdr5srnYyLLy6FSAK58PrYU57zcfgEJIResgyF8jgAAAABJRU5ErkJggg==" />
+{% endif %}
+<span {{ attributes }}>{{ link }}</span>
+{% if file_size %}
+  <span>({{ file_size }})</span>
+{% endif %}
