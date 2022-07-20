@@ -14,4 +14,4 @@
  */
 #}
 {% set classes = ['flex', 'items-center'] %}
-<span {{ attributes.addClass(classes) }}>{{ link }}</span>
+<span {{ attributes.addClass(classes) }}>{{ link|raw }}</span>
