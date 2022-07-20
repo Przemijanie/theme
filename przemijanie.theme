@@ -1,1 +1,31 @@
 <?php
+function przemijanie_preprocess_file_link(&$variables) {
+
+  $file = $variables['file'];
+
+  $file_entity = ($file instanceof File) ? $file : File::load($file->fid);
+  // @todo Wrap in file_url_transform_relative(). This is currently
+  // impossible. As a work-around, we currently add the 'url.site' cache context
+  // to ensure different file URLs are generated for different sites in a
+  // multisite setup, including HTTP and HTTPS versions of the same site.
+  // Fix in https://www.drupal.org/node/2646744.
+  $url = file_create_url($file_entity->getFileUri());
+  $variables['#cache']['contexts'][] = 'url.site';
+
+  $mime_type = $file->getMimeType();
+
+  if (empty($variables['description'])) {
+    $link_text = $file_entity->getFilename();
+  }
+  else {
+    $link_text = $variables['description'];
+    $options['attributes']['title'] = $file_entity->getFilename();
+  }
+
+
+  if(file_icon_class($mime_type) == 'application-pdf'){
+    $link_text = '<img class="mr-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAClUlEQVRYhe3WvU8acRzH8c8Bp1cDHiVUKIlPoUONMRhzcTEx8WEwcdDEp8nBhTi4GCfjZqLyB+iiRB1xcXTSTY2GlJqaGnloaACtA0G0Aj5wXDfbSymR+/0Om+h7hG++vxfH8QC8RhaT78HPo6OxyubmB9LlmXDYLKXT35pWV5tJd8kKLy6GJQpF3W7pemsr92Vs7KtSi4bmC8uXwW5n6oaGGpQiVQcCZMiSAAHlyJIBAWXIkgKB4pElBwLFIZ8FCDwdqVMV4XAgsrNTaITR6vU1hQZUBfKCAF4QCs58X1qKF3r+2d7ip0YFGHK54BsZwe3ZGY11soiBD4kEkoeHMLW343Jvj4ZJFjGQYVloysogZbNgdPRvaWKgzmCAlMvhxu9HudVKwySLyj1oFASkgkHoGxtprJNFB9jaijfV1WB5nsY6WVSAN6enuI3F/s9PsZTNIr69DXN3N849HhomWcTAy4MDlFVVoX5yEtfHx0gFAjRcjxEDzzc2YOnrg4ZlUT8xgeDcHMR0moYNAOFvcdLrxX08DnNHB1KBAB6SSUiiiJOpKXA2G8R0GjqeR0VdHd719IA1Gos+Q/EVvI/HEV1bQ+7uDp8GBxFyuZDY34e5qwvlViuSXi/etrXB3NkJMZOBf2ZG0TlFX8G7iwtEVlaQ2N1FucWC2vFxGAUBrMn0e0iS8GNzE1G3G6zJBA3HQctx6gOvj44QmJ1FpcMBRqvFh+lp6Bsa/h5kGLwfGICltxc/T04giSIqm5rUB4YWFlDrdOLM40GN05kf90cajgPf0qII9rijmOEKux3R9XXYhodh7e8nOvipFXUFP87Pq+X4Zy/jH7WavQJJewWSlvdr5srnYyLLy6FSAK58PrYU57zcfgEJIResgyF8jgAAAABJRU5ErkJggg==" />' . $link_text;
+  }
+  $variables['link'] = \Drupal::l($link_text, Url::fromUri($url, $options));
+
+}
