@@ -1,4 +1,7 @@
 <?php
+
+use Drupal\file\Entity\File;
+
 function przemijanie_preprocess_file_link(&$variables) {
 
   $file = $variables['file'];
