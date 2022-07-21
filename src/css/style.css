@@ -188,6 +188,7 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
 
 #swiper-banner-block-1 .twig-swiper-banner .tlo img {
   object-fit: cover;
+  min-height: 300px;
 }
 
 #swiper-banner-block-1 .swiper-slide {
