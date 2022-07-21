@@ -10,22 +10,33 @@
  * @ingroup themeable
  */
 #}
-<div class="xl:container mx-auto xl:px-[40px] lg§py-[120px] py-[40px] lg:mb-40 mb-52">
-{% if content %}
-  <div{{ attributes.addClass('grid grid-cols-1 md:grid-cols-2 z-[-1]') }}>
+<div class="relative xl:container mx-auto xl:px-[40px] lg§py-[120px] py-[40px] lg:mb-40 mb-52">
+  {% if content %}
+    <div {{ attributes.addClass('grid grid-cols-1 md:grid-cols-2 z-[-1]') }}>
+      {% if content.first %}
+        <div {{
+          region_attributes.first.addClass(
+            'layout__region',
+            'layout__region--first px-[30px]'
+          )
+          }}>
+          {{ content.first }}
+        </div>
+      {% endif %}
 
-    {% if content.first %}
-      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first px-[30px]') }}>
-        {{ content.first }}
-      </div>
-    {% endif %}
-
-    {% if content.second %}
-      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second sm:px-[30px] relative flex justify-end md:block') }}>
-        {{ content.second }}
-      </div>
-    {% endif %}
-
-  </div>
-{% endif %}
+      {% if content.second %}
+        <div {{
+          region_attributes.second.addClass(
+            'layout__region',
+            'layout__region--second sm:px-[30px] relative flex justify-end md:block'
+          )
+          }}>
+          {{ content.second }}
+        </div>
+        <img class="absolute z-0 inset-0"
+          src="{{ base_path }}{{ directory }}/assets/img/img-bg.png"
+          alt="Tło" />
+      {% endif %}
+    </div>
+  {% endif %}
 </div>
