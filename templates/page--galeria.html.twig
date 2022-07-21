@@ -46,7 +46,6 @@
  */
 #}
 <div class="layout-container">
-
   <header class="bg-[#279e95]" role="banner">
     {{ page.header }}
   </header>
@@ -65,7 +64,8 @@
 
     <div class="layout-content">
       {{ page.content }}
-    </div>{# /.layout-content #}
+    </div>
+    {# /.layout-content #}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
@@ -78,12 +78,11 @@
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
-
   </main>
 
-    <footer role="contentinfo" id="footer">
-      {{ page.footer }}
-    </footer>
+  <footer role="contentinfo" id="footer">
+    {{ page.footer }}
+  </footer>
 
   {% if page.footer_top %}
     <footer role="contentinfo_top">
@@ -91,36 +90,32 @@
     </footer>
   {% endif %}
 
-  <div class="footer-info-block
-   bg-[#f7f7f7]  mx-auto py-[40px]
-   ">
-   <div class="footer-container 
-   container mx-auto flex flex-wrap justify-center 
-   sm:justify-between lg:flex-row lg:justify-around">
-    {% if page.footer_left %}
-      <footer role="contentinfo_left">
-        {{ page.footer_left }}
-      </footer>
-    {% endif %}
+  <div class="footer-info-block bg-[#f7f7f7] mx-auto py-[40px]">
+    <div class="footer-container container md:mx-auto flex flex-wrap justify-center sm:justify-between lg:flex-row lg:justify-around">
+      {% if page.footer_left %}
+        <footer role="contentinfo_left">
+          {{ page.footer_left }}
+        </footer>
+      {% endif %}
 
-    {% if page.footer_center %}
-      <footer role="contentinfo_center">
-        {{ page.footer_center }}
-      </footer>
-    {% endif %}
+      {% if page.footer_center %}
+        <footer role="contentinfo_center">
+          {{ page.footer_center }}
+        </footer>
+      {% endif %}
 
-    {% if page.footer_right %}
-      <footer role="contentinfo_right">
-        {{ page.footer_right }}
-      </footer>
-    {% endif %}
+      {% if page.footer_right %}
+        <footer role="contentinfo_right">
+          {{ page.footer_right }}
+        </footer>
+      {% endif %}
+    </div>
   </div>
-</div>
 
   {% if page.footer_bottom %}
     <footer role="contentinfo_bottom">
       {{ page.footer_bottom }}
     </footer>
   {% endif %}
-
-</div>{# /.layout-container #}
+</div>
+{# /.layout-container #}
