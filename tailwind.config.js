@@ -18,6 +18,7 @@ module.exports = {
         xs2: '240px',
         sm: '340px',
         sm2: '640px,',
+        desktop: '1024px',
       },
     },
   },
