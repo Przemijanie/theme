@@ -32,47 +32,25 @@
  */
 #}
 <div class="twig-swiper-banner">
-  
-  <div class="twig-swiper-title
-  w-full text-[22px] text-center text-[#fff] font-normal
-  absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]
-  sm:text-[30px] sm:leading-tight
-  md:text-[40px] md:top-[35%]
-  lg:text-[44px] lg:font-semibold
-  xl:text-[54px] xl:left-[50%] xl:top-[30%]
-  ">
+  <div class="twig-swiper-title w-full text-[22px] text-center text-[#fff] font-normal absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] sm:text-[30px] sm:leading-tight md:text-[40px] md:top-[35%] lg:text-[44px] lg:font-semibold xl:text-[54px] xl:left-[50%] xl:top-[30%]">
     {{ fields.title.content }}
   </div>
 
-  <div class="twig-swiper-subtitle
-  w-full invisible text-center text-[#fff] text-[16px] font-light
-  absolute left-[50%] top-[45%] translate-x-[-50%] translate-y-[-50%]
-  md:visible
-  ">
+  <div class="twig-swiper-subtitle w-full invisible text-center text-[#fff] text-[16px] font-light absolute left-[50%] top-[45%] translate-x-[-50%] translate-y-[-50%] md:visible">
     <span>{{ fields.field_opis_baneru.content }}</span>
   </div>
 
-  <div class="swiper-button-more group
-  text-center text-[12px] text-[#fff] invisible bg-[#279e95]
-  rounded-full px-0 py-1 w-[130px]
-  absolute left-[50%] top-[65%] translate-x-[-50%] translate-y-[-50%]
-  hover:bg-[#30c7bc] hover:cursor-pointer
-  sm:visible
-  md:px-2 md:py-2 md:w-[155px] md:text-[13px]
-  lg:px-4 lg:py-4 lg:w-[200px] lg:text-[15px]
-  ">
+  <div class="swiper-button-more group text-center text-[12px] text-[#fff] invisible bg-[#279e95] rounded-full px-0 py-1 w-[130px] absolute left-[50%] top-[65%] translate-x-[-50%] translate-y-[-50%] hover:bg-[#30c7bc] hover:cursor-pointer sm:visible md:px-2 md:py-2 md:w-[155px] md:text-[13px] lg:px-4 lg:py-4 lg:w-[200px] lg:text-[15px]">
     <span class="ml-0 group-hover:ml-[20px] transition-all ease duration-300">
-      <i class="fa-solid fa-arrow-right
-      translate-x-[-35px] transition ease duration-300 opacity-0
-      group-hover:translate-x-0 group-hover:opacity-100
-      "></i>
+      <i class="fa-solid fa-arrow-right translate-x-[-35px] transition ease duration-300 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 mr-2">
 
-        {{ fields.field_przycisk.content }}
+      </i>
 
-      <i class="fa-solid fa-arrow-right
-      transition ease duration-300 opacity-100
-      group-hover:translate-x-[30px] group-hover:opacity-0
-      "></i>
+      {{ fields.field_przycisk.content }}
+
+      <i class="fa-solid fa-arrow-right transition ease duration-300 opacity-100 group-hover:translate-x-[30px] group-hover:opacity-0 ml-2">
+
+      </i>
     </span>
   </div>
 
@@ -80,4 +58,3 @@
     {{ fields.field_tlo.content }}
   </div>
 </div>
-
