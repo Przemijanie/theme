@@ -93,19 +93,19 @@
   <div class="footer-info-block bg-[#f7f7f7] mx-auto py-[40px]">
     <div class="footer-container mx-auto flex flex-wrap justify-start md:justify-center sm:justify-between lg:flex-row xl:container">
       {% if page.footer_left %}
-        <footer role="contentinfo_left px-[15px] xl:px-[60px]">
+        <footer role="contentinfo_left" class="px-[15px] xl:px-[60px]">
           {{ page.footer_left }}
         </footer>
       {% endif %}
 
       {% if page.footer_center %}
-        <footer role="contentinfo_center px-[15px] xl:px-[60px]">
+        <footer role="contentinfo_center" class="px-[15px] xl:px-[60px]">
           {{ page.footer_center }}
         </footer>
       {% endif %}
 
       {% if page.footer_right %}
-        <footer role="contentinfo_right px-[15px] xl:px-[60px]">
+        <footer role="contentinfo_right" class="px-[15px] xl:px-[60px]">
           {{ page.footer_right }}
         </footer>
       {% endif %}
