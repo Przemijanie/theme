@@ -89,22 +89,23 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
   z-index: 0;
 }
 
-.offer-title {
-  @apply text-xl font-semibold text-stone-700 lg:bg-przemijanie md:block mb-10;
-}
+@layer components {
+  .offer-title {
+    @apply text-xl font-semibold text-stone-700 lg:bg-przemijanie md:block mb-10;
+  }
 
-.offer-title-wrapper {
-  @apply drupal-class bg-white py-4 w-96 absolute top-370px px-9 lg:left-12 sm:hidden lg:block;
-}
+  .offer-title-wrapper {
+    @apply drupal-class bg-white py-4 w-96 absolute top-370px px-9 lg:left-12 sm:hidden lg:block;
+  }
 
-.offer-body {
-  @apply bg-white px-4 py-3 sm:w-auto lg:w-96 lg:h-80 lg:left-12 sm:left-12 lg:top-40 sm:-bottom-8 sm:top-56 text-sm;
-}
+  .offer-body {
+    @apply bg-white px-4 py-3 sm:w-auto lg:w-96 lg:h-80 lg:left-12 sm:left-12 lg:top-40 sm:-bottom-8 sm:top-56 text-sm;
+  }
 
-.offer-img {
-  @apply md:mx-6;
+  .offer-img {
+    @apply md:mx-6;
+  }
 }
-
 @media screen and (max-width: 1024px) {
   .offer-body {
     height: fit-content;
