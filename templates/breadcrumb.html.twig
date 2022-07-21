@@ -10,21 +10,22 @@
  */
 #}
 {% if breadcrumb %}
-  <nav class="container mx-auto 
-  bg-[#f8f8f8] px-[60px] py-[20px] text-[13px] text-[#9b9b9b]
-  "
-  role="navigation" aria-labelledby="system-breadcrumb">
-    <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+  <nav class="container mx-auto bg-[#f8f8f8] md:px-[60px] py-[20px] text-[13px] text-[#9b9b9b]"
+    role="navigation"
+    aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">
+      {{ 'Breadcrumb'|t }}
+    </h2>
     <ol class="flex">
-    {% for item in breadcrumb %}
-      <li>
-        {% if item.url %}
-          <a href="{{ item.url }}">{{ item.text }}</a><span> / </span>
-        {% else %}
-        &nbsp;{{ item.text }}
-        {% endif %}
-      </li>
-    {% endfor %}
+      {% for item in breadcrumb %}
+        <li>
+          {% if item.url %}
+            <a href="{{ item.url }}">{{ item.text }}</a><span>/</span>
+          {% else %}
+            &nbsp;{{ item.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
     </ol>
   </nav>
 {% endif %}
