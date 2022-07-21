@@ -10,7 +10,7 @@
  * @ingroup themeable
  */
 #}
-<div class="relative xl:container mx-auto xl:px-[40px] lg§py-[120px] py-[40px] lg:mb-40 mb-52">
+<div class="relative xl:container mx-auto xl:px-[40px] lg§py-[120px] py-[40px] lg:mb-40 mb-52 overflow-hidden">
   {% if content %}
     <div {{ attributes.addClass('grid grid-cols-1 md:grid-cols-2 z-[-1]') }}>
       {% if content.first %}
@@ -33,7 +33,7 @@
           }}>
           {{ content.second }}
         </div>
-        <img class="absolute z-0 inset-0"
+        <img class="absolute z-0 inset-y-0 ml-[45px] sm:pl-[30px] left-auto right-0"
           src="{{ base_path }}{{ directory }}/assets/img/img-bg.png"
           alt="Tło" />
       {% endif %}
