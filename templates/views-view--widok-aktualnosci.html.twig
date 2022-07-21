@@ -1,42 +1,32 @@
 {#
 /**
  * @file
- * Default theme implementation for a view template to display a list of rows.
+ * Default theme implementation to display a view of unformatted rows.
  *
  * Available variables:
- * - attributes: HTML attributes for the container.
- * - rows: A list of rows for this list.
- *   - attributes: The row's HTML attributes.
- *   - content: The row's contents.
  * - title: The title of this group of rows. May be empty.
- * - list: @todo.
- *   - type: Starting tag will be either a ul or ol.
- *   - attributes: HTML attributes for the list element.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
  *
- * @see template_preprocess_views_view_list()
+ * @see template_preprocess_views_view_unformatted()
  *
  * @ingroup themeable
  */
 #}
-
-{% if attributes -%}
-  <div{{ attributes }}>
+{% if title %}
+  <h3>
+    {{ title }}
+  </h3>
 {% endif %}
-
-  {% if title %}
-    <h3>{{ title }}</h3>
-  {% endif %}
-
-  <{{ list.type }}{{ list.attributes.addClass('tul') }}>
-    {% for row in rows %}
-    <div class="new-container-li">
-      <li{{ row.attributes.addClass('tli') }}>
-        {{- row.content -}}
-      </li>
+<div class="flex flex-col md:flex-row flex-wrap mb-[110px] md:mb-[30px]">
+  {% for row in rows %}
+    {% set row_classes = [default_row_class ? 'views-row'] %}
+    <div {{ row.attributes.addClass(row_classes).addClass('w-full md:w-1/3') }}>
+      {{- row.content -}}
     </div>
-    {% endfor %}
-  </{{ list.type }}>
-
-{% if attributes -%}
-  </div>
-{% endif %}
+  {% endfor %}
+</div>
