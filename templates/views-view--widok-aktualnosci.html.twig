@@ -59,19 +59,19 @@
 
   {{ exposed }}
   {{ attachment_before }}
+  <div class="mb-4">
+    {% if rows -%}
+      {{ rows }}
+    {% elseif empty -%}
+      {{ empty }}
+    {% endif %}
+    {{ pager }}
 
-  {% if rows -%}
-    {{ rows }}
-  {% elseif empty -%}
-    {{ empty }}
-  {% endif %}
-  {{ pager }}
-
-  {{ attachment_after }}
-  {{ more }}
-
+    {{ attachment_after }}
+    {{ more }}
+  </div>
   {% if footer %}
-    <footer>
+    <footer class="text-primary text-right w-full">
       {{ footer }}
     </footer>
   {% endif %}
