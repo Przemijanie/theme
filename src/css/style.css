@@ -175,3 +175,7 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
 #block-kontaktnew > div > p:nth-child(2) > b {
   color: #279e95;
 }
+
+.wyszukiwarka-margin {
+  margin: 25px 0;
+}
