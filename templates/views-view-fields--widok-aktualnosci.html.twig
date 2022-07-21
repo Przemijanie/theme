@@ -32,47 +32,29 @@
  */
 #}
 
-
-<div class="twig-lista-aktualnosci group relative mb-[110px] flex flex-col
-md:flex-row md:mb-[30px]
-">
-
+{# <div class="twig-lista-aktualnosci group relative mb-[110px] flex flex-col md:flex-row md:mb-[30px]">
   <div class="lg:overflow-hidden">
-    <div class="twig-zdjecie lg:group-hover:scale-[1.1] transition ease duration-500
-    ">
+    <div class="twig-zdjecie lg:group-hover:scale-[1.1] transition ease duration-500">
       {{ fields.field_zdjecie.content }}
     </div>
   </div>
-  
-  <div class="content-container
-  bg-[#fff] w-fit h-fit px-[30px] py-[25px] text-[#444] absolute
-  sm:w-auto sm:left-8 sm:-bottom-8
-  left-8 top-56 lg:text-[24px] lg:w-fit lg:px-[30px] lg:py-[25px]
-  ">
-    <div class="twig-title uppercase font-semibold mb-[20px]
-    hover:text-[#279e95] transition ease duration-200
-    ">
+
+  <div class="content-container bg-[#fff] w-fit h-fit px-[30px] py-[25px] text-[#444] absolute sm:w-auto sm:left-8 sm:-bottom-8 left-8 top-56 lg:text-[24px] lg:w-fit lg:px-[30px] lg:py-[25px]">
+    <div class="twig-title uppercase font-semibold mb-[20px] hover:text-[#279e95] transition ease duration-200">
       {{ fields.title_1.content }}
     </div>
 
-    <div class="twig-body
-    text-[16px] font-normal mb-[20px]
-    hidden lg:block
-    ">
+    <div class="twig-body text-[16px] font-normal mb-[20px] hidden lg:block">
       <span>{{ fields.body.content }}</span>
     </div>
 
-    <div class="twig-date
-    text-[#279e95] text-[14px] font-semibold
-    ">
-      <span> {{ fields.created.content }}</span>
+    <div class="twig-date text-[#279e95] text-[14px] font-semibold">
+      <span>{{ fields.created.content }}</span>
     </div>
-</div>
-</div>
+  </div>
+</div> #}
 
-
-{# orginal tempalate #}
-{# {% for field in fields -%}
+{% for field in fields -%}
   {{ field.separator }}
   {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
@@ -95,5 +77,4 @@ md:flex-row md:mb-[30px]
   {%- if field.wrapper_element -%}
     </{{ field.wrapper_element }}>
   {%- endif %}
-{%- endfor %} #}
-
+{%- endfor %}
