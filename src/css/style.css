@@ -84,11 +84,14 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
 } */
 /* ---------------------Nasza oferta--------------------- */
 /* not enough place in drupla field */
+.offer-body {
+  position: absolute;
+  z-index: 0;
+}
+
 @media screen and (max-width: 1024px) {
   .offer-body {
     height: fit-content;
-    position: absolute;
-    z-index: 0;
   }
 }
 
