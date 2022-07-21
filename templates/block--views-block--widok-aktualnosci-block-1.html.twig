@@ -47,8 +47,10 @@
   'after:top-[130px]',
   'after:left-[50%]',
   'after:translate-x-[-50%]'
+  'xl:container',
+  'mx-auto',
 ] %}
-<div class="xl:container mx-auto" {{ attributes }}>
+<div {{ attributes }}>
   {{ title_prefix }}
   {% if label %}
     <h2 {{ title_attributes.addClass(classes) }}>
