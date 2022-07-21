@@ -37,9 +37,9 @@
 
   {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}
-    {% if field.wrapper_attributes.hasClass('views-field-field-zdjecie') %}{% field.wrapper_attributes.addClass('md:mx-6') %}{% endif %}
-    {% if field.wrapper_attributes.hasClass('views-field-title') %}{% field.wrapper_attributes.addClass('drupal-class bg-white py-4 w-96 absolute top-370px px-9 lg:left-12 sm:hidden lg:block') %}{% endif %}
-    {% if field.wrapper_attributes.hasClass('views-field-body') %}{% field.wrapper_attributes.addClass('absolute z-0 bg-white px-4 py-3 sm:w-auto lg:w-96 lg:h-80 lg:left-12 sm:left-12 lg:top-40 sm:-bottom-8 sm:top-56 text-sm') %}{% endif %}
+    {% if field.wrapper_attributes.hasClass('views-field-field-zdjecie') %}{{ field.wrapper_attributes.addClass('md:mx-6') }}{% endif %}
+    {% if field.wrapper_attributes.hasClass('views-field-title') %}{{ field.wrapper_attributes.addClass('drupal-class bg-white py-4 w-96 absolute top-370px px-9 lg:left-12 sm:hidden lg:block') }}{% endif %}
+    {% if field.wrapper_attributes.hasClass('views-field-body') %}{{ field.wrapper_attributes.addClass('absolute z-0 bg-white px-4 py-3 sm:w-auto lg:w-96 lg:h-80 lg:left-12 sm:left-12 lg:top-40 sm:-bottom-8 sm:top-56 text-sm') }}{% endif %}
     {{ field.wrapper_attributes }}>
   {%- endif %}
   
@@ -52,7 +52,7 @@
   {%- endif %}
 
   {%- if field.element_type -%}
-    <{{ field.element_type }}{% if field.wrapper_attributes.hasClass('offer-title') %}{% field.wrapper_attributes.addClass('text-xl font-semibold text-stone-700 lg:bg-przemijanie md:block mb-10') %}{% endif %}{{ field.element_attributes.addClass('twig-elem') }}>{{ field.content }}</{{ field.element_type }}>
+    <{{ field.element_type }}{% if field.wrapper_attributes.hasClass('offer-title') %}{{ field.wrapper_attributes.addClass('text-xl font-semibold text-stone-700 lg:bg-przemijanie md:block mb-10') }}{% endif %}{{ field.element_attributes.addClass('twig-elem') }}>{{ field.content }}</{{ field.element_type }}>
   {%- else -%}
     {{ field.content }}
   {%- endif %}
