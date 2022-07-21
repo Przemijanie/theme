@@ -26,7 +26,7 @@
   {% endif %}
   <{{ list.type }}{{ list.attributes.addClass('twig-ul grid grid-cols-1 md:grid-cols-2') }}>
     {% for row in rows %}
-      <li class="drupal-wiersz-twig flex flex-col items-center relative mb-40 lg:mx-6"{{ row.attributes }}>
+      <li class="drupal-wiersz-twig flex flex-col items-center relative mb-10 lg:mb-40 lg:mx-6"{{ row.attributes }}>
         {{- row.content -}}
         {#
           <div class="new-content">
