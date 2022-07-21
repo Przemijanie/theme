@@ -179,3 +179,17 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
 .wyszukiwarka-margin .views-row {
   margin: 25px 0;
 }
+
+#swiper-banner-block-1 .twig-swiper-banner,
+#swiper-banner-block-1 .twig-swiper-banner .tlo,
+#swiper-banner-block-1 .twig-swiper-banner .tlo img {
+  height: 100%;
+}
+
+#swiper-banner-block-1 .twig-swiper-banner .tlo img {
+  object-fit: cover;
+}
+
+#swiper-banner-block-1 .swiper-slide {
+  height: auto;
+}
