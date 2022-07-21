@@ -19,52 +19,18 @@
  */
 #}
 
-{# stiff template for styling #}
-<div class="twig-lista-aktualnosci-container container  mx-auto mb-[400px] grid grid-cols-1
-xl:grid-cols-3 xl:max-w-[1200px]
-lg:grid-cols-2 lg:grid-flow-col 
-md:grid-cols-2
-">
-  <div class= "twig-item-1 px-[15px] 
-  lg:row-span-1 lg:col-span-1 flex justify-center
-  lg:flex-start
-  "> 
-    {{ rows[0] . content}} 
-  </div>
-
-  <div class= "twig-item-2 px-[15px] 
-  lg:row-span-1 lg:col-span-1 flex justify-center
-  lg:flex-start
-  "> 
-    {{ rows[1] . content}} 
-  </div>
-
-  <div class= "twig-item-3 px-[15px] 
-  lg:col-span-1 lg:row-span-2
-  "> 
-    {{ rows[2] . content}} 
-  </div>
-
-  <div class= "twig-item-4 px-[15px] 
-  lg:col-span-1 lg:row-span-2
-  "> 
-    {{ rows[3] . content}} 
-  </div>
-</div>
-
-{# almost original template #}
-{# {% if attributes -%}
-  <div{{ attributes.addClass('twig-block-container') }}>
+{% if attributes -%}
+  <div{{ attributes }}>
 {% endif %}
 
   {% if title %}
     <h3>{{ title }}</h3>
   {% endif %}
 
-  <{{ list.type }}{{ list.attributes.addClass('twig-ul grid grid-cols-3') }}>
+  <{{ list.type }}{{ list.attributes.addClass('tul') }}>
     {% for row in rows %}
     <div class="new-container-li">
-      <li{{ row.attributes.addClass('twig-li-item') }}>
+      <li{{ row.attributes.addClass('tli') }}>
         {{- row.content -}}
       </li>
     </div>
@@ -73,4 +39,4 @@ md:grid-cols-2
 
 {% if attributes -%}
   </div>
-{% endif %} #}
+{% endif %}
