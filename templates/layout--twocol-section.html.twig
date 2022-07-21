@@ -28,13 +28,11 @@
         <div {{
           region_attributes.second.addClass(
             'layout__region',
-            'layout__region--second sm:px-[30px] relative flex justify-end md:block overflow-hidden'
+            'layout__region--second sm:px-[30px] relative flex justify-end md:block'
           )
           }}>
-          <div class="z-10">
-            {{ content.second }}
-          </div>
-          <img class="absolute z-0 inset-y-0 left-[75px] right-0"
+          {{ content.second }}
+          <img class="absolute z-[-1] inset-y-0 left-[75px] right-0"
             src="{{ base_path }}{{ directory }}/assets/img/img-bg.png"
             alt="Tło" />
         </div>
