@@ -35,7 +35,10 @@
 {% for field in fields -%}
   {{ field.separator }}
     {%- if field.wrapper_element -%}
-      <{{ field.wrapper_element }}{% if field.wrapper_attributes.hasClass('views-field-title') %}{{ field.wrapper_attributes.addClass('text-2xl mb-2 text-black font-semibold font-semibold hover:cursor-pointer hover:text-[#279e95]') }}{% endif %}{{ field.wrapper_attributes }}>
+      <{{ field.wrapper_element }}
+        {% if field.wrapper_attributes.hasClass('views-field-title') %}{{ field.wrapper_attributes.addClass('text-2xl mb-2 text-black font-semibold hover:cursor-pointer hover:text-[#279e95]') }}{% endif %}
+        {% if field.wrapper_attributes.hasClass('views-field-created') %}{{ field.wrapper_attributes.addClass('text-[14px] text-[#269e95] font-semibold') }}{% endif %}
+        {{ field.wrapper_attributes }}>
     {%- endif %}
     
     {%- if field.label -%}
