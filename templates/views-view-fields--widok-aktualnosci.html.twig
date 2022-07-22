@@ -35,7 +35,7 @@
 {% for field in fields -%}
   {{ field.separator }}
     {%- if field.wrapper_element -%}
-      <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
+      <{{ field.wrapper_element }}{% if field.wrapper_attributes.hasClass('views-field-title') %}{{ field.wrapper_attributes.addClass('text-2xl mb-2 text-black font-semibold font-semibold hover:cursor-pointer hover:text-[#279e95]') }}{% endif %}{{ field.wrapper_attributes }}>
     {%- endif %}
     
     {%- if field.label -%}
@@ -47,7 +47,7 @@
     {%- endif %}
 
     {%- if field.element_type -%}
-      <{{ field.element_type }}{% if field.element_attributes.hasClass('views-field-title') %}{{ field.element_attributes.addClass('text-2xl mb-2 text-black font-semibold font-semibold hover:cursor-pointer hover:text-[#279e95]') }}{% endif %}{{ field.element_attributes }}>{{ field.content }}</{{ field.element_type }}>
+      <{{ field.element_type }}{{ field.element_attributes }}>{{ field.content }}</{{ field.element_type }}>
     {%- else -%}
       {{ field.content }}
     {%- endif %}
