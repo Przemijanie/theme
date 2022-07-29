@@ -82,6 +82,14 @@ footer a[href^='mailto:'] {
 body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-container{
     z-index: 2;
 } */
+
+#block-przemijanie-content > div > div > div > div.views-field.views-field-field-imgcolorbox > div{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 0 80px;
+}
 /* ---------------------Nasza oferta--------------------- */
 /* not enough place in drupla field */
 .offer-body {
