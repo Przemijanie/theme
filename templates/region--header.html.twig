@@ -20,8 +20,14 @@
   lg:px-[15px] xl:container
   xl:px-[60px]
   [&>div>div>div>div>p]:z-[2]
+  {# fb icon #}
+  [&>div>div>div>div:nth-child(2)]:hidden
+  lg:flex lg:items-center lg:justify-between
   ">
     {{ content }}
+    <a class="hidden lg:inline-block"href="https://www.facebook.com/FundacjaPrzemijanie">
+      <i class="cursor-pointer fa-brands fa-facebook fa-xl"></i>
+    </a>
   </div>
 {% endif %}
 
