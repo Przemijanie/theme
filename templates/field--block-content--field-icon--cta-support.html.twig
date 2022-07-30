@@ -38,8 +38,6 @@
  * @ingroup themeable
  */
 #}
-
-{# for footer #}
 {%
   set title_classes = [
     label_display == 'visually_hidden' ? 'visually-hidden',
@@ -48,27 +46,30 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div {{ attributes }}>
+    <div class="1" attributes }}>
       {% for item in items %}
-        <div {{ item.attributes }}>{{ item.content }}</div>
+        <div class="2" {{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div class="twig-default"{{ attributes }}>{{ item.content }}</div>
+      <div class="3"{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes }}>
-    <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  <div class="cta-support-icon"{{ attributes }}>
+    <svg class="w-[70px] sm:w-[87px]" width="87" height="79" viewBox="0 0 87 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M43.6768 29.9374L50.1473 54.0855M19.6345 12.6544C7.40946 15.9301 0.15425 28.4965 3.42993 40.7215C9.3612 62.8573 40.9138 75.9711 56.2544 76.8773C69.0866 68.4222 89.855 41.289 83.9238 19.1532C80.6481 6.92825 68.0817 -0.326965 55.8567 2.94871C48.3708 4.95456 42.7461 10.4454 40.2658 17.2073C37.4456 14.8468 34.0982 13.2006 30.5069 12.4081C26.9156 11.6156 23.1862 11.7001 19.6345 12.6544ZM34.838 45.2467L58.9862 38.7762L34.838 45.2467Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    {# <div class="5"{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div>
+      <div class="6">
     {% endif %}
     {% for item in items %}
-      <div {{ item.attributes }}>{{ item.content }}</div>
+      <div class="7"{{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
-    {% endif %}
+    {% endif %} #}
   </div>
 {% endif %}

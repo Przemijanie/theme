@@ -38,8 +38,6 @@
  * @ingroup themeable
  */
 #}
-
-{# for footer #}
 {%
   set title_classes = [
     label_display == 'visually_hidden' ? 'visually-hidden',
@@ -48,27 +46,41 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div {{ attributes }}>
+    <div  attributes }}>
       {% for item in items %}
         <div {{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div class="twig-default"{{ attributes }}>{{ item.content }}</div>
+      <div {{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes }}>
-    <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  <div {{ attributes }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
       <div>
     {% endif %}
     {% for item in items %}
-      <div {{ item.attributes }}>{{ item.content }}</div>
+      <div class="cta-support-title
+      font-[600] leading-[42px] sm:text-[32px] text-[30px] relative
+      lg:max-w-[150px]
+
+      after:absolute after:contet-[''] after:inline-block after:w-[40px] after:h-[3px] after:bg-[#fff]
+      lg:after:top-[100px] after:left-[0]
+      after:top-[55px]
+      "{{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
     {% endif %}
   </div>
 {% endif %}
+
+{# font-[600] leading-[58px] text-[45px]
+after:absolute after:contet-[''] after:inline-block after:w-[40px] after:h-[2px] after:bg-[#279e95]
+    lg:after:top-[130px] lg:after:left-[95px]
+    md:after:top-[130px] md:after:left-[75px]
+    sm:after:top-[125px] sm:after:left-[62px]
+    after:top-[120px] after:left-[60px] #}

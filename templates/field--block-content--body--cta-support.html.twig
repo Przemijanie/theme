@@ -55,7 +55,7 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div class="twig-default"{{ attributes }}>{{ item.content }}</div>
+      <div {{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -65,7 +65,12 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div {{ item.attributes }}>{{ item.content }}</div>
+      <div class="cta-support-body
+      [&>p]:font-['Poppins'] font-[300] text-[22px] leading-[28px]
+      hidden 
+      lg:block
+      "
+      {{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

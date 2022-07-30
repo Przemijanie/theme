@@ -38,8 +38,6 @@
  * @ingroup themeable
  */
 #}
-
-{# for footer #}
 {%
   set title_classes = [
     label_display == 'visually_hidden' ? 'visually-hidden',
@@ -55,17 +53,41 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div class="twig-default"{{ attributes }}>{{ item.content }}</div>
+      <div {{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes }}>
-    <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  <div {{ attributes }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
       <div>
     {% endif %}
     {% for item in items %}
-      <div {{ item.attributes }}>{{ item.content }}</div>
+      <div class="cta-support-button group
+      flex justify-center items-center
+      bg-[#fff] text-[#279e95] rounded-[30px]
+      text-[15px] leading-[27px] tracking-wider text-center font-[400]
+      px-0 py-[10px] w-[210px]
+      lg:py-[10px] lg:h-[45px]
+      hover:cursor-pointer
+      "
+      {{ item.attributes }}>
+      
+      <span class="ml-0 group-hover:ml-[20px] transition-all ease duration-300">
+        <i class="fa-solid fa-arrow-right
+        translate-x-[-35px] transition ease duration-300 opacity-0
+        group-hover:translate-x-0 group-hover:opacity-100
+        "></i>
+
+        {{ item.content }}
+
+        <i class="fa-solid fa-arrow-right
+        transition ease duration-300 opacity-100
+        group-hover:translate-x-[30px] group-hover:opacity-0
+        "></i>
+      </span>  
+    
+    </div>
     {% endfor %}
     {% if multiple %}
       </div>
