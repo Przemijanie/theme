@@ -25,8 +25,13 @@
  * @ingroup themeable
  */
 #}
+{%
+  set htmlClass = [
+    "h-full",
+  ]
+%}
 <!DOCTYPE html>
-<html{{ html_attributes }}>
+<html{{ html_attributes.addClass(htmlClass) }}>
   <head>
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
@@ -61,7 +66,12 @@
       }
     </script>
   </head>
-  <body class="text-[#787878] font-normal text-[16px] font-['Poppins'] leading-[27px]"{{ attributes }}>
+  {%
+    set bodyClass = [
+      "h-full text-[#787878] font-normal font-['Poppins'] text-[16px] leading-[27px]",
+    ]
+  %}
+  <body {{ attributes.addClass(bodyClass) }}>
     
    
 
