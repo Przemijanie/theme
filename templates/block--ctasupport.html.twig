@@ -30,8 +30,8 @@
 <div class="cta-support
 container mx-auto mb-[80px] max-w-[1200px]
 
-bg-[url(/themes/przemijanie/theme/assets/img/cta-support-bg-img.png)]
-bg-no-repeat bg-left bg-cover bg-[#279e95]
+{# bg-[url(/themes/przemijanie/theme/assets/img/cta-support-bg-img.png)] #}
+bg-no-repeat bg-left bg-cover bg-[#279e9590]
 sm:bg-right sm:bg-contain
 "{{ attributes }}>
   {# {{ title_prefix }}
@@ -40,7 +40,7 @@ sm:bg-right sm:bg-contain
   {% endif %}
   {{ title_suffix }} #}
   {% block content %}
-  <div class="bg-container
+  <div class="bg-container relative
   text-[#fff] bg-[#228F86d0] h-[230px]
   flex justify-between items-center flex-col
   px-[10px] py-[10px]
