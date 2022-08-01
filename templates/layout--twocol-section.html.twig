@@ -10,14 +10,14 @@
  * @ingroup themeable
  */
 #}
-<div class="relative xl:container mx-auto xl:px-[40px] py-10 lg:py-[30px] mb-0 md:mb-52 lg:mb-40">
+<div class="relative lg:container mx-auto py-10 lg:py-[30px] mb-0 md:mb-52 lg:mb-40">
   {% if content %}
     <div {{ attributes.addClass('grid grid-cols-1 md:grid-cols-2 z-[-1]') }}>
       {% if content.first %}
         <div {{
           region_attributes.first.addClass(
             'layout__region',
-            'layout__region--first px-[30px]'
+            'layout__region--first'
           )
           }}>
           {{ content.first }}
