@@ -19,7 +19,6 @@ regions:
   content: "Content"
   sidebar_first: "Left sidebar"
   sidebar_second: "Right sidebar"
-  cta_support: "CTA Support"
   footer: "Footer"
   footer_top: "Footer top"
   footer_left: "Footer left"

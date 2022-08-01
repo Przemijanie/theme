@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to dis§play a region.
+ * Default theme implementation to display a region.
  *
  * Available variables:
  * - content: The content for this region, typically blocks.
@@ -15,11 +15,8 @@
  */
 #}
 {% if content %}
-  <div {{ attributes }} class="bg-primary">
-    <div class="mx-auto font-light text-white font-['Roboto'] text-[15px] xl:container">
-      <div class="flex justify-center flex-wrap items-center md:justify-between">
-        {{ content }}
-      </div>
-    </div>
+  <div{{ attributes }}>
+    {{ content }}
   </div>
 {% endif %}
+

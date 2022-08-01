@@ -62,7 +62,7 @@
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
+    <div class="layout-content container mx-auto">
       {{ page.content }}
     </div>
     {# /.layout-content #}
@@ -91,7 +91,7 @@
   {% endif %}
 
   <div class="footer-info-block bg-[#f7f7f7] mx-auto py-[40px]">
-    <div class="footer-container container md:mx-auto flex flex-wrap justify-center sm:justify-between lg:flex-row lg:justify-around">
+    <div class="footer-container container md:mx-auto flex flex-wrap justify-center sm:justify-between lg:flex-row lg:justify-between">
       {% if page.footer_left %}
         <footer role="contentinfo_left">
           {{ page.footer_left }}
