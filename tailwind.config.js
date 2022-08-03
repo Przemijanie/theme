@@ -1,5 +1,8 @@
 module.exports = {
   content: ['**/*.twig'],
+  corePlugins: {
+    container: false,
+  },
   theme: {
     container: {
       center: true,
@@ -33,4 +36,30 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+          paddingLeft: '15px',
+          paddingRight: '15px',
+          '@screen sm': {
+            maxWidth: '100%',
+          },
+          '@screen md': {
+            maxWidth: '100%',
+          },
+          '@screen lg': {
+            maxWidth: '100%',
+          },
+          '@screen xl': {
+            maxWidth: '100%',
+          },
+          '@screen 2xl': {
+            maxWidth: '1536px',
+          },
+        },
+      })
+    },
+  ],
 }
