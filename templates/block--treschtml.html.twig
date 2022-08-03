@@ -27,16 +27,14 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes }} class="twig02">
+<div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</div></h2>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-  <div class=
-    "
-    twig03
+  <div class="
     md:h-[80px] lg:h-[40px]
     block
     lg:flex lg:items-center lg:justify-between
