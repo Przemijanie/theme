@@ -7,10 +7,10 @@ module.exports = {
         DEFAULT: '15px',
       },
       screens: {
-        sm: '100%',
-        md: '100%',
-        lg: '100%',
-        xl: '100%',
+        sm: '1536px',
+        md: '1536px',
+        lg: '1536px',
+        xl: '1536px',
       },
     },
     extend: {
