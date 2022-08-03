@@ -46,24 +46,24 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div  class="1" attributes }}>
+    <div attributes }}>
       {% for item in items %}
-        <div  class="2"{{ item.attributes }}>{{ item.content }}</div>
+        <div {{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div class="3" {{ attributes }}>{{ item.content }}</div>
+      <div {{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div  class="4 absolute z-[-1] overflow-hidden inset-0"{{ attributes }}>
+  <div class="absolute z-[-1] overflow-hidden inset-0"{{ attributes }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div class="6">
+      <div>
     {% endif %}
     {% for item in items %}
-      <div class="7 
+      <div class="
       h-[100%]
       [&>img]:h-[100%] [&>img]:max-w-none [&>img]:object-cover [&>img]:object-center [&>img]:w-[100%]
       "{{ item.attributes }}>{{ item.content }}</div>

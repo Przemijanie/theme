@@ -45,8 +45,7 @@
  * @ingroup themeable
  */
 #}
-<div class="layout-container page-o-nas">
-
+<div class="layout-container">
   <header class="bg-[#279e95]" role="banner">
     {{ page.header }}
   </header>
@@ -63,7 +62,7 @@
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content mb-[80px]">
+    <div class="layout-content lg:container lg:mx-auto mb-[80px]">
       {{ page.content }}
     </div>{# /.layout-content #}
 
@@ -96,7 +95,7 @@
    ">
    <div class="footer-container 
    lg:container md:mx-auto flex flex-wrap justify-center 
-   sm:justify-between lg:flex-row lg:justify-around">
+   sm:justify-between lg:flex-row">
     {% if page.footer_left %}
       <footer role="contentinfo_left">
         {{ page.footer_left }}

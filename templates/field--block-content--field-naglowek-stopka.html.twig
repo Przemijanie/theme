@@ -46,24 +46,24 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div class="twig-stopka-1" {{ attributes }}>
+    <div {{ attributes }}>
       {% for item in items %}
         <div {{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div class="twig-stopka-2"{{ attributes }}>{{ item.content }}</div>
+      <div{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div class="twig-stopka-3" {{ attributes }}>
+  <div {{ attributes }}>
     {# <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div> #}
     {% if multiple %}
-      <div class="twig-stopka-4">
+      <div>
     {% endif %}
     {% for item in items %}
-      <div class="twig-stopka-5 text-[#444] text-[24px] font-semibold mb-[20px] leading-[23px]
+      <div class="text-[#444] text-[24px] font-semibold mb-[20px] leading-[23px]
       after:absolute after:contet-[''] after:inline-block after:w-[40px] after:h-[2px] after:bg-[#279e95]
       after:top-[0px] after:left-[0px]
       " {{ item.attributes }}>{{ item.content }}</div>
