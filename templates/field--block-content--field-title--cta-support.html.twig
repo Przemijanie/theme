@@ -64,12 +64,12 @@
     {% endif %}
     {% for item in items %}
       <div class="cta-support-title
-      font-[600] leading-[42px] sm:text-[32px] text-[30px] relative
+      font-[600] leading-[42px] xl:text-[32px] md:text-[29px] text-[28px] relative
       lg:max-w-[150px]
 
       after:absolute after:contet-[''] after:inline-block after:w-[40px] after:h-[3px] after:bg-[#fff]
-      lg:after:top-[100px] after:left-[0]
-      after:top-[55px]
+      lg:after:top-[100px] after:left-[50%] after:translate-x-[-50%]
+      after:top-[55px] sm:after:left-[0] sm:after:translate-x-0
       "{{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
