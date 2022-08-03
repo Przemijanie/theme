@@ -33,22 +33,20 @@
     <h2 class=
     "
     overflow-hidden
-    twig-nasza-oferta-title lg:w-[800px] w-[500px] 
+    twig-nasza-oferta-title 
     text-center text-[#444] font-semibold relative z-[0] pt-[80px] pb-[50px] mb-[40px]
     lg:text-[36px] md:text-[30px] text-[25px]
+    lg:w-[800px] md:w-[700px] sm:w-[600px] w-[400px]
     
     before:absolute before:content-['Nasza_oferta'] before:text-[#fff] before:z-[-1]
+    before:left-[50%] before:translate-x-[-50%]
     xl:before:w-[800px] xl:before:text-[120px] xl:before:top-[75px]
-    md:before:w-[750px] md:before:text-[100px] md:before:top-[75px] md:before:left-[0px]
-    sm:before:w-[550px] sm:before:text-[85px] sm:before:top-[75px] sm:before:left-[-195px]
-    before:w-[400px] before:text-[60px] before:top-[75px] before:left-[-125px]
+    md:before:w-[750px] md:before:text-[100px] md:before:top-[75px] 
+    sm:before:w-[550px] sm:before:text-[85px] sm:before:top-[75px]
+    before:w-[400px] before:text-[60px] 
 
     after:absolute after:contet-[''] after:inline-block after:w-[40px] after:h-[2px] after:bg-[#279e95]
     after:left-[50%] after:translate-x-[-50%] after:top-[130px]
-    {# lg:after:top-[130px] lg:after:left-[95px]
-    md:after:top-[130px] md:after:left-[75px]
-    sm:after:top-[125px] sm:after:left-[62px]
-    after:top-[120px] after:left-[60px] #}
     "
     {{ title_attributes }}>{{ label }}</div></h2>
   {% endif %}
