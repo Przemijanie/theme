@@ -1,6 +1,18 @@
 module.exports = {
   content: ['**/*.twig'],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '15px',
+      },
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '100%',
+        xl: '100%',
+      },
+    },
     extend: {
       colors: {
         primary: '#279e95',
