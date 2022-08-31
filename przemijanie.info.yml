@@ -28,3 +28,4 @@ regions:
   breadcrumb: "Breadcrumb"
   page_top: "Page top"
   page_bottom: "Page bottom"
+  overlay: "Overlay"
