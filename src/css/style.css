@@ -204,13 +204,13 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
   padding: 25px;
   z-index: 1000;
   border-radius: 5px;
-  max-width: 24em;
+  max-width: 25em;
   line-height: normal;
 }
 
 #cookiesjsr .cookiesjsr-banner--text {
-  font-size: 18px;
-  font-weight: 700;
+  display: block;
+  color: #000;
 }
 
 .cookiesjsr--app .cookiesjsr-links.links--row {
@@ -222,6 +222,7 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
 
 .cookiesjsr--app .cookiesjsr-links a {
   text-decoration: underline;
+  font-size: 12px;
 }
 
 .cookiesjsr--app .cookiesjsr-banner--action {
@@ -248,6 +249,7 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
 
 .cookiesjsr--app .cookiesjsr-btn.denyAll {
   border: none;
+  @apply text-primary;
 }
 
 .cookiesjsr--app .cookiesjsr-btn + .cookiesjsr-btn {
