@@ -196,7 +196,7 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
 }
 
 /* Cookies CSS Styles */
-.cookiesjsr--app {
+.cookiesjsr--app .cookiesjsr-banner {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -206,6 +206,11 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
   border-radius: 5px;
   max-width: 25em;
   line-height: normal;
+  visibility: hidden;
+}
+
+.cookiesjsr--app .cookiesjsr-banner.active {
+  visibility: visible;
 }
 
 #cookiesjsr .cookiesjsr-banner--text {
@@ -245,11 +250,12 @@ body > div.dialog-off-canvas-main-canvas > div > div.bg-white.primary-menu-conta
 
 .cookiesjsr--app .cookiesjsr-btn.allowAll {
   @apply border-primary;
+  @apply text-primary;
+  border-radius: 5px;
 }
 
 .cookiesjsr--app .cookiesjsr-btn.denyAll {
   border: none;
-  @apply text-primary;
 }
 
 .cookiesjsr--app .cookiesjsr-btn + .cookiesjsr-btn {
