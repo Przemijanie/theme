@@ -58,4 +58,4 @@ jobs:
       - name: Cache Clear
         uses: wei/curl@v1
         with:
-          args: "-H 'Content-Type: application/json' -H 'CU-ACCESS-KEY: ${{ secrets.CLEAR_CACHE_KEY }}' ${{ secrets.CLEAR_CACHE_URL }}"
+          args: "-H 'Content-Type: application/json' ${{ secrets.CLEAR_CACHE_URL }}"
