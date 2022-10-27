@@ -113,8 +113,13 @@
           <p class="mb-[15px] text-[15px] font-['Roboto']">Kontakt z fundacją możliwa za pomocą telefonu oraz email.</p>
           
           <ul class="icn-list pl-[24px] font-['Roboto']">
-            <li class="text-[24px] font-normal mb-[18px]"><span class="phone"><i class="fa-solid fa-phone text-[14px] text-[#279e95]"></i>  +48 728 182 993 i/lub 77 50 00 334</span></li>
-            <li class="text-[16px]"><a href="mailto:biuro@przemijanie.pl"><span><i class="fa-solid fa-envelope text-[14px] text-[#279e95]"></i>  biuro@przemijanie.pl</span></a></li>
+            <li class="text-[24px] font-normal mb-[18px]"><span class="phone"><i class="fa-solid fa-phone text-[14px] text-[#279e95]"></i>
+              <a href="{{ site_settings.fundacja.number_phones.field_komorkowy }}">{{ site_settings.fundacja.number_phones.field_komorkowy }}</a>
+              i/lub 
+              <a href="{{ site_settings.fundacja.number_phones.field_stacjonarny }}">{{ site_settings.fundacja.number_phones.field_stacjonarny }}</a>
+             </span>
+            </li>
+            <li class="text-[16px]"><a href="mailto:{{ site_settings.fundacja.email.field_email }}"><span><i class="fa-solid fa-envelope text-[14px] text-[#279e95]"></i>  {{ site_settings.fundacja.email.field_email }}</span></a></li>
           </ul>
         </div>
       </div>

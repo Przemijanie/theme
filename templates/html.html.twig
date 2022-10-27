@@ -147,14 +147,17 @@
       <ul class="icn-list pl-[24px] font-['Roboto']">
         <li class="text-[24px] font-normal mb-[18px]">
           <span class="phone">
-            <i class="fa-solid fa-phone text-[14px] text-[#279e95]"></i>  +48 728 182 993 i/lub 77 50 00 334
+            <i class="fa-solid fa-phone text-[14px] text-[#279e95]"></i>  
+            <a href="tel:{{ site_settings.fundacja.number_phones.field_komorkowy }}">{{ site_settings.fundacja.number_phones.field_komorkowy }}</a>
+            i/lub 
+            <a href="tel:{{ site_settings.fundacja.number_phones.field_stacjonarny }}">{{ site_settings.fundacja.number_phones.field_stacjonarny }}</a>
           </span>
         </li>
 
         <li class="text-[16px]">
           <a href="mailto:biuro@przemijanie.pl">
             <span>
-              <i class="fa-solid fa-envelope text-[14px] text-[#279e95]"></i>  biuro@przemijanie.pl
+              <i class="fa-solid fa-envelope text-[14px] text-[#279e95]"></i><a href="mailto:{{ site_settings.fundacja.email.field_email }}">{{ site_settings.fundacja.email.field_email }}</a>
             </span>
           </a>
         </li> 
