@@ -64,5 +64,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PRIVATE_KEY_PASS }}
           script: |
-            /usr/bin/php8.0 ${{ secrets.REMOTE_ROOT_PATH }}/vendor/bin/drupal cache:rebuild --root=${{ secrets.REMOTE_ROOT_PATH }}
-            /usr/bin/php8.0 ${{ secrets.REMOTE_ROOT_PATH }}/vendor/bin/drupal cron:execute --root=${{ secrets.REMOTE_ROOT_PATH }}
+            /usr/bin/php8.0 ${{ secrets.REMOTE_ROOT_PATH }}/vendor/bin/drush cache:rebuild --root=${{ secrets.REMOTE_ROOT_PATH }}
+            /usr/bin/php8.0 ${{ secrets.REMOTE_ROOT_PATH }}/vendor/bin/drush core:cron --root=${{ secrets.REMOTE_ROOT_PATH }}
+            /usr/bin/php8.0 ${{ secrets.REMOTE_ROOT_PATH }}/vendor/bin/drush cache:rebuild-external -y --root=${{ secrets.REMOTE_ROOT_PATH }}
