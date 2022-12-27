@@ -7,6 +7,11 @@
   .offer-body {
     z-index: -1;
   }
+
+  .offer-img > img {
+    width: 100%;
+  }
+
 }
 /* margin inside block */
 @media screen and (max-width: 1024px) {
