@@ -37,7 +37,7 @@
     {%- if field.wrapper_element -%}
       <{{ field.wrapper_element }}
         {% if field.wrapper_attributes.hasClass('views-field-field-img-header') %}{{ field.wrapper_attributes.addClass('block mb-6') }}{% endif %}
-        {% if field.wrapper_attributes.hasClass('views-field-title') %}{{ field.wrapper_attributes.addClass('text-2xl inline-block mb-3 text-black font-semibold hover:cursor-pointer hover:text-[#279e95]') }}{% endif %}
+        {% if field.wrapper_attributes.hasClass('views-field-title') %}{{ field.wrapper_attributes.addClass('text-2xl block mb-3 text-black font-semibold hover:cursor-pointer hover:text-[#279e95]') }}{% endif %}
         {% if field.wrapper_attributes.hasClass('views-field-created') %}{{ field.wrapper_attributes.addClass('block mt-3 text-[14px] text-[#269e95] font-semibold') }}{% endif %}
         {{ field.wrapper_attributes }}>
     {%- endif %}
