@@ -37,9 +37,9 @@
 
   {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}
-    {% if field.wrapper_attributes.hasClass('views-field-field-zdjecie') %}{{ field.wrapper_attributes.addClass('md:mx-6') }}{% endif %}
+    {% if field.wrapper_attributes.hasClass('views-field-field-zdjecie') %}{{ field.wrapper_attributes.addClass('md:mx-6 xl:w-[70%] xl:aspect-square') }}{% endif %}
     {% if field.wrapper_attributes.hasClass('views-field-title') %}{{ field.wrapper_attributes.addClass('drupal-class bg-white py-4 w-96 relative sm:absolute left-0 top-0 sm:top-370px px-9 lg:left-12 sm:hidden lg:block') }}{% endif %}
-    {% if field.wrapper_attributes.hasClass('views-field-body') %}{{ field.wrapper_attributes.addClass('relative sm:absolute top-0 left-0 z-0 bg-white px-4 py-3 sm:w-auto lg:w-96 lg:h-80 lg:left-12 sm:left-12 lg:top-40 sm:-bottom-8 sm:top-56 text-sm') }}{% endif %}
+    {% if field.wrapper_attributes.hasClass('views-field-body') %}{{ field.wrapper_attributes.addClass('relative sm:absolute top-0 left-0 z-0 bg-white px-4 py-3 sm:w-auto lg:w-96 lg:h-80 xl:w-[70%] lg:left-12 sm:left-12 xl:left-1/4 lg:top-40 sm:-bottom-8 sm:top-56 xl:teop-1/2 text-sm') }}{% endif %}
     {{ field.wrapper_attributes }}>
   {%- endif %}
   
