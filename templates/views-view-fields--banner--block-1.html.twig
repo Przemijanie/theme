@@ -32,13 +32,20 @@
  */
 #}
 <div class="twig-swiper-banner">
-  <div class="twig-swiper-title w-4/5 lg:w-1/2 text-[28px] text-center text-[#fff] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] font-semibold sm:text-[30px] sm:leading-tight md:text-[40px] md:top-[35%] lg:text-[44px] xl:text-[54px] xl:left-[50%] xl:top-[30%]">
-    {{ fields.title.content }}
-    <div class="bg-[#279e95] h-1 mt-5 mx-auto w-20"></div>
-  </div>
+  <div class="absolute flex flex-col w-4/5 lg:w-1/2 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:top-[35%] xl:left-[50%]">
+    <div class="twig-swiper-title text-[28px] text-center text-[#fff] font-semibold sm:text-[30px] sm:leading-tight md:text-[40px] lg:text-[44px] xl:text-[54px]">
+      {{ fields.title.content }}
+    </div>
 
-  <div class="twig-swiper-subtitle w-full invisible text-center text-[#fff] text-[16px] font-light absolute left-[50%] top-[45%] translate-x-[-50%] translate-y-[-50%] md:visible">
-    <span>{{ fields.field_opis_baneru.content }}</span>
+    {% if fields.title.content %}
+    <div class="bg-[#279e95] h-1 mt-5 mx-auto w-20"></div>
+    {% endif %}
+
+    <div class="twig-swiper-subtitle w-full invisible text-center text-[#fff] text-[16px] font-light mt-10 md:visible">
+      <span>{{ fields.field_opis_baneru.content }}</span>
+    </div>
+
+
   </div>
 
   <div class="swiper-button-more group text-center text-[14px] text-[#fff] bg-[#279e95] rounded-full px-0 py-2 w-[160px] overflow-hidden mt-10 absolute left-[50%] top-[65%] translate-x-[-50%] lg:mt-0 xl:top-[57%] hover:bg-[#30c7bc] hover:cursor-pointer md:px-2 md:py-2 md:w-[175px] lg:px-4 lg:py-4 lg:w-[200px] lg:text-[15px]">
