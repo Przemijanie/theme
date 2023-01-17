@@ -246,23 +246,25 @@ window.addEventListener('DOMContentLoaded', (event) => {
       openMenuBtn.classList.add('invisible')
     }
 
+    //init  
     OpenDropMenu()
     CloseDropMenu()
+    showOpenMenuButton()
 
     document.addEventListener('scroll', () => {
       //1st scroll: moved from right side -> hidden under navbar
-      if (window.scrollY > swiperContainer.offsetTop + swiperContainer.clientHeight - 16) {
-        showOpenMenuButton()
+      if (window.scrollY > swiperContainer.offsetTop + swiperContainer.clientHeight + 80) {
         ShowDropMenuFixedHidden()
         //secured from continuously sliding down after scrolling
         if (isCloseClicked === false) {
-          ShowDropMenuFixedHidden()
           ShowDropMenuFixedSlideDown()
+          hideOpenMenuButton()
           // console.log('if closeclicked false');
 
           //display menu when closed/hidden
         } else if (isCloseClicked === true) {
           ShowDropMenuFixedHidden()
+          showOpenMenuButton()
           // console.log('if closeclicked true');
         }
 
@@ -276,9 +278,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       //hiding drop menu widget when scrolled on footer
       if (window.scrollY >= document.querySelector('.layout-container').offsetHeight - 96) {
         DropMenuReturnToHomePos()
+        hideOpenMenuButton()
         if (isCloseClicked === false) {
-          hideOpenMenuButton()
-          // openMenuBtn.click()
+          openMenuBtn.click()
         }
       }
     })
