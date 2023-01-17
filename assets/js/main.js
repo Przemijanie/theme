@@ -235,10 +235,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
       })
     }
 
-    // function showOpenMenuButton(){
-    //     openMenuBtn.classList.remove('invisible');
-    //     openMenuBtn.classList.add('visible');
-    // };
+    function showOpenMenuButton(){
+      openMenuBtn.classList.remove('invisible');
+      openMenuBtn.classList.add('visible');
+    };
+
     function hideOpenMenuButton() {
       openMenuBtn.classList.remove('visible')
       openMenuBtn.classList.add('invisible')
@@ -248,6 +249,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       //1st scroll: moved from right side -> hidden under navbar
       if (window.scrollY > 550 && window.scrollY < 750) {
         // hideOpenMenuButton()
+        showOpenMenuButton()
         ShowDropMenuFixedHidden()
 
         //1st slide down drop-menu
@@ -264,6 +266,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         } else if (isCloseClicked === true) {
           ShowDropMenuFixedHidden()
           CloseDropMenu()
+          OpenDropMenu()
           // console.log('if closeclicked true');
         }
 
