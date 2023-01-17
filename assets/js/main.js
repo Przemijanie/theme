@@ -277,10 +277,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
       }
 
       //hiding drop menu widget when scrolled on footer
-      if (window.scrollY > 3770) {
-        DropMenuReturnToHomePos()
-        hideOpenMenuButton()
-        console.log('>3770')
+      if (window.scrollY - 50 >= (document.documentElement.scrollHeight - window.innerHeight)) {
+        // DropMenuReturnToHomePos()
+        if (isCloseClicked === false) {
+          hideOpenMenuButton()
+          openMenuBtn.click()
+        }
+      }else{
+        showOpenMenuButton()
       }
     })
   }
