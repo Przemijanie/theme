@@ -121,7 +121,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       //Map content display after hover
       mapContent.classList.remove(
         'xl:right-[785px]',
-        'lg:right-[530px]',
+        'lg:right-[620px]',
         'top-[120px]',
       )
       mapContent.classList.add('right-[100px]', 'top-[20px]')
@@ -129,7 +129,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       //Boss content display after hover
       bossContent.classList.remove(
         'xl:right-[405px]',
-        'lg:right-[230px]',
+        'lg:right-[320px]',
         'top-[80px]',
       )
       bossContent.classList.add('right-[100px]', 'top-[-70px]')
@@ -185,7 +185,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       mapContent.classList.remove('right-[100px]', 'top-[20px]')
       mapContent.classList.add(
         'xl:right-[785px]',
-        'lg:right-[530px]',
+        'lg:right-[620px]',
         'top-[120px]',
       )
 
@@ -193,7 +193,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       bossContent.classList.remove('right-[100px]', 'top-[-70px]')
       bossContent.classList.add(
         'xl:right-[405px]',
-        'lg:right-[230px]',
+        'lg:right-[320px]',
         'top-[80px]',
       )
 
