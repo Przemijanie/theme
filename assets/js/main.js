@@ -77,6 +77,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   //Drop menu widget change to fixed under navbar after scroll
   function DynamicDropMenu() {
     //on scroll content
+    let swiperContainer = document.querySelector('#swiper-banner-block-1')
     let dropMenu = document.querySelector('[data-drop-menu]')
     let closeMenuBtn = document.querySelector('[data-close-button]')
     let openMenuBtn = document.querySelector('[data-btn-open-drop-menu]')
@@ -247,13 +248,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     document.addEventListener('scroll', () => {
       //1st scroll: moved from right side -> hidden under navbar
-      if (window.scrollY > 550 && window.scrollY < 750) {
-        // hideOpenMenuButton()
+      if (window.scrollY > swiperContainer.offsetTop + swiperContainer.clientHeight - 16) {
         showOpenMenuButton()
         ShowDropMenuFixedHidden()
-
-        //1st slide down drop-menu
-      } else if (window.scrollY > 750) {
         //secured from continuously sliding down after scrolling
         if (isCloseClicked === false) {
           ShowDropMenuFixedHidden()
@@ -272,18 +269,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //Back to right side position
       } else {
+        hideOpenMenuButton()
         DropMenuReturnToHomePos()
         // console.log('rth');
       }
 
       //hiding drop menu widget when scrolled on footer
-      if (window.scrollY - 50 >= (document.documentElement.scrollHeight - window.innerHeight)) {
-        // DropMenuReturnToHomePos()
+      if (window.scrollY >= document.querySelector('.layout-container').offsetHeight - 96) {
+        DropMenuReturnToHomePos()
         if (isCloseClicked === false) {
           hideOpenMenuButton()
-          openMenuBtn.click()
+          // openMenuBtn.click()
         }
       }else{
+        ShowDropMenuFixedHidden()
         showOpenMenuButton()
       }
     })
