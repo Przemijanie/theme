@@ -219,7 +219,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     function CloseDropMenu() {
       closeMenuBtn.addEventListener('click', () => {
         dropMenu.classList.remove('slide-down-drop-menu')
-        openMenuBtn.classList.remove('invisible')
+        showOpenMenuButton()
         isCloseClicked = true
       })
     }
@@ -230,8 +230,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       openMenuBtn.addEventListener('click', () => {
         dropMenu.classList.add('slide-down-drop-menu')
         dropMenu.classList.add('visible')
-        openMenuBtn.classList.add('invisible')
-
+        hideOpenMenuButton()
         isCloseClicked = false
       })
     }
@@ -242,12 +241,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
       openMenuBtn.classList.remove('-translate-y-full');
     };
 
-    function hideOpenMenuButton() {
+    function hideOpenMenuButton(fast) {
       openMenuBtn.classList.add('-translate-y-full');
-      setTimeout(()=>{
+      if (fast == true) {
         openMenuBtn.classList.remove('visible')
         openMenuBtn.classList.add('invisible')
-      },100)
+      }else{
+        setTimeout(()=>{
+          openMenuBtn.classList.remove('visible')
+          openMenuBtn.classList.add('invisible')
+        },100)
+
+      }
     }
 
     //init  
@@ -282,7 +287,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       //hiding drop menu widget when scrolled on footer
       if (window.scrollY >= document.querySelector('.layout-container').offsetHeight - 96) {
         DropMenuReturnToHomePos()
-        hideOpenMenuButton()
+        hideOpenMenuButton(true)
         if (isCloseClicked === false) {
           openMenuBtn.click()
         }
