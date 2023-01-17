@@ -246,6 +246,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       openMenuBtn.classList.add('invisible')
     }
 
+    OpenDropMenu()
+    CloseDropMenu()
+
     document.addEventListener('scroll', () => {
       //1st scroll: moved from right side -> hidden under navbar
       if (window.scrollY > swiperContainer.offsetTop + swiperContainer.clientHeight - 16) {
@@ -255,15 +258,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (isCloseClicked === false) {
           ShowDropMenuFixedHidden()
           ShowDropMenuFixedSlideDown()
-          CloseDropMenu()
-          OpenDropMenu()
           // console.log('if closeclicked false');
 
           //display menu when closed/hidden
         } else if (isCloseClicked === true) {
           ShowDropMenuFixedHidden()
-          CloseDropMenu()
-          OpenDropMenu()
           // console.log('if closeclicked true');
         }
 
@@ -281,9 +280,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
           hideOpenMenuButton()
           // openMenuBtn.click()
         }
-      }else{
-        ShowDropMenuFixedHidden()
-        showOpenMenuButton()
       }
     })
   }
