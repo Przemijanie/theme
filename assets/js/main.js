@@ -247,7 +247,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('scroll', () => {
       //1st scroll: moved from right side -> hidden under navbar
       if (window.scrollY > 550 && window.scrollY < 750) {
-        hideOpenMenuButton()
+        // hideOpenMenuButton()
         ShowDropMenuFixedHidden()
 
         //1st slide down drop-menu
