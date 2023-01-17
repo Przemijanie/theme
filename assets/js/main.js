@@ -42,12 +42,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
     // hiding btn
     document.addEventListener('scroll', () => {
-      if (window.scrollY >= 300) {
-        backToTopButton.classList.add('btn-move')
-        backToTopButtonHover.classList.add('btn-move')
+      if (window.scrollY >= 300 && document.documentElement.scrollHeight - 50 >= window.scrollY + window.innerHeight) {
+        backToTopButton.classList.add("btn-move");
+        backToTopButtonHover.classList.add("btn-move");
       } else {
-        backToTopButton.classList.replace('btn-move', 'bottom-0')
-        backToTopButtonHover.classList.replace('btn-move', 'bottom-0')
+        backToTopButton.classList.replace("btn-move", "bottom-0");
+        backToTopButtonHover.classList.replace("btn-move", "bottom-0");
       }
     })
     // transparent border around button active
