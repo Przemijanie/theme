@@ -55,7 +55,7 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div class="flex items-center justify-between w-[100%] z-[6]"{{ attributes }}>{{ item.content }}</div>
+      <div class="flex items-center justify-between w-[100%] z-[6] leading-5 py-2 sm:py-0 text-center "{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
