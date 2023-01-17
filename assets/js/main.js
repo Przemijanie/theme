@@ -253,7 +253,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     document.addEventListener('scroll', () => {
       //1st scroll: moved from right side -> hidden under navbar
-      if (window.scrollY > swiperContainer.offsetTop + swiperContainer.clientHeight + 80) {
+      if (window.scrollY > swiperContainer.offsetTop + swiperContainer.clientHeight - 80) {
         ShowDropMenuFixedHidden()
         //secured from continuously sliding down after scrolling
         if (isCloseClicked === false) {
