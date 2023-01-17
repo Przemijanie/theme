@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let closeMenuBtn = document.querySelector('[data-close-button]')
     let openMenuBtn = document.querySelector('[data-btn-open-drop-menu]')
     let hoverTitleBtn = document.querySelector('[data-hover-btn-title]')
-    let isCloseClicked = false
+    let isCloseClicked = true
 
     //on hover content
     let mapContent = document.querySelector('[data-map-content]')
@@ -149,7 +149,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       hoverTitleBtn.classList.remove('absolute')
 
       //status marker
-      isCloseClicked = false
+      // isCloseClicked = false
     }
 
     function ShowDropMenuFixedHidden() {
@@ -263,7 +263,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
           //display menu when closed/hidden
         } else if (isCloseClicked === true) {
           ShowDropMenuFixedHidden()
-          OpenDropMenu()
+          CloseDropMenu()
           // console.log('if closeclicked true');
         }
 
