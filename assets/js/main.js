@@ -237,13 +237,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function showOpenMenuButton(){
-      openMenuBtn.classList.remove('invisible');
-      openMenuBtn.classList.add('visible');
+      openMenuBtn.classList.remove('-translate-y-full');
+      setTimeout(()=>{
+        openMenuBtn.classList.remove('invisible');
+        openMenuBtn.classList.add('visible');
+      },100)
     };
 
     function hideOpenMenuButton() {
-      openMenuBtn.classList.remove('visible')
-      openMenuBtn.classList.add('invisible')
+      openMenuBtn.classList.add('-translate-y-full');
+      setTimeout(()=>{
+        openMenuBtn.classList.remove('visible')
+        openMenuBtn.classList.add('invisible')
+      },100)
     }
 
     //init  
